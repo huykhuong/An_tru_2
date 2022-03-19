@@ -9,7 +9,7 @@ const BottomContents = ({
   return (
     <div className="w-full px-[21.25px] flex items-center justify-between absolute bottom-5 right-15 z-20">
       {/* selected filter option */}
-      <h1 className="font-medium text-sm text-white bg-black px-3 py-1">
+      <h1 className="font-medium text-sm text-white bg-black rounded-sm px-3 py-1">
         {filter_options[selectedFilterOption]} ({numberOfDish})
       </h1>
       <div className="flex items-center justify-center gap-x-1">

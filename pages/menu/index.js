@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/GeneralUI/Header";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import BottomContents from "../../components/MenuPage/BottomContents";
 import FilterOption from "../../components/MenuPage/FIlterOption";
 import SwiperInstantiation from "../../components/MenuPage/SwiperInstantiation";
+import { uiActions } from "../../store/ui-slice";
 
 const mon_com = [
   {
@@ -59,6 +60,8 @@ const Menu = () => {
     (state) => state.uiReducer.pageExitingFrom
   );
 
+  const dispatch = useDispatch();
+
   // select option function
   const selectOption = (value) => {
     setSelectedFilterOption(value);
@@ -69,6 +72,10 @@ const Menu = () => {
       setNumberOfDish(mon_soi.length);
     }
   };
+
+  useEffect(() => {
+    dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
+  }, []);
 
   return (
     <div>
@@ -81,6 +88,7 @@ const Menu = () => {
 
       {pageWillBeExitingFrom == "menu" && (
         <motion.main
+          key={"menu_page"}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -115,7 +123,13 @@ const Menu = () => {
                 className="absolute z-[60] w-full top-0 bottom-0 bg-black bg-opacity-70"
               ></div>
               {/* Bottom Content div */}
-              <div className="w-full h-[170px] bg-white rounded-t-lg absolute z-[60] bottom-0 p-6">
+              <motion.div
+                className="w-full h-[200px] bg-white rounded-t-lg absolute z-[60] bottom-0 p-6"
+                key={"modal"}
+                initial={{ y: "100%" }}
+                animate={openFilterModal ? { y: 0 } : { y: "100%" }}
+                transition={{ duration: 0.65, ease: [0.85, 0.01, 0.4, 1] }}
+              >
                 {filter_options.map((name, index) => (
                   <FilterOption
                     key={name}
@@ -133,7 +147,7 @@ const Menu = () => {
                 >
                   Đóng
                 </h1>
-              </div>
+              </motion.div>
             </>
           )}
         </motion.main>
