@@ -1,0 +1,86 @@
+import React from "react";
+import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
+
+const FooterIcons = () => {
+  const openMenuState = useSelector((state) => state.uiReducer.openMenu);
+
+  return (
+    <div className="flex gap-x-3 items-center absolute bottom-6 z-50">
+      <div
+        className={`w-5 h-28 border-r ${
+          openMenuState ? "border-white" : "border-black"
+        }`}
+      ></div>
+      <div className="flex flex-col gap-y-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          // style={{ fill: `${openMenuState ? "#fff" : "#000"}` }}
+        >
+          {" "}
+          <motion.path
+            id="facebook-logo"
+            key={"facebook-logo"}
+            initial={{ fill: "#000" }}
+            animate={{ fill: `${openMenuState ? "#fff" : "#000"}` }}
+            transition={{ duration: 1, ease: [0.31, 0, 0.05, 0.93] }}
+            d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z"
+          ></motion.path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          style={{ fill: "#000000" }}
+        >
+          {" "}
+          <motion.path
+            id="ins-logo"
+            key={"ins-logo"}
+            initial={{ fill: "#000" }}
+            animate={{ fill: `${openMenuState ? "#fff" : "#000"}` }}
+            transition={{ duration: 1, ease: [0.31, 0, 0.05, 0.93] }}
+            d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+          ></motion.path>
+        </svg>
+        <div className="flex items-center gap-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            style={{ fill: "#000000" }}
+          >
+            <motion.path
+              id="phone-logo"
+              key={"phone-logo"}
+              initial={{ fill: "#000" }}
+              animate={{ fill: `${openMenuState ? "#fff" : "#000"}` }}
+              transition={{ duration: 1, ease: [0.31, 0, 0.05, 0.93] }}
+              d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+            />
+          </svg>
+          <p
+            className={`${
+              openMenuState ? "text-white" : "text-black"
+            } font-medium`}
+          >
+            090982738
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FooterIcons;
