@@ -32,12 +32,12 @@ const Header = () => {
   return (
     <header className="relative">
       {/* Contents */}
-      <div className="flex justify-between items-start absolute top-0 bottom-0 left-0 right-0 z-50 w-[90%] h-fit mx-auto mt-5">
+      <div className="flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-[90%] h-fit mx-auto">
         {/* Logo and list items */}
         <div className="flex flex-col">
           <motion.h3
             key={"logo"}
-            className={`${openMenuState ? "mb-16" : "mb-0"}`}
+
             animate={{ color: `${openMenuState ? "#fff" : "#000"}` }}
             transition={{ duration: `${openMenuState ? 1 : 0}` }}
             onClick={() => {
@@ -49,102 +49,95 @@ const Header = () => {
             AN TRÚ
           </motion.h3>
 
-          <nav>
-            <div
-              className={`${
-                openMenuState ? "h-full" : "h-0 overflow-hidden"
-              } text-4xl space-y-[5px] font-medium`}
+          <nav
+            className={`${openMenuState ? "h-full" : "h-0 overflow-hidden"
+              } absolute top-20 text-4xl space-y-[5px] font-medium`}
+          >
+            <motion.h1
+              key={"home"}
+              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
+              transition={
+                openMenuState
+                  ? { duration: 1, delay: 0.5 }
+                  : { duration: 0, delay: 0 }
+              }
+              onClick={() => {
+                if (router.pathname === "/") return;
+                dispatch(uiActions.setOpenMenuFalse());
+                dispatch(
+                  uiActions.setPageExitingFrom({ exitingPage: "home" })
+                );
+                switchPage("/");
+              }}
+              className={`${router.pathname === "/" ? selectedOptionStyle : "text-white"
+                }`}
             >
-              <motion.h1
-                key={"home"}
-                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-                transition={
-                  openMenuState
-                    ? { duration: 1, delay: 0.5 }
-                    : { duration: 0, delay: 0 }
-                }
-                onClick={() => {
-                  if (router.pathname === "/") return;
-                  dispatch(uiActions.setOpenMenuFalse());
-                  dispatch(
-                    uiActions.setPageExitingFrom({ exitingPage: "home" })
-                  );
-                  switchPage("/");
-                }}
-                className={`${
-                  router.pathname === "/" ? selectedOptionStyle : "text-white"
-                }`}
-              >
-                Trang chủ
+              Trang chủ
               </motion.h1>
 
-              <motion.h1
-                key={"menu"}
-                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-                transition={
-                  openMenuState
-                    ? { duration: 1, delay: 0.5 }
-                    : { duration: 0, delay: 0 }
-                }
-                onClick={() => {
-                  if (router.pathname === "/menu") return;
-                  dispatch(uiActions.setOpenMenuFalse());
-                  dispatch(
-                    uiActions.setPageExitingFrom({ exitingPage: "menu" })
-                  );
-                  switchPage("/menu");
-                }}
-                className={`${
-                  router.pathname === "/menu"
-                    ? selectedOptionStyle
-                    : "text-white"
+            <motion.h1
+              key={"menu"}
+              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
+              transition={
+                openMenuState
+                  ? { duration: 1, delay: 0.5 }
+                  : { duration: 0, delay: 0 }
+              }
+              onClick={() => {
+                if (router.pathname === "/menu") return;
+                dispatch(uiActions.setOpenMenuFalse());
+                dispatch(
+                  uiActions.setPageExitingFrom({ exitingPage: "menu" })
+                );
+                switchPage("/menu");
+              }}
+              className={`${router.pathname === "/menu"
+                ? selectedOptionStyle
+                : "text-white"
                 }`}
-              >
-                Menu
+            >
+              Menu
               </motion.h1>
 
-              <motion.h1
-                key={"about"}
-                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-                transition={
-                  openMenuState
-                    ? { duration: 1, delay: 0.5 }
-                    : { duration: 0, delay: 0 }
-                }
-                onClick={() => {
-                  if (router.pathname === "/about") return;
-                  dispatch(uiActions.setOpenMenuFalse());
-                  dispatch(
-                    uiActions.setPageExitingFrom({ exitingPage: "about" })
-                  );
-                  switchPage("/about");
-                }}
-                className={`${
-                  router.pathname === "/about"
-                    ? selectedOptionStyle
-                    : "text-white"
+            <motion.h1
+              key={"about"}
+              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
+              transition={
+                openMenuState
+                  ? { duration: 1, delay: 0.5 }
+                  : { duration: 0, delay: 0 }
+              }
+              onClick={() => {
+                if (router.pathname === "/about") return;
+                dispatch(uiActions.setOpenMenuFalse());
+                dispatch(
+                  uiActions.setPageExitingFrom({ exitingPage: "about" })
+                );
+                switchPage("/about");
+              }}
+              className={`${router.pathname === "/about"
+                ? selectedOptionStyle
+                : "text-white"
                 }`}
-              >
-                Về chúng tôi
+            >
+              Về chúng tôi
               </motion.h1>
 
-              <motion.h1
-                key={"contact"}
-                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-                transition={
-                  openMenuState
-                    ? { duration: 1, delay: 0.5 }
-                    : { duration: 0, delay: 0 }
-                }
-                className={`${
-                  router.pathname === "/contact"
-                    ? selectedOptionStyle
-                    : "text-white"
+            <motion.h1
+              key={"contact"}
+              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
+              transition={
+                openMenuState
+                  ? { duration: 1, delay: 0.5 }
+                  : { duration: 0, delay: 0 }
+              }
+              className={`${router.pathname === "/contact"
+                ? selectedOptionStyle
+                : "text-white"
                 }`}
-              >
-                Liên hệ
+            >
+              Liên hệ
               </motion.h1>
-            </div>
           </nav>
         </div>
 

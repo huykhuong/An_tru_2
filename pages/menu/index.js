@@ -94,18 +94,21 @@ const Menu = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          {selectedFilterOption == 0 && (
-            <SwiperInstantiation array={mon_com} setDishName={setDishName} />
-          )}
 
-          {selectedFilterOption == 1 && (
-            <SwiperInstantiation array={mon_soi} setDishName={setDishName} />
-          )}
+          <div className='flex flex-col justify-center items-center pt-44 gap-y-14'>
+            {selectedFilterOption == 0 && (
+              <SwiperInstantiation array={mon_com} setDishName={setDishName} />
+            )}
 
-          {/* Dish name */}
-          <h1 className="absolute bottom-[35%] top-[65%] right-0 left-0 z-20 text-center w-2/3 mx-auto text-2xl font-medium">
-            {dishName}
-          </h1>
+            {selectedFilterOption == 1 && (
+              <SwiperInstantiation array={mon_soi} setDishName={setDishName} />
+            )}
+
+            {/* Dish name */}
+            <h1 className="z-20 text-center w-2/3 mx-auto text-2xl font-medium">
+              {dishName}
+            </h1>
+          </div>
 
           {/* Bottom contents consitsting of filter button and dish category heading */}
           <BottomContents

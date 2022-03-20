@@ -29,12 +29,12 @@ const SwiperInstantiation = ({ array, setDishName }) => {
         modifier: 1,
         slideShadows: false,
       }}
-      className="h-[800px]"
+      className=""
     >
       {/* using array */}
       {array.map((data, i) => {
         return (
-          <SwiperSlide key={i} className="pt-[220px]">
+          <SwiperSlide key={i}>
             <img
               className="w-2/3 mx-auto lg:mx-0 lg:mt-0 lg:w-auto"
               src={data.img}
