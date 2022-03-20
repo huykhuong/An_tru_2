@@ -57,12 +57,10 @@ const Header = () => {
             >
               <motion.h1
                 key={"home"}
-                animate={
-                  openMenuState ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
+                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
                 transition={
                   openMenuState
-                    ? { duration: 1, delay: 0.2 }
+                    ? { duration: 1, delay: 0.5 }
                     : { duration: 0, delay: 0 }
                 }
                 onClick={() => {
@@ -82,12 +80,10 @@ const Header = () => {
 
               <motion.h1
                 key={"menu"}
-                animate={
-                  openMenuState ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
+                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
                 transition={
                   openMenuState
-                    ? { duration: 1, delay: 0.2 }
+                    ? { duration: 1, delay: 0.5 }
                     : { duration: 0, delay: 0 }
                 }
                 onClick={() => {
@@ -109,14 +105,20 @@ const Header = () => {
 
               <motion.h1
                 key={"about"}
-                animate={
-                  openMenuState ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
+                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
                 transition={
                   openMenuState
-                    ? { duration: 1, delay: 0.2 }
+                    ? { duration: 1, delay: 0.5 }
                     : { duration: 0, delay: 0 }
                 }
+                onClick={() => {
+                  if (router.pathname === "/about") return;
+                  dispatch(uiActions.setOpenMenuFalse());
+                  dispatch(
+                    uiActions.setPageExitingFrom({ exitingPage: "about" })
+                  );
+                  switchPage("/about");
+                }}
                 className={`${
                   router.pathname === "/about"
                     ? selectedOptionStyle
@@ -128,12 +130,10 @@ const Header = () => {
 
               <motion.h1
                 key={"contact"}
-                animate={
-                  openMenuState ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
+                animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
                 transition={
                   openMenuState
-                    ? { duration: 1, delay: 0.2 }
+                    ? { duration: 1, delay: 0.5 }
                     : { duration: 0, delay: 0 }
                 }
                 className={`${
@@ -180,7 +180,7 @@ const Header = () => {
         key={"menu"}
         initial={{ y: "100%" }}
         animate={openMenuState ? { y: 0 } : { y: "100%" }}
-        transition={{ duration: 1, ease: [0.5, 0, 0, 1] }}
+        transition={{ duration: 1, ease: [0.85, 0.01, 0.4, 1] }}
         className="h-screen w-full bg-black absolute top-0 z-40"
       >
         {" "}
