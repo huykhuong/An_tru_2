@@ -29,7 +29,7 @@ const SwiperInstantiation = ({ array, setDishName }) => {
         modifier: 1,
         slideShadows: false,
       }}
-      className=""
+      className="mt-20"
     >
       {/* using array */}
       {array.map((data, i) => {
