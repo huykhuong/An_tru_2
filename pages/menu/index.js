@@ -5,9 +5,9 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import BottomContents from "../../components/MenuPage/BottomContents";
 import FilterOption from "../../components/MenuPage/FIlterOption";
-import SwiperInstantiation from "../../components/MenuPage/SwiperInstantiation";
 import { uiActions } from "../../store/ui-slice";
 import ModalBackground from "../../components/MenuPage/ModalBackground";
+import DishCard from "../../components/MenuPage/DishCard";
 
 const mon_com = [
   {
@@ -94,27 +94,50 @@ const Menu = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-full h-[80vh] overflow-y-scroll">
-            <div className="w-1/2 h-fit flex flex-col gap-y-5">
+          <div className="w-full h-[80vh] mt-2 flex flex-wrap gap-y-10 content-start overflow-y-scroll">
+            <DishCard name={'Com'} />
+            <div className="w-1/2 h-[300px] shadow-sm">
               <img
                 className="w-[90%] mx-auto"
                 src="https://swiperjs.com/demos/images/nature-1.jpg"
               />
-              <h1 className="flex-1">Mỳ ý phô mai chay</h1>
+              <h1 className="ml-3 mt-3 text-[18px] leading-6 font-bold">Mỳ ý phô mai chay ngon ha ha ha ha hahahahah</h1>
+              <p className='ml-3 mt-3'>15.000vnd</p>
             </div>
-            <div className="w-1/2 h-fit flex flex-col gap-y-5 mt-40">
+            <div className="w-1/2 h-fit">
               <img
                 className="w-[90%] mx-auto"
                 src="https://swiperjs.com/demos/images/nature-1.jpg"
               />
-              <h1 className="flex-1">Mỳ ý phô mai chay</h1>
+              <h1 className="">Mỳ ý phô mai chay</h1>
             </div>
-            <div className="w-1/2 h-fit flex flex-col gap-y-5 mt-40">
+            <div className="w-1/2 h-fit">
               <img
                 className="w-[90%] mx-auto"
                 src="https://swiperjs.com/demos/images/nature-1.jpg"
               />
-              <h1 className="flex-1">Mỳ ý phô mai chay</h1>
+              <h1 className="">Mỳ ý phô mai chay</h1>
+            </div>
+            <div className="w-1/2 h-fit">
+              <img
+                className="w-[90%] mx-auto"
+                src="https://swiperjs.com/demos/images/nature-1.jpg"
+              />
+              <h1 className="">Mỳ ý phô mai chay</h1>
+            </div>
+            <div className="w-1/2 h-fit">
+              <img
+                className="w-[90%] mx-auto"
+                src="https://swiperjs.com/demos/images/nature-1.jpg"
+              />
+              <h1 className="">Mỳ ý phô mai chay</h1>
+            </div>
+            <div className="w-1/2 h-fit">
+              <img
+                className="w-[90%] mx-auto"
+                src="https://swiperjs.com/demos/images/nature-1.jpg"
+              />
+              <h1 className="">Mỳ ý phô mai chay</h1>
             </div>
           </div>
 
