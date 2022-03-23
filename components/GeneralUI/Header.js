@@ -49,9 +49,8 @@ const Header = () => {
           </motion.h3>
 
           <nav
-            className={`${
-              openMenuState ? "h-full" : "h-0 overflow-hidden"
-            } absolute top-20 text-4xl space-y-[5px] font-medium`}
+            className={`${openMenuState ? "h-full" : "h-0 overflow-hidden"
+              } absolute top-20 text-4xl space-y-[5px] font-medium`}
           >
             <motion.h1
               key={"home"}
@@ -67,9 +66,8 @@ const Header = () => {
                 dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
                 switchPage("/");
               }}
-              className={`${
-                router.pathname === "/" ? selectedOptionStyle : "text-white"
-              }`}
+              className={`${router.pathname === "/" ? selectedOptionStyle : "text-white"
+                }`}
             >
               Trang chủ
             </motion.h1>
@@ -88,9 +86,8 @@ const Header = () => {
                 dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
                 switchPage("/menu");
               }}
-              className={`${
-                router.pathname === "/menu" ? selectedOptionStyle : "text-white"
-              }`}
+              className={`${router.pathname === "/menu" ? selectedOptionStyle : "text-white"
+                }`}
             >
               Menu
             </motion.h1>
@@ -111,11 +108,10 @@ const Header = () => {
                 );
                 switchPage("/about");
               }}
-              className={`${
-                router.pathname === "/about"
-                  ? selectedOptionStyle
-                  : "text-white"
-              }`}
+              className={`${router.pathname === "/about"
+                ? selectedOptionStyle
+                : "text-white"
+                }`}
             >
               Về chúng tôi
             </motion.h1>
@@ -128,11 +124,10 @@ const Header = () => {
                   ? { duration: 1, delay: 0.5 }
                   : { duration: 0, delay: 0 }
               }
-              className={`${
-                router.pathname === "/contact"
-                  ? selectedOptionStyle
-                  : "text-white"
-              }`}
+              className={`${router.pathname === "/contact"
+                ? selectedOptionStyle
+                : "text-white"
+                }`}
             >
               Liên hệ
             </motion.h1>
@@ -169,8 +164,9 @@ const Header = () => {
       {/* Black background */}
       <motion.div
         key={"menu"}
-        initial={{ y: "100%" }}
-        animate={openMenuState ? { y: 0 } : { y: "100%" }}
+        style={{ originY: 1 }}
+        initial={{ scaleY: 0 }}
+        animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 1, ease: [0.85, 0.01, 0.4, 1] }}
         className="h-screen w-full bg-black absolute top-0 z-40"
       >

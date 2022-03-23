@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

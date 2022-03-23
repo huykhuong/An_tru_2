@@ -5,7 +5,7 @@ import Image from "next/image";
 }
 const MainContent = () => {
   return (
-    <div className="w-full h-[100vh] flex flex-col mt-[15vh] items-center gap-y-8 text-center">
+    <section className="w-full h-[calc(100vh-64px)] flex flex-col justify-center items-center gap-y-8 text-center">
       <h1 className="text-4xl text-black font-medium">Nhà hàng chay</h1>
       <div className="relative w-[80%] h-60">
         <Image
@@ -16,7 +16,7 @@ const MainContent = () => {
       </div>
 
       <h1 className="text-4xl text-black font-medium">An Trú</h1>
-    </div>
+    </section>
   );
 };
 

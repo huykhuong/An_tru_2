@@ -7,7 +7,7 @@ const BottomContents = ({
   numberOfDish,
 }) => {
   return (
-    <div className="w-full px-[21.25px] flex items-center justify-between absolute bottom-5 right-15 z-20">
+    <section className="w-full px-[21.25px] py-5 fixed bottom-0 flex items-center justify-between">
       {/* selected filter option */}
       <h1 className="font-medium text-sm text-white bg-black rounded-sm px-3 py-1">
         {filter_options[selectedFilterOption]} ({numberOfDish})
@@ -28,7 +28,7 @@ const BottomContents = ({
           <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
         </svg>
       </div>
-    </div>
+    </section>
   );
 };
 

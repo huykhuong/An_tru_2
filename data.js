@@ -78,3 +78,61 @@ export const mon_soi = [
     type: "Món sợi (khô)",
   },
 ];
+
+export const mon_canh = [
+  {
+    name: "Canh rong biển tàu hủ",
+    price: 73000,
+    type: "Món canh",
+  },
+  {
+    name: "Canh tomyum nấm",
+    price: 47000,
+    type: "Món canh",
+  },
+]
+
+export const mon_rau = [
+  {
+    name: "Xà lách tương giấm/ mè đen",
+    price: 73000,
+    type: "Món rau",
+  },
+  {
+    name: "Bông cải sốt dầu hào",
+    price: 73000,
+    type: "Món rau",
+  },
+  {
+    name: "Rau bó xôi xào nấm mỡ",
+    price: 73000,
+    type: "Món rau",
+  },
+  {
+    name: "Kim chi",
+    price: 73000,
+    type: "Món rau",
+  },
+]
+
+export const mon_an_kem = [
+  {
+    name: "Khoai tây viên chiên xù",
+    price: 73000,
+    type: 'Món ăn kèm'
+  },
+  {
+    name: "Chả giò trái cây",
+    price: 69000,
+    type: 'Món ăn kèm'
+  },
+  {
+    name: "Trứng ngâm tương",
+    price: 73000,
+    type: 'Món ăn kèm'
+  },
+]
+
+// export default {
+//   mon_com, mon_rau, mon_soi, mon_an_kem, mon_canh
+// }
