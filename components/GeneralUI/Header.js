@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header className="relative">
       {/* Contents */}
-      <div className="flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-[90%] py-5 h-fit mx-auto">
+      <div className="flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-full px-5 py-5 h-fit mx-auto md:px-10">
         {/* Logo and list items */}
         <div className="flex flex-col">
           <motion.h3
@@ -49,8 +49,9 @@ const Header = () => {
           </motion.h3>
 
           <nav
-            className={`${openMenuState ? "h-full" : "h-0 overflow-hidden"
-              } absolute top-20 text-4xl space-y-[5px] font-medium`}
+            className={`${
+              openMenuState ? "h-full" : "h-0 overflow-hidden"
+            } absolute top-20 text-4xl space-y-[5px] font-medium`}
           >
             <motion.h1
               key={"home"}
@@ -66,8 +67,9 @@ const Header = () => {
                 dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
                 switchPage("/");
               }}
-              className={`${router.pathname === "/" ? selectedOptionStyle : "text-white"
-                }`}
+              className={`${
+                router.pathname === "/" ? selectedOptionStyle : "text-white"
+              }`}
             >
               Trang chủ
             </motion.h1>
@@ -86,8 +88,9 @@ const Header = () => {
                 dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
                 switchPage("/menu");
               }}
-              className={`${router.pathname === "/menu" ? selectedOptionStyle : "text-white"
-                }`}
+              className={`${
+                router.pathname === "/menu" ? selectedOptionStyle : "text-white"
+              }`}
             >
               Menu
             </motion.h1>
@@ -108,15 +111,16 @@ const Header = () => {
                 );
                 switchPage("/about");
               }}
-              className={`${router.pathname === "/about"
-                ? selectedOptionStyle
-                : "text-white"
-                }`}
+              className={`${
+                router.pathname === "/about"
+                  ? selectedOptionStyle
+                  : "text-white"
+              }`}
             >
               Về chúng tôi
             </motion.h1>
 
-            <motion.h1
+            {/* <motion.h1
               key={"contact"}
               animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
               transition={
@@ -130,7 +134,7 @@ const Header = () => {
                 }`}
             >
               Liên hệ
-            </motion.h1>
+            </motion.h1> */}
           </nav>
         </div>
 

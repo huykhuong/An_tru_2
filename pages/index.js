@@ -26,16 +26,16 @@ export default function Home() {
 
       <Header />
 
-      {pageWillBeExitingFrom == "home" && (
-        <motion.main
-          key={"home_page"}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <MainContent />
-        </motion.main>
-      )}
+      <motion.main
+        key={"home_page"}
+        initial={{ opacity: 0 }}
+        animate={
+          pageWillBeExitingFrom === "home" ? { opacity: 1 } : { opacity: 0 }
+        }
+        transition={{ duration: 0.6 }}
+      >
+        <MainContent />
+      </motion.main>
     </>
   );
 }
