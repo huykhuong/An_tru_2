@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const DishesDivWrapper = (props) => {
   return (
     <motion.div
-      className="w-[100vw] h-[calc(100vh-140px)] mt-2 mb-40 flex flex-wrap gap-y-6 gap-x-2 content-start overflow-y-scroll justify-center md:px-3 md:gap-x-5"
+      className="w-[100vw] h-[calc(100vh-140px)] mt-2 mb-40 flex flex-wrap gap-y-4 gap-x-2 content-start overflow-y-scroll justify-center md:px-3 md:gap-x-5"
       key={"dishes_wrapper"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

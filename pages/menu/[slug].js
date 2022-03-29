@@ -39,7 +39,7 @@ const DishDetail = () => {
       >
         <TitleAndPrice />
 
-        <section className="relative w-[100vw] h-[40vh]">
+        <section className="relative w-[100%] h-[40vh]">
           <Image
             src="https://swiperjs.com/demos/images/nature-1.jpg"
             layout="fill"

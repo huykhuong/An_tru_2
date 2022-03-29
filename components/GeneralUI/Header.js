@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header className="relative">
       {/* Contents */}
-      <div className="flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-full px-5 py-5 h-fit mx-auto md:px-10">
+      <div className="flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-full px-5 py-5 h-fit mx-auto md:px-10 lg:px-52">
         {/* Logo and list items */}
         <div className="flex flex-col">
           <motion.h3
@@ -147,7 +147,6 @@ const Header = () => {
             dispatch(uiActions.toggleOpenMenu());
             setDisableBtn(true);
           }}
-          className="lg:hidden"
           disabled={disableBtn}
         >
           <svg
