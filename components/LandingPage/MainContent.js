@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 {
   /* Middle content */
 }
 const MainContent = () => {
+  const router = useRouter();
   return (
     <section className="relative max-w-[100vw] mt-20 mx-auto flex flex-col justify-center items-center gap-y-6 text-center md:justify-center lg:max-w-[750px]">
       <h1 className="text-3xl text-black tracking-widest font-medium md:text-4xl">
@@ -31,10 +33,10 @@ const MainContent = () => {
         </h2>
       </div>
 
-      <div className="hidden lg:inline absolute bg-black w-[2px] h-[150px] left-0 bottom-36"></div>
-      <div className="hidden lg:inline absolute bg-black w-[2px] h-[150px] right-0 top-20"></div>
+      {/* <div className="hidden lg:inline absolute bg-black w-[2px] h-[150px] left-0 bottom-36"></div>
+      <div className="hidden lg:inline absolute bg-black w-[2px] h-[150px] right-0 top-20"></div> */}
 
-      <div className="hidden lg:inline-flex absolute right-0 bottom-[62px] items-center justify-center">
+      <div className="hidden lg:inline-flex absolute -right-20 bottom-[62px] items-center justify-center">
         {/* lg:bg-black lg:text-white lg:px-3 lg:py-3 lg:rounded-full */}
         {/* <p className="text-lg ">Khám phá</p> */}
         {/* <svg
@@ -54,11 +56,12 @@ const MainContent = () => {
           className="h-7 w-7"
           viewBox="0 0 20 20"
           fill="currentColor"
+          onClick={() => router.push("/menu")}
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           />
         </svg>
       </div>
