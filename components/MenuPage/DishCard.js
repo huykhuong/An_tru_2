@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
 
-const DishCard = ({ dishName, dishImg, dishPrice }) => {
+const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -32,20 +32,20 @@ const DishCard = ({ dishName, dishImg, dishPrice }) => {
 
       <div className="hidden lg:flex items-center justify-around">
         <div className="group min-w-[500px] h-full flex flex-shrink-0 items-center hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')] bg-no-repeat bg-cover bg-center">
-          <div className="w-[100%] h-full flex flex-col items-center justify-between border-l-[1px] border-[#272727] border-opacity-20">
+          <div className="w-[100%] h-full pt-[64px] flex flex-col items-center justify-between border-l-[1px] border-[#272727] border-opacity-20">
             <div>
-              <h1 className="w-[300px] text-[3rem] font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+              <h1 className="w-[300px] text-[3rem] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
                 {dishName}
                 {/* The <br />
                 night <br />
                 watch */}
               </h1>
-              <p className="px-[8px] text-[12px] tracking-[1px] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+              {/* <p className="px-[8px] text-[12px] tracking-[1px] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
                 MDCLIIX
-              </p>
+              </p> */}
             </div>
             <div className="text-[30vh] mb-[50px] text-[#8f0000] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
-              2
+              {index + 1}
             </div>
           </div>
         </div>

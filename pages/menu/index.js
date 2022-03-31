@@ -71,11 +71,12 @@ const Menu = () => {
       >
         {selectedFilterOption === 0 && (
           <DishesDivWrapper>
-            {mon_com.map((item) => (
+            {mon_com.map((item, index) => (
               <DishCard
                 key={item.name}
                 dishName={item.name}
                 dishPrice={item.price}
+                index={index}
               />
             ))}
           </DishesDivWrapper>
@@ -83,11 +84,12 @@ const Menu = () => {
 
         {selectedFilterOption === 1 && (
           <DishesDivWrapper>
-            {mon_soi.map((item) => (
+            {mon_soi.map((item, index) => (
               <DishCard
                 key={item.name}
                 dishName={item.name}
                 dishPrice={item.price}
+                index={index}
               />
             ))}
           </DishesDivWrapper>
@@ -95,11 +97,12 @@ const Menu = () => {
 
         {selectedFilterOption === 2 && (
           <DishesDivWrapper>
-            {mon_canh.map((item) => (
+            {mon_canh.map((item, index) => (
               <DishCard
                 key={item.name}
                 dishName={item.name}
                 dishPrice={item.price}
+                index={index}
               />
             ))}
           </DishesDivWrapper>
@@ -107,11 +110,12 @@ const Menu = () => {
 
         {selectedFilterOption === 3 && (
           <DishesDivWrapper>
-            {mon_rau.map((item) => (
+            {mon_rau.map((item, index) => (
               <DishCard
                 key={item.name}
                 dishName={item.name}
                 dishPrice={item.price}
+                index={index}
               />
             ))}
           </DishesDivWrapper>
@@ -119,11 +123,12 @@ const Menu = () => {
 
         {selectedFilterOption === 4 && (
           <DishesDivWrapper>
-            {mon_an_kem.map((item) => (
+            {mon_an_kem.map((item, index) => (
               <DishCard
                 key={item.name}
                 dishName={item.name}
                 dishPrice={item.price}
+                index={index}
               />
             ))}
           </DishesDivWrapper>
