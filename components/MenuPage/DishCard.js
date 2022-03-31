@@ -31,19 +31,20 @@ const DishCard = ({ dishName, dishImg, dishPrice }) => {
       </div>
 
       <div className="hidden lg:flex items-center justify-around">
-        <div className="group min-w-[500px] h-full flex flex-shrink-0 items-center hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')] bg-no-repeat bg-cover bg-center transition-all duration-[800ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+        <div className="group min-w-[500px] h-full flex flex-shrink-0 items-center hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')] bg-no-repeat bg-cover bg-center">
           <div className="w-[100%] h-full flex flex-col items-center justify-between border-l-[1px] border-[#272727] border-opacity-20">
             <div>
-              <h1 className="text-[3rem] font-light uppercase group-hover:text-white ">
-                The <br />
+              <h1 className="w-[300px] text-[3rem] font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+                {dishName}
+                {/* The <br />
                 night <br />
-                watch
+                watch */}
               </h1>
-              <p className="group-hover:text-white px-[8px] text-[12px] tracking-[1px]">
+              <p className="px-[8px] text-[12px] tracking-[1px] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
                 MDCLIIX
               </p>
             </div>
-            <div className="group-hover:text-white text-[35vh] mb-[50px] text-[#8f0000]">
+            <div className="text-[30vh] mb-[50px] text-[#8f0000] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
               2
             </div>
           </div>
