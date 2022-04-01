@@ -2,11 +2,11 @@ import React from "react";
 
 const TitleAndPrice = ({ vn_name, eng_name, price }) => {
   return (
-    <section className="px-5 md:px-10">
-      <h1 className="text-7xl">Cơm chiên Omurice</h1>
-      <div className="flex justify-between items-center mt-6 mb-10">
-        <h2 className="italic text-xl">Omurice Fried Rice</h2>
-        <p className="text-lg">73000</p>
+    <section className="px-5 md:px-10 lg:flex-shrink-0 lg:w-[50%] lg:mt-auto lg:mb-20">
+      <h1 className="text-7xl lg:text-[8vw]">Cơm chiên Omurice</h1>
+      <div className="flex justify-between items-center mt-10 mb-5 lg:flex-col lg:items-end lg:gap-y-10">
+        <h2 className="italic text-xl lg:text-[25px]">Omurice Fried Rice</h2>
+        <p className="text-lg lg:text-[25px]">73</p>
       </div>
     </section>
   );

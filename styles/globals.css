@@ -16,6 +16,8 @@ body {
   -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: grayscale;
 
+  /* scroll-behavior: smooth; */
+
   /* overflow: hidden; */
 }
 

@@ -34,7 +34,9 @@ const Header = () => {
       {/* Contents */}
       <div
         className={`flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-full px-5 py-5 h-fit mx-auto md:px-10 lg:px-36 2xl:px-[280px] ${
-          router.pathname === "/menu" ? "lg:absolute" : "sticky"
+          router.pathname === "/menu" || router.pathname === "/menu/[slug]"
+            ? "lg:absolute"
+            : "sticky"
         }`}
       >
         {/* Logo and list items */}
@@ -48,6 +50,11 @@ const Header = () => {
               dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
               switchPage("/");
             }}
+            className={`${
+              router.pathname === "/menu/[slug]" && !openMenuState
+                ? "invisible"
+                : "visible"
+            }`}
           >
             AN TRÚ
           </motion.h3>

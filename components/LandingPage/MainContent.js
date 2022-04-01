@@ -6,8 +6,14 @@ import { useRouter } from "next/router";
 }
 const MainContent = () => {
   const router = useRouter();
+  const switchPage = (path) => {
+    setTimeout(() => {
+      router.push(path);
+    }, 1100);
+  };
+
   return (
-    <section className="relative max-w-[100vw] mt-20 mx-auto flex flex-col justify-center items-center gap-y-6 text-center md:justify-center lg:max-w-[750px]">
+    <section className="relative max-w-[100vw] mt-5 mx-auto flex flex-col justify-center items-center gap-y-6 text-center md:justify-center lg:max-w-[750px]">
       <h1 className="text-3xl text-black tracking-widest font-medium md:text-4xl">
         Nhà hàng chay
       </h1>
@@ -28,7 +34,7 @@ const MainContent = () => {
       </div>
 
       <div>
-        <h2 className="mt-16 mb-16 font-semibold text-xl md:mt-24 md:text-2xl">
+        <h2 className="mt-16 mb-10 font-semibold text-xl md:text-2xl">
           Hân hạnh phục vụ
         </h2>
       </div>
@@ -36,9 +42,9 @@ const MainContent = () => {
       {/* <div className="hidden lg:inline absolute bg-black w-[2px] h-[150px] left-0 bottom-36"></div>
       <div className="hidden lg:inline absolute bg-black w-[2px] h-[150px] right-0 top-20"></div> */}
 
-      <div className="hidden lg:inline-flex absolute -right-20 bottom-[62px] items-center justify-center">
+      <div className="hidden lg:inline-flex absolute -right-20 bottom-[40px] items-center justify-center gap-x-2">
         {/* lg:bg-black lg:text-white lg:px-3 lg:py-3 lg:rounded-full */}
-        {/* <p className="text-lg ">Khám phá</p> */}
+        <p className="text-lg font-medium">Khám phá</p>
         {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-7 w-7"

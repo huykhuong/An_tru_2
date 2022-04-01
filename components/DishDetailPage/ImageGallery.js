@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ImageGallery = ({ img1, img2, img3, img4 }) => {
   return (
-    <section className="relative mt-10 h-fit">
+    <section className="relative mt-10 h-fit lg:w-[2000px]">
       <h2 className="text-2xl mb-14 px-5 md:px-10">Hình ảnh</h2>
 
       <div className="md:absolute md:left-[15vw]">
