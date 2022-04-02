@@ -47,7 +47,7 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
                 MDCLIIX
               </p> */}
             </div>
-            <div className="text-[30vh] mb-[50px] text-[#8f0000] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+            <div className="text-[30vh] mb-[50px] text-black transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
               {index + 1}
             </div>
           </div>

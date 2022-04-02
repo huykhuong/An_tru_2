@@ -70,7 +70,6 @@ const DishDetail = () => {
 
         {/* NEXT DISH */}
         <NextDish />
-        <h1>asdasdsa</h1>
       </motion.main>
     </Fragment>
   );
