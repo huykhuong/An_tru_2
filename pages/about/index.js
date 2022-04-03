@@ -9,9 +9,11 @@ import Founder from "../../components/AboutUs/Founder";
 import Philosophy from "../../components/AboutUs/Philosophy";
 import Divider from "../../components/AboutUs/Divider";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const About = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const pageWillBeExitingFrom = useSelector(
     (state) => state.uiReducer.pageExitingFrom
@@ -19,6 +21,16 @@ const About = () => {
 
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "about" }));
+    router.beforePopState(({ url, as, options }) => {
+      // I only want to allow these two routes!
+
+      if (as !== "/about" || as === "/about") {
+        dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        setTimeout(() => {
+          router.replace(as);
+        }, 1100);
+      }
+    });
   }, []);
 
   return (
@@ -164,8 +176,8 @@ const About = () => {
                 strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
@@ -184,8 +196,8 @@ const About = () => {
                 strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                 />
               </svg>
@@ -203,8 +215,8 @@ const About = () => {
                 strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
                 />
               </svg>
@@ -223,8 +235,8 @@ const About = () => {
                 strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
                 />
               </svg>

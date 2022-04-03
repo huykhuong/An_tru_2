@@ -4,6 +4,7 @@ import MainContent from "../components/LandingPage/MainContent";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { uiActions } from "../store/ui-slice";
 
 export default function Home() {
@@ -12,9 +13,20 @@ export default function Home() {
   );
 
   const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
+    router.beforePopState(({ url, as, options }) => {
+      // I only want to allow these two routes!
+
+      if (as !== "/" || as === "/") {
+        dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        setTimeout(() => {
+          router.replace(as);
+        }, 1100);
+      }
+    });
   }, [dispatch]);
 
   return (

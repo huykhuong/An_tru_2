@@ -11,6 +11,7 @@ import DishCard from "../../components/MenuPage/DishCard";
 import { mon_an_kem, mon_canh, mon_com, mon_rau, mon_soi } from "../../data";
 import BottomFilterModal from "../../components/MenuPage/BottomFilterModal";
 import DishesDivWrapper from "../../components/MenuPage/DishesDivWrapper";
+import { useRouter } from "next/router";
 
 const filter_options = [
   "Món cơm",
@@ -30,6 +31,7 @@ const Menu = () => {
   );
 
   const dispatch = useDispatch();
+  const router = useRouter();
 
   // select option function
   const selectOption = (value) => {
@@ -50,6 +52,16 @@ const Menu = () => {
 
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
+    router.beforePopState(({ url, as, options }) => {
+      // I only want to allow these two routes!
+
+      if (as !== "/menu" || as === "/menu") {
+        dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        setTimeout(() => {
+          router.replace(as);
+        }, 1100);
+      }
+    });
   }, []);
 
   return (

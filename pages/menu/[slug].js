@@ -10,6 +10,7 @@ import AllergyWarning from "../../components/DishDetailPage/AllergyWarning";
 import { ImageGallery } from "../../components/DishDetailPage/ImageGallery";
 import NextDish from "../../components/DishDetailPage/NextDish";
 import { uiActions } from "../../store/ui-slice";
+import { useRouter } from "next/router";
 
 const DishDetail = () => {
   const pageWillBeExitingFrom = useSelector(
@@ -17,6 +18,7 @@ const DishDetail = () => {
   );
 
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const onWheel = (e) => {
     e.preventDefault();
@@ -32,6 +34,16 @@ const DishDetail = () => {
 
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "dish_detail" }));
+    router.beforePopState(({ url, as, options }) => {
+      // I only want to allow these two routes!
+
+      if (url !== "/menu/[slug]" || url === "/menu/[slug]") {
+        dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        setTimeout(() => {
+          router.replace(as);
+        }, 1100);
+      }
+    });
   }, []);
 
   return (
@@ -49,11 +61,11 @@ const DishDetail = () => {
         }
         transition={{ duration: 0.6 }}
         onWheel={onWheel}
-        className="pt-10 h-[calc(100vh-64px)] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:scrollbar-hide lg:h-screen lg:pt-0"
+        className="pt-10 w-[100%] h-[calc(100vh-64px)] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:scrollbar-hide lg:h-screen lg:pt-0"
       >
         <TitleAndPrice />
 
-        <section className="relative w-[100%] h-[40vh] lg:w-[50%] lg:h-screen lg:flex-shrink-0">
+        <section className="relative w-[100vw] h-[100vw] lg:w-[50%] lg:h-screen lg:flex-shrink-0">
           <Image
             src="https://swiperjs.com/demos/images/nature-1.jpg"
             layout="fill"

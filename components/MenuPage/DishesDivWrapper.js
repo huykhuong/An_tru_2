@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const DishesDivWrapper = (props) => {
   const onWheel = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const container = document.getElementById("container");
     const containerScrollPosition =
       document.getElementById("container").scrollLeft;

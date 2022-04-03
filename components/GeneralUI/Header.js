@@ -54,7 +54,7 @@ const Header = () => {
               router.pathname === "/menu/[slug]" && !openMenuState
                 ? "invisible"
                 : "visible"
-            }`}
+            } lg:cursor-pointer`}
           >
             AN TRÚ
           </motion.h3>
@@ -80,7 +80,7 @@ const Header = () => {
               }}
               className={`${
                 router.pathname === "/" ? selectedOptionStyle : "text-white"
-              }`}
+              } lg:cursor-pointer`}
             >
               Trang chủ
             </motion.h1>
@@ -100,8 +100,11 @@ const Header = () => {
                 switchPage("/menu");
               }}
               className={`${
-                router.pathname === "/menu" ? selectedOptionStyle : "text-white"
-              }`}
+                router.pathname === "/menu" ||
+                router.pathname === "/menu/[slug]"
+                  ? selectedOptionStyle
+                  : "text-white"
+              } lg:cursor-pointer`}
             >
               Menu
             </motion.h1>
@@ -126,7 +129,7 @@ const Header = () => {
                 router.pathname === "/about"
                   ? selectedOptionStyle
                   : "text-white"
-              }`}
+              } lg:cursor-pointer`}
             >
               Về chúng tôi
             </motion.h1>

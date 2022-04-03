@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const NextDish = () => {
   return (
-    <section className="mt-40 lg:mt-0 lg:w-full lg:h-full lg:flex-shrink-0 lg:flex lg:justify-center lg:items-center">
+    <section className="mt-40 mb-20 mt lg:mt-0 lg:w-full lg:h-full lg:flex-shrink-0 lg:flex lg:justify-center lg:items-center">
       <div className="group lg:flex lg:flex-col lg:justify-center lg:h-fit">
         <h1 className="px-6 text-lg md:px-10 lg:text-xl lg:text-center">
           Món tiếp theo
