@@ -32,7 +32,12 @@ function MyApp({ Component, pageProps }) {
             content="width=device-width, initial-scale=1.0"
           />
         </Head>
-        {loading ? <Loader /> : <Component {...pageProps} />}
+
+        {loading ? (
+          <Loader />
+        ) : (
+          typeof window !== "undefined" && <Component {...pageProps} />
+        )}
       </AnimatePresence>
     </Provider>
   );

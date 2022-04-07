@@ -21,14 +21,14 @@ const DishDetail = () => {
   const router = useRouter();
 
   const onWheel = (e) => {
-    e.preventDefault();
-    const container = document.getElementById("container");
+    // e.preventDefault();
+    const container = document.getElementById("dish_detail_page");
     const containerScrollPosition =
-      document.getElementById("container").scrollLeft;
+      document.getElementById("dish_detail_page").scrollLeft;
     container.scrollTo({
       top: 0,
-      left: containerScrollPosition + e.deltaY,
-      behaviour: "smooth",
+      left: containerScrollPosition + e.deltaY * 10,
+      behavior: "smooth",
     });
   };
 
@@ -44,14 +44,39 @@ const DishDetail = () => {
         }, 1100);
       }
     });
+    const slider = document.getElementById("dish_detail_page");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+      slider.classList.remove("active");
+    });
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 5; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+    });
   }, []);
 
   return (
     <Fragment>
       <Header />
-
       <motion.main
-        id="container"
+        id="dish_detail_page"
         key={"dish_detail_page"}
         initial={{ opacity: 0 }}
         animate={
@@ -60,12 +85,12 @@ const DishDetail = () => {
             : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        onWheel={onWheel}
-        className="pt-10 w-[100%] h-[calc(100vh-64px)] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:scrollbar-hide lg:h-screen lg:pt-0"
+        // onWheel={onWheel}
+        className="pt-10 w-[100%] h-[calc(100vh-64px)] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:cursor-pointer lg:overflow-x-auto lg:scrollbar-hide lg:h-screen lg:pt-0"
       >
         <TitleAndPrice />
 
-        <section className="relative w-[100vw] h-[100vw] lg:w-[50%] lg:h-screen lg:flex-shrink-0">
+        <section className="relative w-[100vw] h-[100vw] lg:w-[50vw] lg:h-screen lg:flex-shrink-0">
           <Image
             src="https://swiperjs.com/demos/images/nature-1.jpg"
             layout="fill"

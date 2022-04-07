@@ -10,6 +10,7 @@ import Philosophy from "../../components/AboutUs/Philosophy";
 import Divider from "../../components/AboutUs/Divider";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Scrollbar from "smooth-scrollbar";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const About = () => {
         }, 1100);
       }
     });
+    Scrollbar.init(document.querySelector("#about_page"), { damping: 0.08 });
   }, []);
 
   return (
@@ -38,6 +40,7 @@ const About = () => {
       <Header />
 
       <motion.main
+        id="about_page"
         key={"about_page"}
         initial={{ opacity: 0 }}
         animate={
