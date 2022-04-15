@@ -33,45 +33,97 @@ const Header = () => {
     <header className="relative">
       {/* Contents */}
       <div
-        className={`flex justify-between items-start sticky top-0 bottom-0 left-0 right-0 z-50 w-full px-5 py-5 h-fit mx-auto md:px-10 lg:px-36 2xl:px-[280px] ${
-          router.pathname === "/menu" || router.pathname === "/menu/[slug]"
+        className={`flex justify-between items-center sticky top-0 bottom-0 left-0 right-0 z-40 w-full px-10 py-4 h-fit mx-auto lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
+          router.pathname === "/menu" ||
+          router.pathname === "/menu/[slug]" ||
+          router.pathname === "/"
             ? "lg:absolute"
             : "sticky"
-        }`}
+        } `}
       >
         {/* Logo and list items */}
-        <div className="flex flex-col">
-          <motion.h3
-            key={"logo"}
-            animate={{ color: `${openMenuState ? "#fff" : "#000"}` }}
-            transition={{ duration: `${openMenuState ? 1 : 0}` }}
-            onClick={() => {
-              dispatch(uiActions.setOpenMenuFalse());
-              dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
-              switchPage("/");
-            }}
-            className={`${
-              router.pathname === "/menu/[slug]" && !openMenuState
-                ? "invisible"
-                : "visible"
-            } lg:cursor-pointer`}
-          >
-            AN TRÚ
-          </motion.h3>
 
-          <nav
-            className={`${
-              openMenuState ? "h-full" : "h-0 overflow-hidden"
-            } absolute top-20 text-4xl space-y-[5px] font-medium`}
+        <img
+          src="/logo.png"
+          onClick={() => {
+            dispatch(uiActions.setOpenMenuFalse());
+            dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
+            switchPage("/");
+          }}
+          className={`${
+            router.pathname === "/menu/[slug]" && !openMenuState
+              ? "invisible"
+              : "visible"
+          } w-[50px] lg:w-[60px] lg:cursor-pointer relative z-30`}
+        />
+
+        {/* Menu button */}
+        <button
+          onClick={() => {
+            dispatch(uiActions.toggleOpenMenu());
+            setDisableBtn(true);
+          }}
+          disabled={disableBtn}
+          className={`${
+            openMenuState ? "invisible" : "visible"
+          } transition-all duration-200`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 lg:h-7 lg:w-7"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
-            <motion.h1
-              key={"home"}
-              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-              transition={
-                openMenuState
-                  ? { duration: 1, delay: 0.5 }
-                  : { duration: 0, delay: 0 }
-              }
+            <path
+              fillRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Blur black background */}
+      <div
+        className={`absolute bg-black top-0 left-0 w-full h-screen z-40 ${
+          openMenuState ? "visible bg-opacity-70" : "invisible bg-opacity-0"
+        } transition-all duration-[0.65s] ease-[0.85, 0.01, 0.4, 1]`}
+        // onClick={() => {
+        //   dispatch(uiActions.toggleOpenMenu(false));
+        //   setDisableBtn(true);
+        // }}
+      ></div>
+
+      {/* Green background */}
+      <motion.div
+        key={"menu"}
+        style={{ originY: 1 }}
+        initial={{ scaleY: 0 }}
+        animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
+        transition={{ duration: 0.65, ease: [0.85, 0.01, 0.4, 1] }}
+        className="h-screen w-full bg-[#3A563E] absolute top-0 right-0 z-40 lg:flex lg:flex-col lg:w-[300px]"
+      >
+        <div className="flex flex-col items-center flex-grow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-white ml-auto mr-10 mt-16 lg:cursor-pointer"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2"
+            onClick={() => {
+              dispatch(uiActions.toggleOpenMenu());
+              setDisableBtn(true);
+            }}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+          <nav className={` mt-20 text-4xl space-y-[10px] font-medium`}>
+            <h1
               onClick={() => {
                 if (router.pathname === "/") return;
                 dispatch(uiActions.setOpenMenuFalse());
@@ -80,19 +132,14 @@ const Header = () => {
               }}
               className={`${
                 router.pathname === "/" ? selectedOptionStyle : "text-white"
-              } lg:cursor-pointer`}
+              } ${
+                openMenuState ? "visible opacity-100" : "invisible opacity-0"
+              } transition-all duration-1000  lg:cursor-pointer`}
             >
               Trang chủ
-            </motion.h1>
+            </h1>
 
-            <motion.h1
-              key={"menu"}
-              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-              transition={
-                openMenuState
-                  ? { duration: 1, delay: 0.5 }
-                  : { duration: 0, delay: 0 }
-              }
+            <h1
               onClick={() => {
                 if (router.pathname === "/menu") return;
                 dispatch(uiActions.setOpenMenuFalse());
@@ -104,19 +151,14 @@ const Header = () => {
                 router.pathname === "/menu/[slug]"
                   ? selectedOptionStyle
                   : "text-white"
-              } lg:cursor-pointer`}
+              } ${
+                openMenuState ? "visible opacity-100" : "invisible opacity-0"
+              } transition-all duration-1000 lg:cursor-pointer`}
             >
               Menu
-            </motion.h1>
+            </h1>
 
-            <motion.h1
-              key={"about"}
-              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-              transition={
-                openMenuState
-                  ? { duration: 1, delay: 0.5 }
-                  : { duration: 0, delay: 0 }
-              }
+            <h1
               onClick={() => {
                 if (router.pathname === "/about") return;
                 dispatch(uiActions.setOpenMenuFalse());
@@ -129,66 +171,17 @@ const Header = () => {
                 router.pathname === "/about"
                   ? selectedOptionStyle
                   : "text-white"
-              } lg:cursor-pointer`}
+              } ${
+                openMenuState ? "visible opacity-100" : "invisible opacity-0"
+              } transition-all duration-1000 lg:cursor-pointer`}
             >
               Về chúng tôi
-            </motion.h1>
-
-            {/* <motion.h1
-              key={"contact"}
-              animate={openMenuState ? { opacity: 1 } : { opacity: 0 }}
-              transition={
-                openMenuState
-                  ? { duration: 1, delay: 0.5 }
-                  : { duration: 0, delay: 0 }
-              }
-              className={`${router.pathname === "/contact"
-                ? selectedOptionStyle
-                : "text-white"
-                }`}
-            >
-              Liên hệ
-            </motion.h1> */}
+            </h1>
           </nav>
         </div>
-
-        {/* Menu button */}
-        <motion.button
-          key={"menuButton"}
-          animate={{ color: `${openMenuState ? "#fff" : "#000"}` }}
-          transition={{ duration: `${openMenuState ? 1 : 0}` }}
-          onClick={() => {
-            dispatch(uiActions.toggleOpenMenu());
-            setDisableBtn(true);
-          }}
-          disabled={disableBtn}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </motion.button>
-      </div>
-
-      {/* Black background */}
-      <motion.div
-        key={"menu"}
-        style={{ originY: 1 }}
-        initial={{ scaleY: 0 }}
-        animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
-        transition={{ duration: 1, ease: [0.85, 0.01, 0.4, 1] }}
-        className="h-screen w-full bg-black absolute top-0 z-40"
-      >
-        {" "}
-        <FooterIcons />
+        <p className="text-white text-center pb-10">
+          Copyright © 2022 An Trú - Vegetarian house
+        </p>
       </motion.div>
     </header>
   );

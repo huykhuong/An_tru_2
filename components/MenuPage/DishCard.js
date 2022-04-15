@@ -17,7 +17,7 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
   return (
     <>
       <div
-        className="relative max-w-[183px] h-[300px] shadow-sm md:max-w-[248px] md:h-[380px] lg:max-w-[300px] lg:h-[400px] 2xl:max-w-[350px] 2xl:h-[450px] lg:hidden"
+        className="relative max-w-[183px] h-[300px] shadow-sm md:max-w-[248px] md:h-[380px] lg:max-w-[300px] lg:h-[400px] 2xl:max-w-[350px] bg-white lg:hidden"
         onClick={() => switchPage("/menu/1")}
       >
         <img
@@ -33,7 +33,7 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
       <div className="hidden lg:flex items-center justify-around">
         <div className="group w-[550px] h-full flex flex-shrink-0 items-center hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')] bg-no-repeat bg-cover bg-center">
           <div
-            className="w-[100%] h-full pt-[100px] flex flex-col items-center justify-between border-l-[1px] border-[#272727] border-opacity-20 cursor-pointer"
+            className="w-[100%] h-[750px] pt-[100px] flex flex-col items-center justify-between border-l-[1px] border-[#272727] border-opacity-20 cursor-pointer"
             onClick={() => switchPage("/menu/1")}
           >
             <div>
@@ -47,7 +47,7 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
                 MDCLIIX
               </p> */}
             </div>
-            <div className="text-[30vh] mb-[50px] text-black transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+            <div className="text-[250px] mb-[50px] text-black transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
               {index + 1}
             </div>
           </div>

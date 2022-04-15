@@ -26,7 +26,8 @@
     "scrolltrigger": "^1.0.1",
     "smooth-scrollbar": "^8.7.4",
     "swiper": "^8.0.7",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "universalsmoothscroll": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
