@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
-import FooterIcons from "./FooterIcons";
 
 const Header = () => {
   const [disableBtn, setDisableBtn] = useState(false);
@@ -101,7 +100,7 @@ const Header = () => {
         initial={{ scaleY: 0 }}
         animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 0.65, ease: [0.85, 0.01, 0.4, 1] }}
-        className="h-screen w-full bg-[#3A563E] absolute top-0 right-0 z-40 lg:flex lg:flex-col lg:w-[300px]"
+        className="h-screen w-full bg-[#3A563E] absolute top-0 right-0 z-40 flex flex-col lg:w-[300px]"
       >
         <div className="flex flex-col items-center flex-grow">
           <svg
@@ -122,7 +121,7 @@ const Header = () => {
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
-          <nav className={` mt-20 text-4xl space-y-[10px] font-medium`}>
+          <nav className="mt-20 text-4xl space-y-[10px] font-medium">
             <h1
               onClick={() => {
                 if (router.pathname === "/") return;
@@ -134,7 +133,7 @@ const Header = () => {
                 router.pathname === "/" ? selectedOptionStyle : "text-white"
               } ${
                 openMenuState ? "visible opacity-100" : "invisible opacity-0"
-              } transition-all duration-1000  lg:cursor-pointer`}
+              } transition-all duration-200  lg:cursor-pointer`}
             >
               Trang chủ
             </h1>
@@ -153,7 +152,7 @@ const Header = () => {
                   : "text-white"
               } ${
                 openMenuState ? "visible opacity-100" : "invisible opacity-0"
-              } transition-all duration-1000 lg:cursor-pointer`}
+              } transition-all duration-200 lg:cursor-pointer`}
             >
               Menu
             </h1>
@@ -173,13 +172,17 @@ const Header = () => {
                   : "text-white"
               } ${
                 openMenuState ? "visible opacity-100" : "invisible opacity-0"
-              } transition-all duration-1000 lg:cursor-pointer`}
+              } transition-all duration-200 lg:cursor-pointer`}
             >
               Về chúng tôi
             </h1>
           </nav>
         </div>
-        <p className="text-white text-center pb-10">
+        <p
+          className={`text-white text-center pb-10 ${
+            openMenuState ? "visible opacity-100" : "invisible opacity-0"
+          }`}
+        >
           Copyright © 2022 An Trú - Vegetarian house
         </p>
       </motion.div>

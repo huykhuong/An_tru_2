@@ -23,11 +23,13 @@ const filter_options = [
 
 const Menu = () => {
   const [openFilterModal, setOpenFilterModal] = useState(false);
-  const [selectedFilterOption, setSelectedFilterOption] = useState(0);
   const [numberOfDish, setNumberOfDish] = useState(mon_com.length);
 
   const pageWillBeExitingFrom = useSelector(
     (state) => state.uiReducer.pageExitingFrom
+  );
+  const selectedFilterOption = useSelector(
+    (state) => state.uiReducer.selectedFilterOption
   );
 
   const dispatch = useDispatch();
@@ -35,7 +37,7 @@ const Menu = () => {
 
   // select option function
   const selectOption = (value) => {
-    setSelectedFilterOption(value);
+    dispatch(uiActions.setSelectedFilterOption({ value: value }));
     // Set the number of dishes of each dish category
     if (value === 0) {
       setNumberOfDish(mon_com.length);

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const defaultSliceState = {
   openMenu: false,
   pageExitingFrom: null,
+  selectedFilterOption: 0,
 };
 
 const uiSlice = createSlice({
@@ -17,6 +18,9 @@ const uiSlice = createSlice({
     },
     setPageExitingFrom(state, action) {
       state.pageExitingFrom = action.payload.exitingPage;
+    },
+    setSelectedFilterOption(state, action) {
+      state.selectedFilterOption = action.payload.value;
     },
   },
 });
