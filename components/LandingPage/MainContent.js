@@ -119,7 +119,7 @@ const MainContent = () => {
           </div>
         </div>
 
-        <div className="hidden lg:flex justify-between absolute bottom-0 w-full mx-auto px-10 pb-[4vh]">
+        <div className="hidden lg:flex justify-between mt-10 mx-auto px-10 pb-[3vh] lg:max-w-[1650px] xl:max-w-[1400px]">
           <h2 className="text-center my-auto text-xl">Hân hạnh phục vụ</h2>
           <div className="my-auto">
             <Link href={"https://www.facebook.com/nhahangchayantru"}>

@@ -32,12 +32,12 @@ const Header = () => {
     <header className="relative">
       {/* Contents */}
       <div
-        className={`flex justify-between items-center sticky top-0 bottom-0 left-0 right-0 z-40 w-full px-10 py-4 h-fit mx-auto lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
+        className={`flex justify-between items-center top-0 bg-[#fbfbfb] bottom-0 left-0 right-0 z-40 w-full px-10 py-4 h-fit mx-auto lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
           router.pathname === "/menu" ||
           router.pathname === "/menu/[slug]" ||
           router.pathname === "/"
-            ? "lg:absolute"
-            : "sticky"
+            ? "lg:absolute lg:bg-transparent"
+            : "fixed"
         } `}
       >
         {/* Logo and list items */}
@@ -87,10 +87,10 @@ const Header = () => {
         className={`absolute bg-black top-0 left-0 w-full h-screen z-40 ${
           openMenuState ? "visible bg-opacity-70" : "invisible bg-opacity-0"
         } transition-all duration-[0.65s] ease-[0.85, 0.01, 0.4, 1]`}
-        // onClick={() => {
-        //   dispatch(uiActions.toggleOpenMenu(false));
-        //   setDisableBtn(true);
-        // }}
+        onClick={() => {
+          dispatch(uiActions.toggleOpenMenu(false));
+          setDisableBtn(true);
+        }}
       ></div>
 
       {/* Green background */}
