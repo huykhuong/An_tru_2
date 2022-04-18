@@ -41,7 +41,6 @@ const Header = () => {
         } `}
       >
         {/* Logo and list items */}
-
         <img
           src="/logo.png"
           onClick={() => {
@@ -84,7 +83,7 @@ const Header = () => {
 
       {/* Blur black background */}
       <div
-        className={`absolute bg-black top-0 left-0 w-full h-screen z-40 ${
+        className={`fixed bg-black top-0 left-0 w-full h-screen z-40 ${
           openMenuState ? "visible bg-opacity-70" : "invisible bg-opacity-0"
         } transition-all duration-[0.65s] ease-[0.85, 0.01, 0.4, 1]`}
         onClick={() => {
@@ -100,7 +99,7 @@ const Header = () => {
         initial={{ scaleY: 0 }}
         animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 0.65, ease: [0.85, 0.01, 0.4, 1] }}
-        className="h-screen w-full bg-[#3A563E] absolute top-0 right-0 z-40 flex flex-col lg:w-[300px]"
+        className="h-screen w-full bg-[#3A563E] fixed top-0 right-0 z-40 flex flex-col lg:w-[300px]"
       >
         <div className="flex flex-col items-center flex-grow">
           <svg

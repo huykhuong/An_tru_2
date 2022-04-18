@@ -45,7 +45,7 @@ const About = () => {
           pageWillBeExitingFrom === "about" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className="mt-40 lg:max-w-[1650px] xl:max-w-[1400px] mx-auto"
+        className="mt-40 lg:max-w-[1650px] xl:max-w-[1400px] mx-auto lg:px-10"
       >
         {/* TITLE */}
         <section className="relative max-w-[256px] lg:max-w-[350px] h-20 lg:h-[100px] mx-auto mb-24 lg:mb-[200px]">
@@ -66,35 +66,26 @@ const About = () => {
 
         {/* GENERAL INFO */}
         <section className="mt-[300px] lg:flex lg:space-x-20 lg:justify-between">
-          <div className="flex flex-col gap-y-2 items-center mb-20 lg:w-fit lg:px-10 lg:mb-0">
-            <h2 className="text-7xl lg:bg-[#3A563E] lg:p-16 lg:text-white lg:text-8xl">
-              01
-            </h2>
-            <h2 className="text-xl font-semibold italic lg:not-italic lg:text-3xl lg:mt-5 lg:text-[#3A563E]">
-              TỔNG QUAN
-            </h2>
-          </div>
+          <Heading order="01" title="TỔNG QUAN" />
           {/* <Heading order="01" title="TỔNG QUAN" /> */}
           <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm grid grid-cols-2 lg:mx-0">
             <p className="border-b font-bold text-lg py-5">Sức chứa</p>
-            <p className="border-b text-lg">32 chỗ</p>
-            <p className="border-b font-bold text-lg">Đóng cửa</p>
-            <p className="border-b text-lg">
+            <p className="border-b text-lg py-5">32 chỗ</p>
+            <p className="border-b font-bold text-lg py-5">Đóng cửa</p>
+            <p className="border-b text-lg py-5">
               Thứ 2 hàng tuần (trừ các ngày Mùng 1 & 15 âm lịch)
             </p>
-            <p className="border-b font-bold text-lg">Địa điểm</p>
-            <p className="border-b text-lg">
-              Lầu 1 & 2, 230 Nguyễn Sơn, Tân Phú
-            </p>
-            <p className="font-bold text-lg">Giờ mở cửa</p>
-            <div className="text-lg">
+            <p className="border-b font-bold text-lg py-5">Giờ mở cửa</p>
+            <div className="border-b text-lg py-5">
               <p>- Bữa trưa: 10:00 - 14:00 (Đơn cuối 13:30)</p>
               <p>- Bữa tối : 17:00 - 21:00 (Đơn cuối 20:30)</p>
             </div>
+            <p className="font-bold text-lg py-5">Địa điểm</p>
+            <p className="text-lg py-5">Lầu 1 & 2, 230 Nguyễn Sơn, Tân Phú</p>
           </div>
           <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm grid grid-cols-2 lg:mx-0">
-            <p className="font-bold text-lg">Đặt bàn</p>
-            <p className="text-lg">
+            <p className="font-bold text-lg py-5">Đặt bàn</p>
+            <p className="text-lg py-5">
               Nếu quý khách đi theo nhóm từ 5 đến 12 người, hoan hỉ liên hệ đặt
               bàn (qua điện thoại, Facebook, Instagram, Zalo) để chúng tôi phục
               vụ quý khách tốt hơn. Trân trọng cảm ơn quý khách
@@ -102,7 +93,39 @@ const About = () => {
           </div>
         </section>
 
-        {/* <Divider /> */}
+        {/* STORY */}
+        <section className="mt-16 lg:flex lg:flex-row-reverse lg:mt-[200px]">
+          <Heading order="02" title="CÂU CHUYỆN" />
+          <div className="lg:columns-2 lg:text-lg">
+            <p>
+              Nhà hàng chay AN TRÚ phục vụ các món ăn chay lấy cảm hứng từ các
+              nước châu Á điển hình như Hàn Quốc và Nhật Bản, hoà điệu với văn
+              hoá ẩm thực chay Việt Nam để tạo nên màu sắc tươi mới, đương đại.
+              Qua đó, việc ăn chay trở nên dễ dàng và gần gũi hơn với giới trẻ,
+              nhằm giảm bớt yếu tố tín ngưỡng, tăng tính sở thích và lý tưởng cá
+              nhân như “ăn chay vì yêu môi trường, yêu động vật”, “ăn chay vì
+              sức khoẻ”, “ăn chay vì… nó ngon”.{" "}
+            </p>
+            <br />
+            <p className="mb-auto align-top p content-start items-start">
+              Nhà hàng chay AN TRÚ tuy vận hành với quy mô nhỏ nhưng hứa hẹn sẽ
+              mang lại chất lượng cao từ món ăn, đồ uống đến phong cách phục vụ.
+              Chúng tôi luôn đề cao sự tận tâm, tận tình trong từng “điểm chạm”
+              để mang đến trải nghiệm trọn vẹn cho thực khách. Tất cả nhằm phá
+              bỏ quan điểm “ăn chay là phải khắc khổ” và thay bằng quan điểm mới
+              “ăn chay là phải sang, xịn”.
+            </p>
+            <br />
+            <p>
+              Nhà hàng chay AN TRÚ mang âm hưởng Phật Giáo Ứng Dụng vào cuộc
+              sống hiện đại, nên các chiến lược và đường lối kinh doanh đều dựa
+              trên lời dạy của Đức Phật và những vị Thầy đáng kính của chúng
+              tôi. Bởi lẽ đó, sự ủng hộ của quý thực khách là “tăng thượng
+              duyên” cho chúng tôi thực hiện sứ mệnh “chia sẻ một chút gì với
+              Nhân - Loài và Trái Đất”.
+            </p>
+          </div>
+        </section>
 
         {/* PHILOSOPHIES */}
         <section className="mt-16">
@@ -290,33 +313,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* <p>
-              Nhà hàng chay AN TRÚ phục vụ các món ăn chay lấy cảm hứng từ các
-              nước châu Á điển hình như Hàn Quốc và Nhật Bản, hoà điệu với văn
-              hoá ẩm thực chay Việt Nam để tạo nên màu sắc tươi mới, đương đại.
-              Qua đó, việc ăn chay trở nên dễ dàng và gần gũi hơn với giới trẻ,
-              nhằm giảm bớt yếu tố tín ngưỡng, tăng tính sở thích và lý tưởng cá
-              nhân như “ăn chay vì yêu môi trường, yêu động vật”, “ăn chay vì
-              sức khoẻ”, “ăn chay vì… nó ngon”.{" "}
-            </p>
-            <br />
-            <p>
-              Nhà hàng chay AN TRÚ tuy vận hành với quy mô nhỏ nhưng hứa hẹn sẽ
-              mang lại chất lượng cao từ món ăn, đồ uống đến phong cách phục vụ.
-              Chúng tôi luôn đề cao sự tận tâm, tận tình trong từng “điểm chạm”
-              để mang đến trải nghiệm trọn vẹn cho thực khách. Tất cả nhằm phá
-              bỏ quan điểm “ăn chay là phải khắc khổ” và thay bằng quan điểm mới
-              “ăn chay là phải sang, xịn”.
-            </p>
-            <br />
-            <p>
-              Nhà hàng chay AN TRÚ mang âm hưởng Phật Giáo Ứng Dụng vào cuộc
-              sống hiện đại, nên các chiến lược và đường lối kinh doanh đều dựa
-              trên lời dạy của Đức Phật và những vị Thầy đáng kính của chúng
-              tôi. Bởi lẽ đó, sự ủng hộ của quý thực khách là “tăng thượng
-              duyên” cho chúng tôi thực hiện sứ mệnh “chia sẻ một chút gì với
-              Nhân - Loài và Trái Đất”.
-            </p> */
-}
