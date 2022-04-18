@@ -96,8 +96,8 @@ const About = () => {
         {/* STORY */}
         <section className="mt-16 lg:flex lg:flex-row-reverse lg:mt-[200px]">
           <Heading order="02" title="CÂU CHUYỆN" />
-          <div className="lg:columns-2 lg:text-lg">
-            <p>
+          <div className="lg:columns-2 lg:text-lg lg:leading-8">
+            <p className="lg:pr-10">
               Nhà hàng chay AN TRÚ phục vụ các món ăn chay lấy cảm hứng từ các
               nước châu Á điển hình như Hàn Quốc và Nhật Bản, hoà điệu với văn
               hoá ẩm thực chay Việt Nam để tạo nên màu sắc tươi mới, đương đại.
@@ -107,7 +107,7 @@ const About = () => {
               sức khoẻ”, “ăn chay vì… nó ngon”.{" "}
             </p>
             <br />
-            <p className="mb-auto align-top p content-start items-start">
+            <p className="mb-auto align-top p content-start items-start lg:pr-10">
               Nhà hàng chay AN TRÚ tuy vận hành với quy mô nhỏ nhưng hứa hẹn sẽ
               mang lại chất lượng cao từ món ăn, đồ uống đến phong cách phục vụ.
               Chúng tôi luôn đề cao sự tận tâm, tận tình trong từng “điểm chạm”
@@ -116,7 +116,7 @@ const About = () => {
               “ăn chay là phải sang, xịn”.
             </p>
             <br />
-            <p>
+            <p className="lg:pr-10">
               Nhà hàng chay AN TRÚ mang âm hưởng Phật Giáo Ứng Dụng vào cuộc
               sống hiện đại, nên các chiến lược và đường lối kinh doanh đều dựa
               trên lời dạy của Đức Phật và những vị Thầy đáng kính của chúng
@@ -127,42 +127,19 @@ const About = () => {
           </div>
         </section>
 
-        {/* PHILOSOPHIES */}
-        <section className="mt-16">
-          <Heading order="02" title="TRIẾT LÝ" />
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm">
-            <Philosophy
-              title="Tầm nhìn"
-              content="Một cánh én vẫn quyết tâm kêu gọi mùa xuân."
-            />
-            <Philosophy
-              title="Sứ mệnh"
-              content="Chia sẻ một chút gì với Nhân - Loài và Trái Đất."
-            />
-            <Philosophy
-              title="Giá trị cốt lõi"
-              content="Hy sinh - Nhẫn nhục - Siêng năng - Chân thật - Tình thương."
-            />
-            <Philosophy
-              title="Cam kết xã hội"
-              content="Tuân thủ luật pháp và đạo đức bằng tình thương và sự hiểu biết."
-            />
-          </div>
-        </section>
-
-        <Divider />
+        {/* <Divider /> */}
 
         {/* MESSAGE */}
-        <section className="mt-16">
-          <Heading order="03" title="THÔNG ĐIỆP" />
-          <p className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm">
+        <section className="mt-[200px] lg:bg-[#3A563E] lg:text-center text-white lg:rounded-lg lg:p-28">
+          <h3 className="opacity-70 lg:mb-20">Chúng tôi tin rằng</h3>
+          <q className="max-w-xs mx-auto leading-8 text-[17px] text-opacity-70 md:max-w-sm lg:text-2xl">
             Nếu mỗi ngày bạn ăn một bữa chay, thì trong một tháng, bạn “vô tình”
             ăn chay được 10 ngày và giảm được ⅓ lượng thịt tiêu thụ một cách dễ
             dàng. Ăn chay không khó, ăn chay là phải sang, xịn.
-          </p>
+          </q>
         </section>
 
-        <Divider />
+        {/* <Heading order="03" title="THÔNG ĐIỆP" /> */}
 
         {/* FOUNDERS */}
         <section className="mt-16">
@@ -313,3 +290,28 @@ const About = () => {
 };
 
 export default About;
+
+{
+  /* PHILOSOPHIES
+        <section className="mt-16">
+          <Heading order="02" title="TRIẾT LÝ" />
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm">
+            <Philosophy
+              title="Tầm nhìn"
+              content="Một cánh én vẫn quyết tâm kêu gọi mùa xuân."
+            />
+            <Philosophy
+              title="Sứ mệnh"
+              content="Chia sẻ một chút gì với Nhân - Loài và Trái Đất."
+            />
+            <Philosophy
+              title="Giá trị cốt lõi"
+              content="Hy sinh - Nhẫn nhục - Siêng năng - Chân thật - Tình thương."
+            />
+            <Philosophy
+              title="Cam kết xã hội"
+              content="Tuân thủ luật pháp và đạo đức bằng tình thương và sự hiểu biết."
+            />
+          </div>
+        </section> */
+}
