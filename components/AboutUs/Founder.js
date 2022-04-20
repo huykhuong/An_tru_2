@@ -4,7 +4,7 @@ import Image from "next/image";
 const Founder = ({ name }) => {
   return (
     <div className="mb-20">
-      <div className="relative h-40 w-40 mx-auto md:h-48 md:w-48">
+      <div className="relative h-40 w-40 mx-auto md:h-48 md:w-48 lg:h-64 lg:w-64">
         <Image
           src="https://swiperjs.com/demos/images/nature-1.jpg"
           layout="fill"

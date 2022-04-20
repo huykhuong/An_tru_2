@@ -10,6 +10,7 @@ import Philosophy from "../../components/AboutUs/Philosophy";
 import Divider from "../../components/AboutUs/Divider";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Footer from "../../components/GeneralUI/Footer";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ const About = () => {
           pageWillBeExitingFrom === "about" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className="mt-40 lg:max-w-[1650px] xl:max-w-[1400px] mx-auto lg:px-10"
+        className="px-10 mt-40 lg:max-w-[1650px] xl:max-w-[1400px] mx-auto lg:px-10 lg:mb-[300px]"
       >
         {/* TITLE */}
         <section className="relative max-w-[256px] lg:max-w-[350px] h-20 lg:h-[100px] mx-auto mb-24 lg:mb-[200px]">
@@ -68,7 +69,7 @@ const About = () => {
         <section className="mt-[300px] lg:flex lg:space-x-20 lg:justify-between">
           <Heading order="01" title="TỔNG QUAN" />
           {/* <Heading order="01" title="TỔNG QUAN" /> */}
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm grid grid-cols-2 lg:mx-0">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-sm grid grid-cols-2 lg:mx-0">
             <p className="border-b font-bold text-lg py-5">Sức chứa</p>
             <p className="border-b text-lg py-5">32 chỗ</p>
             <p className="border-b font-bold text-lg py-5">Đóng cửa</p>
@@ -94,7 +95,7 @@ const About = () => {
         </section>
 
         {/* STORY */}
-        <section className="mt-16 lg:flex lg:flex-row-reverse lg:mt-[200px]">
+        <section className="mt-16 lg:flex lg:flex-row-reverse lg:mt-[400px]">
           <Heading order="02" title="CÂU CHUYỆN" />
           <div className="lg:columns-2 lg:text-lg lg:leading-8">
             <p className="lg:pr-10">
@@ -130,161 +131,38 @@ const About = () => {
         {/* <Divider /> */}
 
         {/* MESSAGE */}
-        <section className="mt-[200px] lg:bg-[#3A563E] lg:text-center text-white lg:rounded-lg lg:p-28">
-          <h3 className="opacity-70 lg:mb-20">Chúng tôi tin rằng</h3>
-          <q className="max-w-xs mx-auto leading-8 text-[17px] text-opacity-70 md:max-w-sm lg:text-2xl">
-            Nếu mỗi ngày bạn ăn một bữa chay, thì trong một tháng, bạn “vô tình”
-            ăn chay được 10 ngày và giảm được ⅓ lượng thịt tiêu thụ một cách dễ
-            dàng. Ăn chay không khó, ăn chay là phải sang, xịn.
-          </q>
+        <section className="mt-[400px] lg:text-center">
+          <img
+            src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
+            className="lg:h-[700px] lg:w-[450px] lg:inline-block lg:align-top"
+          />
+          <div className="lg:bg-[#3A563E] lg:bg-opacity-90 lg:-ml-[100px] lg:mt-[100px] lg:inline-block">
+            <h3 className="lg:text-4xl lg:p-36 lg:font-semibold lg:text-white">
+              Chúng tôi tin rằng
+            </h3>
+            <q className="max-w-xs mx-auto leading-8 text-[17px] text-opacity-70 md:max-w-sm lg:text-2xl  lg:text-white lg:flex lg:items-center lg:rounded-xl lg:mb-40">
+              Nếu mỗi ngày bạn ăn một bữa chay, thì trong một tháng, bạn “vô
+              tình” ăn chay được 10 ngày và giảm được ⅓ lượng thịt tiêu thụ một
+              cách dễ dàng. Ăn chay không khó, ăn chay là phải sang, xịn.
+            </q>
+          </div>
         </section>
-
-        {/* <Heading order="03" title="THÔNG ĐIỆP" /> */}
 
         {/* FOUNDERS */}
-        <section className="mt-16">
-          <Heading order="04" title="CÁC NHÀ SÁNG LẬP" />
-          <Founder name="Nguyễn Minh Đạt" />
-          <Founder name="Phan Duy Thịnh" />
-          <Founder name="Khương Chấn Huy" />
-        </section>
-
-        <Divider />
-
-        {/* CONTACT INFO */}
-        <section className="mt-16">
-          <Heading order="05" title="LIÊN LẠC" />
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7 col-span-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            }
-            text="230 Nguyễn Sơn, phường Phú Thọ Hòa, quận Tân Phú, TP. HCM"
-          />
-
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7 col-span-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-            }
-            text="0903940533"
-          />
-
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7 col-span-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                />
-              </svg>
-            }
-            text="nhahangchayantru.vn"
-          />
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7 col-span-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"
-                />
-              </svg>
-            }
-            text="nhahangchayantru@gmail.com"
-          />
-
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7 col-span-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
-                />
-              </svg>
-            }
-            text="Fax"
-          />
-
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 30 30"
-                className="h-7 w-7 col-span-1"
-                fill="#000000"
-              >
-                <path d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z"></path>
-              </svg>
-            }
-            text="Nhà hàng chay An Trú"
-          />
-          <ContactElement
-            svgPath={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="h-7 w-7 col-span-1"
-                fill="#000000"
-              >
-                <path
-                  id="ins-logo"
-                  key={"ins-logo"}
-                  d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
-                ></path>
-              </svg>
-            }
-            text="Nhà hàng chay An Trú"
-          />
+        <section className="mt-[400px]">
+          <div className="lg:w-fit lg:mx-auto">
+            <Heading order="04" title="CÁC NHÀ SÁNG LẬP" />
+          </div>
+          <div className="lg:flex lg:justify-evenly lg:mt-40">
+            <Founder name="Nguyễn Minh Đạt" />
+            <Founder name="Phan Duy Thịnh" />
+            <Founder name="Khương Chấn Huy" />
+          </div>
         </section>
       </motion.main>
+
+      {/* CONTACT INFO */}
+      <Footer />
     </Fragment>
   );
 };
