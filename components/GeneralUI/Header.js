@@ -32,12 +32,12 @@ const Header = () => {
     <header className="relative">
       {/* Contents */}
       <div
-        className={`flex justify-between items-center top-0 bg-[#fbfbfb] bottom-0 left-0 right-0 z-40 w-full px-10 py-4 h-fit mx-auto lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
+        className={`fixed flex justify-between items-center top-0 bg-[#fbfbfb] bottom-0 left-0 right-0 z-40 w-full px-10 py-4 h-fit mx-auto lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
           router.pathname === "/menu" ||
           router.pathname === "/menu/[slug]" ||
           router.pathname === "/"
-            ? "lg:absolute lg:bg-transparent"
-            : "fixed"
+            ? "lg:bg-transparent"
+            : ""
         } `}
       >
         {/* Logo and list items */}
@@ -50,8 +50,8 @@ const Header = () => {
           }}
           className={`${
             router.pathname === "/menu/[slug]" && !openMenuState
-              ? "invisible"
-              : "visible"
+              ? "lg:invisible"
+              : "lg:visible"
           } w-[50px] lg:w-[60px] lg:cursor-pointer relative z-30`}
         />
 

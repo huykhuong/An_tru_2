@@ -33,21 +33,15 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
       <div className="hidden lg:flex items-center justify-around">
         <div className="group w-[550px] h-full flex flex-shrink-0 items-center hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')] bg-no-repeat bg-cover bg-center">
           <div
-            className="w-[100%] h-[750px] pt-[100px] flex flex-col items-center justify-between border-l-[1px] border-[#272727] border-opacity-20 cursor-pointer"
+            className="w-[100%] h-[750px] pb-[100px] flex flex-col items-center justify-end space-y-10 border-l-[1px] border-[#272727] border-opacity-20 cursor-pointer"
             onClick={() => switchPage("/menu/1")}
           >
             <div>
               <h1 className="w-[300px] text-[3rem] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
                 {dishName}
-                {/* The <br />
-                night <br />
-                watch */}
               </h1>
-              {/* <p className="px-[8px] text-[12px] tracking-[1px] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
-                MDCLIIX
-              </p> */}
             </div>
-            <div className="text-[250px] mb-[50px] text-black transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+            <div className="text-[200px] mb-[50px] text-black transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
               {index + 1}
             </div>
           </div>
