@@ -4,10 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
 import { Fragment } from "react";
 import Heading from "../../components/AboutUs/Heading";
-import ContactElement from "../../components/AboutUs/ContactElement";
 import Founder from "../../components/AboutUs/Founder";
-import Philosophy from "../../components/AboutUs/Philosophy";
-import Divider from "../../components/AboutUs/Divider";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Footer from "../../components/GeneralUI/Footer";
@@ -49,12 +46,14 @@ const About = () => {
         className="px-10 mt-40 lg:max-w-[1650px] xl:max-w-[1400px] mx-auto lg:px-10 lg:mb-[300px]"
       >
         {/* TITLE */}
-        <section className="relative max-w-[256px] lg:max-w-[350px] h-20 lg:h-[100px] mx-auto mb-24 lg:mb-[200px]">
+        {/* <section className="relative max-w-[256px] lg:max-w-[350px] h-20 lg:h-[100px] mx-auto mb-24 lg:mb-[200px]">
           <h1 className="absolute left-0 top-0 text-4xl lg:text-5xl">
             Đôi điều
           </h1>
-          <h1 className="absolute right-0 bottom-0 text-5xl">về chúng tôi</h1>
-        </section>
+          <h1 className="absolute right-0 bottom-0 text-4xl lg:text-5xl">
+            về chúng tôi
+          </h1>
+        </section> */}
 
         <section>
           <blockquote className="mb-10 max-w-xs mx-auto text-center text-xl italic lg:text-3xl lg:max-w-sm">
@@ -95,9 +94,9 @@ const About = () => {
         </section>
 
         {/* STORY */}
-        <section className="mt-16 lg:flex lg:flex-row-reverse lg:mt-[400px]">
+        <section className="mt-[250px] lg:flex lg:flex-row-reverse lg:mt-[400px]">
           <Heading order="02" title="CÂU CHUYỆN" />
-          <div className="lg:columns-2 lg:text-lg lg:leading-8">
+          <div className="leading-8 lg:columns-2 lg:text-lg">
             <p className="lg:pr-10">
               Nhà hàng chay AN TRÚ phục vụ các món ăn chay lấy cảm hứng từ các
               nước châu Á điển hình như Hàn Quốc và Nhật Bản, hoà điệu với văn
@@ -131,16 +130,16 @@ const About = () => {
         {/* <Divider /> */}
 
         {/* MESSAGE */}
-        <section className="mt-[400px] lg:text-center">
+        <section className="mt-[250px] lg:mt-[400px] lg:text-center">
           <img
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-            className="lg:h-[700px] lg:w-[450px] lg:inline-block lg:align-top"
+            className="h-[550px] lg:h-[700px] lg:w-[450px] lg:inline-block lg:align-top"
           />
-          <div className="lg:bg-[#3A563E] lg:bg-opacity-90 lg:-ml-[100px] lg:mt-[100px] lg:inline-block">
-            <h3 className="lg:text-4xl lg:p-36 lg:font-semibold lg:text-white">
+          <div className="lg:bg-[#3A563E] lg:bg-opacity-90 lg:-ml-[150px] lg:mt-[100px] lg:inline-block">
+            <h3 className="my-10 font-semibold text-3xl lg:my-0 lg:text-4xl lg:p-36 lg:text-white">
               Chúng tôi tin rằng
             </h3>
-            <q className="max-w-xs mx-auto leading-8 text-[17px] text-opacity-70 md:max-w-sm lg:text-2xl  lg:text-white lg:flex lg:items-center lg:rounded-xl lg:mb-40">
+            <q className="max-w-xs mx-auto leading-8 lg;text-opacity-70 md:max-w-sm lg:text-2xl lg:text-white lg:flex lg:items-center lg:rounded-xl lg:mb-40">
               Nếu mỗi ngày bạn ăn một bữa chay, thì trong một tháng, bạn “vô
               tình” ăn chay được 10 ngày và giảm được ⅓ lượng thịt tiêu thụ một
               cách dễ dàng. Ăn chay không khó, ăn chay là phải sang, xịn.
@@ -149,7 +148,7 @@ const About = () => {
         </section>
 
         {/* FOUNDERS */}
-        <section className="mt-[400px]">
+        <section className="mt-[250px] lg:mt-[400px]">
           <div className="lg:w-fit lg:mx-auto">
             <Heading order="04" title="CÁC NHÀ SÁNG LẬP" />
           </div>
