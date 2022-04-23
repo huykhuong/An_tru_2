@@ -4,10 +4,6 @@ import { motion } from "framer-motion";
 
 import dynamic from "next/dynamic";
 
-const uss = dynamic(() => import("universalsmoothscroll"), {
-  ssr: false,
-});
-
 const DishesDivWrapper = (props) => {
   const onWheel = (e) => {
     // e.preventDefault();
@@ -27,7 +23,7 @@ const DishesDivWrapper = (props) => {
     <motion.div
       ref={scrollRef}
       id="dishes_wrapper"
-      className="w-[100%] mx-auto h-[calc(100vh-154.797px)] mt-2 mb-40 flex flex-wrap gap-y-4 gap-x-2 content-start overflow-y-scroll justify-center md:px-3 md:gap-x-5 lg:scrollbar-hide lg:overflow-x-auto lg:justify-start lg:gap-x-0 lg:px-0 lg:my-0 lg:flex-nowrap lg:h-[100vh] lg:mx-0"
+      className="w-[100%] mx-auto h-[calc(100vh-154.797px)] mt-[92px] mb-40 flex flex-wrap gap-y-4 gap-x-2 content-start overflow-y-scroll justify-center md:px-3 md:gap-x-5 lg:scrollbar-hide lg:overflow-x-auto lg:justify-start lg:gap-x-0 lg:px-0 lg:my-0 lg:flex-nowrap lg:h-[100vh] lg:mx-0"
       key={"dishes_wrapper"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

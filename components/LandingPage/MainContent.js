@@ -17,7 +17,7 @@ const MainContent = () => {
 
   return (
     <>
-      <section className="relative max-w-[425px] h-full mx-auto mt-40 flex flex-col flex-shrink-0 justify-center items-center gap-y-6 text-center lg:hidden">
+      <section className="relative max-w-[425px] md:max-w-[580px] h-full mx-auto mt-40 flex flex-col flex-shrink-0 justify-center items-center gap-y-6 text-center md:mt-[200px] lg:hidden">
         <div className="relative z-30">
           <div className="relative w-[310px] h-[450px] md:w-[450px] md:h-[530px] lg:w-[500px]">
             <Image
@@ -38,13 +38,13 @@ const MainContent = () => {
 
         <div className="bg-[#3A563E] bg-opacity-80 w-52 h-40 absolute z-[0] top-14 -left-6"></div>
 
-        <div className="bg-[#3A563E] bg-opacity-80 w-40 h-40 absolute z-[0] bottom-16 right-0">
+        <div className="bg-[#3A563E] bg-opacity-80 w-40 h-40 absolute z-[0] top-[360px] right-0 md:top-[430px]">
           <p className="text-white text-lg tracking-wider mt-28">
             Vegetarian House
           </p>
         </div>
 
-        <div className="mr-[270px] mt-20">
+        <div className="mb-[50px] mt-[140px] md:mt-[100px]">
           <Link href={"https://www.facebook.com/nhahangchayantru"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const MainContent = () => {
               width="30"
               height="30"
               viewBox="0 0 30 30"
-              className="inline-block mr-2 lg:cursor-pointer"
+              className="inline-block mr-5 lg:cursor-pointer"
             >
               {" "}
               <path
@@ -72,7 +72,7 @@ const MainContent = () => {
               height="30"
               viewBox="0 0 24 24"
               style={{ fill: "#000000" }}
-              className="inline-block mr-2 lg:cursor-pointer"
+              className="inline-block mr-5 lg:cursor-pointer"
             >
               {" "}
               <path

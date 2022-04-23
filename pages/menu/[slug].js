@@ -86,7 +86,7 @@ const DishDetail = () => {
         }
         transition={{ duration: 0.6 }}
         // onWheel={onWheel}
-        className="pt-10 w-[100%] h-[calc(100vh-64px)] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:cursor-pointer lg:overflow-x-auto lg:scrollbar-hide lg:h-screen lg:pt-0"
+        className="mt-[100px] pt-10 w-[100%] h-[calc(100vh-64px)] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:cursor-pointer lg:overflow-x-auto lg:scrollbar-hide lg:h-screen lg:pt-0"
       >
         <TitleAndPrice />
 
