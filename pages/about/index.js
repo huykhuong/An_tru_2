@@ -130,16 +130,16 @@ const About = () => {
         {/* <Divider /> */}
 
         {/* MESSAGE */}
-        <section className="mt-[250px] lg:mt-[400px] lg:text-center">
+        <section className="md:text-center mt-[250px] lg:mt-[400px]">
           <img
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-            className="h-[550px] lg:h-[700px] lg:w-[450px] lg:inline-block lg:align-top"
+            className="h-[550px] md:h-[700px] md:w-[450px] md:inline-block md:align-top"
           />
-          <div className="lg:bg-[#3A563E] lg:bg-opacity-90 lg:-ml-[150px] lg:mt-[100px] lg:inline-block">
-            <h3 className="my-10 font-semibold text-3xl lg:my-0 lg:text-4xl lg:p-36 lg:text-white">
+          <div className="md:bg-[#3A563E] md:bg-opacity-90 md:-ml-[320px] md:mt-[150px]  md:inline-block lg:-ml-[150px] lg:mt-[100px]">
+            <h3 className="my-10 font-semibold text-3xl md:my-0 md:text-4xl md:p-36 md:text-white">
               Chúng tôi tin rằng
             </h3>
-            <q className="max-w-xs mx-auto leading-8 lg;text-opacity-70 md:max-w-sm lg:text-2xl lg:text-white lg:flex lg:items-center lg:rounded-xl lg:mb-40">
+            <q className="max-w-xs mx-auto leading-8 lg;text-opacity-70 md:max-w-sm lg:text-2xl md:text-white md:flex md:items-center md:rounded-xl md:mb-40">
               Nếu mỗi ngày bạn ăn một bữa chay, thì trong một tháng, bạn “vô
               tình” ăn chay được 10 ngày và giảm được ⅓ lượng thịt tiêu thụ một
               cách dễ dàng. Ăn chay không khó, ăn chay là phải sang, xịn.
