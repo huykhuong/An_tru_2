@@ -7,7 +7,7 @@ const BottomContents = ({
   numberOfDish,
 }) => {
   return (
-    <section className="w-full px-[21.25px] py-5 fixed bottom-0 flex items-center justify-between lg:px-32 2xl:px-[280px]">
+    <section className="w-full px-[21.25px] pt-[10px] pb-5 fixed bottom-0 flex items-center justify-between lg:px-32 2xl:px-[280px]">
       {/* selected filter option */}
       <h1 className="font-medium text-[17px] text-white bg-[#3A563E] rounded-sm px-3 py-1 lg:px-5 lg:py-3">
         {filter_options[selectedFilterOption]} ({numberOfDish})
