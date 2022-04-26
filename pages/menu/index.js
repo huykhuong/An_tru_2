@@ -53,11 +53,13 @@ const Menu = () => {
     } else if (value === 1) {
       setNumberOfDish(mon_soi.length);
     } else if (value === 2) {
-      setNumberOfDish(mon_canh.length);
-    } else if (value === 3) {
       setNumberOfDish(mon_rau.length);
-    } else if (value === 4) {
+    } else if (value === 3) {
       setNumberOfDish(mon_an_kem.length);
+    } else if (value === 4) {
+      setNumberOfDish(trang_mieng.length);
+    } else if (value === 5) {
+      setNumberOfDish(do_uong.length);
     }
   };
 
