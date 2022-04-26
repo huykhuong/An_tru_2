@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const BottomFilterModal = (props) => {
   return (
     <motion.section
-      className="w-full h-[200px] bg-white rounded-t-lg absolute z-[60] bottom-0 p-6 lg:w-[300px] lg:h-full lg:flex lg:flex-col lg:top-0 lg:right-0 lg:justify-start lg:bg-[#3A563E]"
+      className="w-full h-[200px] bg-white rounded-t-lg fixed z-[60] bottom-0 p-6 lg:w-[300px] lg:h-full lg:flex lg:flex-col lg:top-0 lg:right-0 lg:justify-start lg:bg-[#3A563E]"
       key={"modal"}
       initial={{ y: "100%" }}
       animate={props.openFilterModal ? { y: 0 } : { y: "100%" }}
