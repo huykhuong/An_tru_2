@@ -22,7 +22,9 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
       >
         <img
           className="w-[98%] mx-auto rounded-t-md rounded-r-md"
-          src="https://swiperjs.com/demos/images/nature-1.jpg"
+          src={
+            dishImg ? dishImg : "https://swiperjs.com/demos/images/nature-1.jpg"
+          }
         />
         <h1 className="px-3 mt-3 text-[18px] leading-6 font-bold">
           {dishName}

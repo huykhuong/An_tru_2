@@ -11,7 +11,6 @@ import DishCard from "../../components/MenuPage/DishCard";
 import {
   do_uong,
   mon_an_kem,
-  mon_canh,
   mon_com,
   mon_rau,
   mon_soi,
@@ -167,6 +166,7 @@ const Menu = () => {
                 key={item.name}
                 dishName={item.name}
                 dishPrice={item.price}
+                dishImg={item.img}
                 index={index}
               />
             ))}

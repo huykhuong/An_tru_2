@@ -33,9 +33,10 @@ const Header = () => {
       {/* Contents */}
       <div
         className={`fixed flex justify-between items-center top-0 bg-[#fbfbfb] bottom-0 left-0 right-0 z-40 w-full px-5 py-4 h-fit mx-auto md:px-10 lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
-          router.pathname === "/menu" || router.pathname === "/menu/[slug]"
-            ? // router.pathname === "/"
-              "sticky lg:bg-transparent"
+          router.pathname === "/menu" ||
+          router.pathname === "/menu/[slug]" ||
+          router.pathname === "/"
+            ? "lg:bg-transparent"
             : ""
         } `}
       >

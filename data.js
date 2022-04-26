@@ -198,21 +198,25 @@ export const do_uong = [
     name: "Nước suối (chai thủy tinh)",
     price: 47000,
     type: "Đồ Uống",
+    img: "https://albamineralwater.com/wp-content/uploads/2020/04/Glass-Still-450ml-1.jpg",
   },
   {
     name: "Dừa tắc Cocoxim",
     price: 47000,
     type: "Đồ Uống",
+    img: "https://www.minhcaumart.vn/media/com_eshop/products/8938507849018.jpg",
   },
   {
     name: "Coca-cola",
     price: 47000,
     type: "Đồ Uống",
+    img: "https://grocerybazaar.pk/wp-content/uploads/2020/04/1117826-1.jpeg",
   },
   {
     name: "Pepsi",
     price: 47000,
     type: "Đồ Uống",
+    img: "https://cdn.shopify.com/s/files/1/0498/9075/4727/products/pepsi-can-250-ml-216930_800x.jpg?v=1621949090",
   },
 ];
 
