@@ -39,7 +39,7 @@ const MainContent = () => {
         <div className="bg-[#3A563E] bg-opacity-80 w-52 h-40 absolute z-[0] top-14 -left-6"></div>
 
         <div className="bg-[#3A563E] bg-opacity-80 w-40 h-40 absolute z-[0] top-[360px] right-0 md:top-[430px]">
-          <p className="text-white text-lg tracking-wider mt-28">
+          <p className="text-white text-[15px] tracking-wider mt-28">
             Vegetarian House
           </p>
         </div>

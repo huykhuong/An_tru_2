@@ -58,7 +58,7 @@ export const mon_soi = [
     type: "Món sợi (khô)",
   },
   {
-    name: "Mì trộn Japchae",
+    name: "Miến trộn Japchae",
     price: 73000,
     type: "Món sợi (khô)",
   },
@@ -132,7 +132,7 @@ export const trang_mieng = [
     type: "Tráng miệng",
   },
   {
-    name: "Canh Tomyum nấm",
+    name: "Sữa chua trái cây",
     price: 47000,
     type: "Tráng miệng",
   },

@@ -9,12 +9,13 @@ import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3A563E] text-white flex flex-col justify-center items-start px-5 py-10 mx-auto gap-y-10 md:flex-row md:max-w-full md:space-x-12 lg:flex-row lg:px-20 lg:gap-x-20 xl:px-48 ">
+    <footer className="bg-[#3A563E] text-white flex flex-col justify-center items-start px-5 py-10 mx-auto gap-y-10 md:flex-row md:max-w-full md:space-x-12 lg:px-20 lg:gap-x-20 xl:px-48 ">
       {/* The restaurant */}
-      <div className="md:flex-1/3">
+      <div className="md:flex-1/4">
         <h1 className="text-2xl">Nhà hàng chay An Trú</h1>
-        <p className="paragraph mt-4 text-white opacity-80 md:w-[150px]">
-          Cảm ơn quý khách đã dành sự quan tâm đến chúng tôi
+        <p className="paragraph mt-4 text-white opacity-80 italic">
+          Chân thành cảm ơn quý khách đã dành sự quan tâm đến nhà hàng của chúng
+          tôi
         </p>
       </div>
       {/* Overall div of opening time and social links */}
@@ -22,13 +23,13 @@ const Footer = () => {
         {/* Opening time */}
         <div>
           <div>
-            <h1 className="text-xl">Giờ hoạt động 1</h1>
+            <h1 className="text-xl">Bữa trưa</h1>
             <p className="paragraph mt-4 text-white opacity-80">
               Từ 10h sáng - 2h chiều
             </p>
           </div>
           <div>
-            <h1 className="text-xl mt-4">Giờ hoạt động 2</h1>
+            <h1 className="text-xl mt-10">Bữa tối</h1>
             <p className="paragraph mt-4 text-white opacity-80">
               Từ 5h chiều - 9h tối
             </p>
@@ -50,26 +51,22 @@ const Footer = () => {
           <div className="flex">
             <PhoneIcon className="h-6 w-6" />
             <div>
-              <p className="paragraph text-white opacity-80">
-                000 (123) 456 7890
-              </p>
+              <p className="ml-2 text-white opacity-80">000 (123) 456 7890</p>
             </div>
           </div>
 
           <div className="flex">
             <LocationMarkerIcon className="h-6 w-6" />
             <div>
-              <p className="paragraph text-white opacity-80">
-                198 West 21th Street
-              </p>
+              <p className="ml-2 text-white opacity-80">198 West 21th Street</p>
             </div>
           </div>
 
           <div className="flex">
             <MailIcon className="h-6 w-6" />
             <div>
-              <p className="paragraph text-white opacity-80">
-                nhahangantru@gmail.com
+              <p className="ml-2 text-white opacity-80">
+                nhahangchayantru@gmail.com
               </p>
             </div>
           </div>

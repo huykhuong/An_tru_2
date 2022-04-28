@@ -68,24 +68,32 @@ const About = () => {
         <section className="mt-[300px] lg:flex lg:space-x-20 lg:justify-between">
           <Heading order="01" title="TỔNG QUAN" />
           {/* <Heading order="01" title="TỔNG QUAN" /> */}
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-sm grid grid-cols-2 lg:mx-0">
-            <p className="border-b font-bold text-lg py-5">Sức chứa</p>
-            <p className="border-b text-lg py-5">32 chỗ</p>
-            <p className="border-b font-bold text-lg py-5">Đóng cửa</p>
-            <p className="border-b text-lg py-5">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-sm grid grid-cols-3 lg:mx-0">
+            <p className="border-b font-bold text-lg py-5 col-span-1">
+              Sức chứa
+            </p>
+            <p className="border-b text-lg py-5 col-span-2">32 chỗ</p>
+            <p className="border-b font-bold text-lg py-5 col-span-1">
+              Đóng cửa
+            </p>
+            <p className="border-b text-lg py-5 col-span-2">
               Thứ 2 hàng tuần (trừ các ngày Mùng 1 & 15 âm lịch)
             </p>
-            <p className="border-b font-bold text-lg py-5">Giờ mở cửa</p>
-            <div className="border-b text-lg py-5">
+            <p className="border-b font-bold text-lg py-5 pr-2 col-span-1">
+              Giờ mở cửa
+            </p>
+            <div className="border-b text-lg py-5 col-span-2">
               <p>- Bữa trưa: 10:00 - 14:00 (Đơn cuối 13:30)</p>
               <p>- Bữa tối : 17:00 - 21:00 (Đơn cuối 20:30)</p>
             </div>
-            <p className="font-bold text-lg py-5">Địa điểm</p>
-            <p className="text-lg py-5">Lầu 1 & 2, 230 Nguyễn Sơn, Tân Phú</p>
+            <p className="font-bold text-lg py-5 col-span-1">Địa điểm</p>
+            <p className="text-lg py-5 col-span-2">
+              230 Nguyễn Sơn, Phú Thọ Hòa, Tân Phú, Tp.HCM
+            </p>
           </div>
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm grid grid-cols-2 lg:mx-0">
-            <p className="font-bold text-lg py-5">Đặt bàn</p>
-            <p className="text-lg py-5">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm grid grid-cols-3 lg:mx-0">
+            <p className="font-bold text-lg py-5 col-span-1">Đặt bàn</p>
+            <p className="text-lg py-5 col-span-2">
               Nếu quý khách đi theo nhóm từ 5 đến 12 người, hoan hỉ liên hệ đặt
               bàn (qua điện thoại, Facebook, Instagram, Zalo) để chúng tôi phục
               vụ quý khách tốt hơn. Trân trọng cảm ơn quý khách
@@ -135,7 +143,7 @@ const About = () => {
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
             className="h-[550px] md:h-[700px] md:w-[450px] md:inline-block md:align-top"
           />
-          <div className="md:bg-[#3A563E] md:bg-opacity-90 md:-ml-[320px] md:mt-[150px]  md:inline-block lg:-ml-[150px] lg:mt-[100px]">
+          <div className="md:bg-[#3A563E] md:bg-opacity-90 md:-ml-[370px] md:mt-[150px] md:inline-block lg:-ml-[150px] lg:mt-[100px]">
             <h3 className="my-10 font-semibold text-3xl md:my-0 md:text-4xl md:p-36 md:text-white">
               Chúng tôi tin rằng
             </h3>
