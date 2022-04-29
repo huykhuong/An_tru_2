@@ -90,7 +90,7 @@ const DishDetail = () => {
       >
         <TitleAndPrice />
 
-        <section className="relative w-[100vw] h-[100vw] lg:w-[50vw] lg:h-screen lg:flex-shrink-0">
+        <section className="relative w-[100vw] h-[100vw] lg:w-[50vw] lg:h-[100vh] lg:flex-shrink-0">
           <Image
             src="https://swiperjs.com/demos/images/nature-1.jpg"
             layout="fill"

@@ -8,7 +8,7 @@ const TitleAndPrice = ({ vn_name, eng_name, price }) => {
       </p> */}
       <h1 className="text-7xl lg:text-[8vw]">Cơm chiên Omurice</h1>
       <div className="flex justify-between items-center mt-10 lg:mt-16 mb-5">
-        <div className="lg:flex-col lg:space-y-5">
+        <div className="lg:flex-col space-y-5">
           <h2 className="italic text-xl lg:text-[20px]">Omurice Fried Rice</h2>
           <p className="text-lg lg:text-[20px]">73</p>
         </div>
