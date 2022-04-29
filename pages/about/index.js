@@ -8,6 +8,7 @@ import Founder from "../../components/AboutUs/Founder";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Footer from "../../components/GeneralUI/Footer";
+import Space from "../../components/AboutUs/Space";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -68,7 +69,7 @@ const About = () => {
         <section className="mt-[300px] lg:flex lg:space-x-20 lg:justify-between">
           <Heading order="01" title="TỔNG QUAN" />
           {/* <Heading order="01" title="TỔNG QUAN" /> */}
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-sm grid grid-cols-3 lg:mx-0">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-2xl grid grid-cols-3 lg:mx-0">
             <p className="border-b font-bold text-lg py-5 col-span-1">
               Sức chứa
             </p>
@@ -91,7 +92,7 @@ const About = () => {
               230 Nguyễn Sơn, Phú Thọ Hòa, Tân Phú, Tp.HCM
             </p>
           </div>
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-sm grid grid-cols-3 lg:mx-0">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-2xl grid grid-cols-3 lg:mx-0">
             <p className="font-bold text-lg py-5 col-span-1">Đặt bàn</p>
             <p className="text-lg py-5 col-span-2">
               Nếu quý khách đi theo nhóm từ 5 đến 12 người, hoan hỉ liên hệ đặt
@@ -155,10 +156,16 @@ const About = () => {
           </div>
         </section>
 
+        {/* RESTAURANT SPACE */}
+        <section className="mt-[250px] lg:mt-[400px]">
+          <Heading order="04" title="KHÔNG GIAN" />
+          <Space />
+        </section>
+
         {/* FOUNDERS */}
         <section className="mt-[250px] lg:mt-[400px]">
           <div className="lg:w-fit lg:mx-auto">
-            <Heading order="04" title="CÁC NHÀ SÁNG LẬP" />
+            <Heading order="05" title="CÁC NHÀ SÁNG LẬP" />
           </div>
           <div className="lg:flex lg:justify-evenly lg:mt-40">
             <Founder name="Nguyễn Minh Đạt" />
