@@ -76,7 +76,7 @@ export const mon_soi = [
 
 export const mon_rau = [
   {
-    name: "Xà lách tương giấm/ mè đen",
+    name: "Xà lách tương giấm / mè đen",
     price: 73000,
     type: "Món rau",
   },

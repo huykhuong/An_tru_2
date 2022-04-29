@@ -84,7 +84,7 @@ const About = () => {
             </p>
             <div className="border-b text-lg py-5 col-span-2">
               <p>- Bữa trưa: 10:00 - 14:00 (Đơn cuối 13:30)</p>
-              <p>- Bữa tối : 17:00 - 21:00 (Đơn cuối 20:30)</p>
+              <p>- Bữa tối: 17:00 - 21:00 (Đơn cuối 20:30)</p>
             </div>
             <p className="font-bold text-lg py-5 col-span-1">Địa điểm</p>
             <p className="text-lg py-5 col-span-2">

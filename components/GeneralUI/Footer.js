@@ -13,7 +13,7 @@ const Footer = () => {
       {/* The restaurant */}
       <div className="md:flex-1/4">
         <h1 className="text-2xl">Nhà hàng chay An Trú</h1>
-        <p className="paragraph mt-4 text-white opacity-80 italic">
+        <p className="w-fit mt-4 text-white opacity-80 italic">
           Chân thành cảm ơn quý khách đã dành sự quan tâm đến nhà hàng của chúng
           tôi
         </p>

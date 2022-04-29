@@ -24,9 +24,10 @@ const MainContent = () => {
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
               objectFit="cover"
               layout="fill"
+              className="rounded-t-md rounded-br-md"
             />
           </div>
-          <div className="bg-black bg-opacity-40 absolute top-0 flex flex-col justify-start items-center w-full h-full">
+          <div className="bg-black bg-opacity-40 absolute top-0 flex flex-col justify-start items-center w-full h-full rounded-t-lg rounded-br-lg">
             <h1 className=" py-10 text-2xl text-white tracking-widest font-medium md:text-4xl">
               Nhà hàng chay
             </h1>
@@ -36,9 +37,9 @@ const MainContent = () => {
           </div>
         </div>
 
-        <div className="bg-[#3A563E] bg-opacity-80 w-52 h-40 absolute z-[0] top-14 -left-6"></div>
+        <div className="bg-[#3A563E] bg-opacity-80 w-52 h-40 absolute z-[0] top-14 -left-6 rounded-t-lg rounded-br-lg"></div>
 
-        <div className="bg-[#3A563E] bg-opacity-80 w-40 h-40 absolute z-[0] top-[360px] right-0 md:top-[430px]">
+        <div className="bg-[#3A563E] bg-opacity-80 w-40 h-40 absolute z-[0] top-[360px] right-0 rounded-t-lg rounded-br-lg md:top-[430px]">
           <p className="text-white text-[15px] tracking-wider mt-28">
             Vegetarian House
           </p>
@@ -115,6 +116,7 @@ const MainContent = () => {
                 src="https://images.unsplash.com/photo-1616362258595-28a25ece05f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                 objectFit="cover"
                 layout="fill"
+                className="rounded-t-lg rounded-br-lg"
               />
               <div className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300">
                 <p className="text-3xl">Về chúng tôi</p>
@@ -125,6 +127,7 @@ const MainContent = () => {
                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
                 objectFit="cover"
                 layout="fill"
+                className="rounded-t-lg rounded-br-lg"
               />
               <div className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300">
                 <p className="text-3xl">Không gian</p>
@@ -135,6 +138,7 @@ const MainContent = () => {
                 src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                 objectFit="cover"
                 layout="fill"
+                className="rounded-t-lg rounded-br-lg"
               />
               <div className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300">
                 <p className="text-3xl">Menu</p>

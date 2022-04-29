@@ -44,32 +44,32 @@ const DishDetail = () => {
         }, 1100);
       }
     });
-    const slider = document.getElementById("dish_detail_page");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    // const slider = document.getElementById("dish_detail_page");
+    // let isDown = false;
+    // let startX;
+    // let scrollLeft;
 
-    slider.addEventListener("mousedown", (e) => {
-      isDown = true;
-      slider.classList.add("active");
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener("mouseleave", () => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mouseup", () => {
-      isDown = false;
-      slider.classList.remove("active");
-    });
-    slider.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 5; //scroll-fast
-      slider.scrollLeft = scrollLeft - walk;
-    });
+    // slider.addEventListener("mousedown", (e) => {
+    //   isDown = true;
+    //   slider.classList.add("active");
+    //   startX = e.pageX - slider.offsetLeft;
+    //   scrollLeft = slider.scrollLeft;
+    // });
+    // slider.addEventListener("mouseleave", () => {
+    //   isDown = false;
+    //   slider.classList.remove("active");
+    // });
+    // slider.addEventListener("mouseup", () => {
+    //   isDown = false;
+    //   slider.classList.remove("active");
+    // });
+    // slider.addEventListener("mousemove", (e) => {
+    //   if (!isDown) return;
+    //   e.preventDefault();
+    //   const x = e.pageX - slider.offsetLeft;
+    //   const walk = (x - startX) * 5; //scroll-fast
+    //   slider.scrollLeft = scrollLeft - walk;
+    // });
   }, []);
 
   return (
@@ -86,7 +86,7 @@ const DishDetail = () => {
         }
         transition={{ duration: 0.6 }}
         // onWheel={onWheel}
-        className="mt-[100px] pt-10 w-[100%] overflow-y-scroll lg:flex lg:overflow-y-hidden lg:cursor-pointer lg:overflow-x-auto lg:mt-0 lg:scrollbar-hide lg:h-screen lg:pt-0"
+        className="mt-[100px] mb-20 pt-10 w-[100%] overflow-y-scroll lg:mb-0 lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:mt-0 lg:scrollbar-hide lg:h-screen lg:pt-0"
       >
         <TitleAndPrice />
 
@@ -98,15 +98,17 @@ const DishDetail = () => {
           />
         </section>
 
-        <Ingredients />
+        {/* <Ingredients /> */}
 
-        <AllergyWarning />
+        <div className="lg:hidden">
+          <AllergyWarning />
+        </div>
 
         {/* Gallery */}
-        <ImageGallery />
+        {/* <ImageGallery /> */}
 
         {/* NEXT DISH */}
-        <NextDish />
+        {/* <NextDish /> */}
       </motion.main>
     </Fragment>
   );
