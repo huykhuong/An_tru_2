@@ -44,7 +44,7 @@ const About = () => {
           pageWillBeExitingFrom === "about" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className="px-10 mt-40 lg:max-w-[1650px] xl:max-w-[1400px] mx-auto lg:px-10 lg:mb-[300px]"
+        className="px-10 mt-40 mx-auto lg:max-w-[1650px] lg:mb-[300px] lg:mt-[300px] xl:max-w-[1400px]"
       >
         {/* TITLE */}
         {/* <section className="relative max-w-[256px] lg:max-w-[350px] h-20 lg:h-[100px] mx-auto mb-24 lg:mb-[200px]">
@@ -69,7 +69,7 @@ const About = () => {
         <section className="mt-[300px] lg:flex lg:space-x-20 lg:justify-between">
           <Heading order="01" title="TỔNG QUAN" />
           {/* <Heading order="01" title="TỔNG QUAN" /> */}
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-2xl grid grid-cols-3 lg:mx-0">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-2xl grid grid-cols-3 lg:max-w-sm lg:mx-0">
             <p className="border-b font-bold text-lg py-5 col-span-1">
               Sức chứa
             </p>
@@ -92,7 +92,7 @@ const About = () => {
               230 Nguyễn Sơn, Phú Thọ Hòa, Tân Phú, Tp.HCM
             </p>
           </div>
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-2xl grid grid-cols-3 lg:mx-0">
+          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-2xl grid grid-cols-3 lg:max-w-sm lg:mx-0">
             <p className="font-bold text-lg py-5 col-span-1">Đặt bàn</p>
             <p className="text-lg py-5 col-span-2">
               Nếu quý khách đi theo nhóm từ 5 đến 12 người, hoan hỉ liên hệ đặt
@@ -158,7 +158,9 @@ const About = () => {
 
         {/* RESTAURANT SPACE */}
         <section className="mt-[250px] lg:mt-[400px]">
-          <Heading order="04" title="KHÔNG GIAN" />
+          <div className="lg:w-fit lg:mx-auto">
+            <Heading order="04" title="KHÔNG GIAN" />
+          </div>
           <Space />
         </section>
 

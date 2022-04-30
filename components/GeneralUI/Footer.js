@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
 
           <div className="flex">
-            <LocationMarkerIcon className="h-8 w-8" />
+            <LocationMarkerIcon className="h-8 w-8 lg:h-7 lg:w-7" />
             <div>
               <p className="ml-2 text-white opacity-80">
                 230 Nguyễn Sơn, Phú Thọ Hòa, Tân Phú, Tp.HCM
