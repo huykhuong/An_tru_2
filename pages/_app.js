@@ -41,11 +41,6 @@ function MyApp({ Component, pageProps }) {
             content="#3A563E"
             media="(prefers-color-scheme: light)"
           />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta
-            name="apple-mobile-web-app-status-bar-style"
-            content="#3A563E"
-          />
         </Head>
 
         {loading ? (
