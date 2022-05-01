@@ -10,13 +10,13 @@ const BottomContents = ({
   return (
     <React.Fragment>
       {/* Mobile & Tablet */}
-      <section className="bg-[#3A563E] w-full px-[21.25px] py-[14px] fixed bottom-0 flex overflow-x-auto scrollbar-hide md:justify-center lg:hidden">
+      <section className="bg-[#3A563E] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden">
         {filter_options.map((name, index) => (
           <button
             onClick={() => {
               selectFilterOption(index);
             }}
-            className={`min-w-[120px] mr-5 py-[6px] px-[10px] border rounded-t-md rounded-br-md text-white text-sm font-bold outline-none md:mr-2 ${
+            className={`min-w-[120px] py-[6px] px-[10px] border rounded-t-md rounded-br-md text-white text-sm font-bold outline-none ${
               selectedFilterOption === index
                 ? "border-white border-1"
                 : "text-opacity-40 border-opacity-40 border-white"

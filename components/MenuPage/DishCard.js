@@ -17,11 +17,11 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
   return (
     <>
       <div
-        className="relative max-w-[183px] h-[300px] shadow-sm rounded-t-md rounded-r-md md:max-w-[248px] md:h-[380px] lg:max-w-[300px] lg:h-[400px] 2xl:max-w-[350px] bg-white lg:hidden"
+        className="relative max-w-[183px] h-[300px] shadow-lg rounded-t-xl rounded-br-xl md:max-w-[248px] md:h-[380px] lg:max-w-[300px] lg:h-[400px] 2xl:max-w-[350px] bg-white lg:hidden"
         onClick={() => switchPage("/menu/1")}
       >
         <img
-          className="w-[98%] mx-auto rounded-t-md rounded-r-md"
+          className="w-[98%] mx-auto rounded-t-xl rounded-r-xl"
           src={
             dishImg ? dishImg : "https://swiperjs.com/demos/images/nature-1.jpg"
           }
