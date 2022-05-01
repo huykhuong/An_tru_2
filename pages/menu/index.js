@@ -176,6 +176,7 @@ const Menu = () => {
         {/* Bottom contents consitsting of filter button and dish category heading */}
         <BottomContents
           setOpenFilterModal={setOpenFilterModal}
+          selectFilterOption={selectOption}
           filter_options={filter_options}
           selectedFilterOption={selectedFilterOption}
           numberOfDish={numberOfDish}
