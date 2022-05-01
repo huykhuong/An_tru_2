@@ -91,7 +91,6 @@ const Menu = () => {
         {/* <meta property="og:url" content="https://iron-fever.vn/"/> */}
         {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
         <meta property="og:site_name" content="Nhà hàng chay An Trú" />
-        <meta name="theme-color" content="#3A563E"></meta>
         <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
       </Head>
 
