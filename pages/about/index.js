@@ -25,8 +25,8 @@ const About = () => {
 
       if (as !== "/about" || as === "/about") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
-        dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
         setTimeout(() => {
+          dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
           router.replace(as);
         }, 1100);
       }
