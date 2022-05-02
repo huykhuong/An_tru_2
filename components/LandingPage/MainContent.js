@@ -31,7 +31,7 @@ const MainContent = () => {
             <h1 className=" py-10 text-2xl text-white tracking-widest font-medium md:text-4xl">
               Nhà hàng chay
             </h1>
-            <h1 className="w-fit text-9xl text-white font-bold md:w-[270px] md:text-[170px]">
+            <h1 className="w-fit text-9xl text-white font-bold md:w-[270px] md:text-[170px] font-akashi">
               An Trú
             </h1>
           </div>
@@ -107,7 +107,7 @@ const MainContent = () => {
         <div className="hidden lg:flex mt-0 mx-auto lg:h-[calc(100vh-105.766px)] lg:max-w-[1650px] xl:max-w-[1400px]">
           <div className="flex flex-col justify-center w-1/2 px-10 mt-[10vh]">
             <h2 className="text-lg">nhà hàng chay</h2>
-            <h1 className="text-9xl">An Trú</h1>
+            <h1 className="text-9xl font-akashi">An Trú</h1>
           </div>
 
           <div className="flex flex-col justify-center mx-auto mt-[8vh]">

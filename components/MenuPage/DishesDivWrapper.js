@@ -1,8 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-// import uss from "universalsmoothscroll";
-
-import dynamic from "next/dynamic";
 
 const DishesDivWrapper = (props) => {
   const onWheel = (e) => {

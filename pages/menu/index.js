@@ -118,7 +118,7 @@ const Menu = () => {
         <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
       </Head>
 
-      <Header />
+      {/* <Header /> */}
 
       <motion.main
         key={"menu_page"}

@@ -9,7 +9,7 @@ import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#000] text-white flex flex-col justify-center items-start px-5 py-10 mx-auto gap-y-10 md:flex-row md:max-w-full md:space-x-12 lg:px-20 lg:gap-x-20 xl:px-48 ">
+    <footer className="bg-[#3A563E] text-white flex flex-col justify-center items-start px-5 py-10 mx-auto gap-y-10 md:flex-row md:max-w-full md:space-x-12 lg:px-20 lg:gap-x-20 xl:px-48 ">
       {/* The restaurant */}
       <div className="md:flex-1/4">
         <h1 className="text-2xl">Nhà hàng chay An Trú</h1>

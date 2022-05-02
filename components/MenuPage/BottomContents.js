@@ -10,7 +10,7 @@ const BottomContents = ({
   return (
     <React.Fragment>
       {/* Mobile & Tablet */}
-      <section className="bg-[#3A563E] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden">
+      <section className="bg-[#000] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden">
         {filter_options.map((name, index) => (
           <button
             onClick={() => {

@@ -140,11 +140,6 @@ export const trang_mieng = [
 
 export const do_uong = [
   {
-    name: "Nước Detox",
-    price: 47000,
-    type: "Đồ Uống",
-  },
-  {
     name: "Trà Tắc mật ong",
     price: 47000,
     type: "Đồ Uống",
