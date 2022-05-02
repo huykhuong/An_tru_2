@@ -118,7 +118,7 @@ const Menu = () => {
         <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
       </Head>
 
-      {/* <Header /> */}
+      <Header />
 
       <motion.main
         key={"menu_page"}
@@ -127,7 +127,7 @@ const Menu = () => {
           pageWillBeExitingFrom === "menu" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className="lg:bg-transparent"
+        className="bg-white lg:bg-transparent"
       >
         {selectedFilterOption === 0 && (
           <DishesDivWrapper>
