@@ -22,6 +22,7 @@ export default function Home() {
 
       if (as !== "/" || as === "/") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
         setTimeout(() => {
           router.replace(as);
         }, 1100);

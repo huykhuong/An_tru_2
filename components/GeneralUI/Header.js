@@ -47,6 +47,7 @@ const Header = () => {
           onClick={() => {
             dispatch(uiActions.setOpenMenuFalse());
             dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
+            dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
             switchPage("/");
           }}
           className={`${
@@ -127,6 +128,7 @@ const Header = () => {
                 if (router.pathname === "/") return;
                 dispatch(uiActions.setOpenMenuFalse());
                 dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
+                dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
                 switchPage("/");
               }}
               className={`${
@@ -164,6 +166,7 @@ const Header = () => {
                 dispatch(
                   uiActions.setPageExitingFrom({ exitingPage: "about" })
                 );
+                dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
                 switchPage("/about");
               }}
               className={`${

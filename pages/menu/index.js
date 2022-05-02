@@ -77,6 +77,7 @@ const Menu = () => {
     });
   }, []);
 
+  //Stop the screen from scrolling when the modal is opened
   useEffect(() => {
     if (menuModalState) {
       const scrollY =
