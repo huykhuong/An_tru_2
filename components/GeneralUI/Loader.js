@@ -10,6 +10,7 @@ const Loader = () => {
         animate={{ opacity: [1, 0, 1] }}
         transition={{ duration: 3, repeat: Infinity, ease: [0.5, 0, 0, 1] }}
         src="/image.webp"
+        alt="loader-img"
         height={100}
         width={100}
       />

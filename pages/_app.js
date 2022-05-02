@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
           <meta charSet="UTF-8" />
           <meta
             name="viewport"
-            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,target-densitydpi=device-dpi"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,target-densitydpi=device-dpi,viewport-fit=cover"
           />
           <meta
             name="viewport"

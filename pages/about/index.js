@@ -143,6 +143,7 @@ const About = () => {
           <img
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
             className="h-[550px] md:h-[700px] md:w-[450px] md:inline-block md:align-top"
+            alt="message-img"
           />
           <div className="md:bg-[#3A563E] md:bg-opacity-90 md:-ml-[370px] md:mt-[150px] md:inline-block lg:-ml-[150px] lg:mt-[100px]">
             <h3 className="my-10 font-semibold text-3xl md:my-0 md:text-4xl md:p-36 md:text-white">

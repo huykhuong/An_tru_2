@@ -30,8 +30,8 @@ const BottomContents = ({
       {/* Pc & laptop */}
       <section className="hidden w-full bg-[#fbfbfb] px-[21.25px] pt-[10px] pb-5 fixed bottom-0 lg:inline-flex items-center justify-between lg:bg-transparent lg:px-32 2xl:px-[280px]">
         {/* selected filter option */}
-        <h1 className="font-medium text-[17px] text-white bg-[#3A563E] rounded-sm px-3 py-1 lg:px-5 lg:py-3">
-          {filter_options[selectedFilterOption]} ({numberOfDish})
+        <h1 className="rounded-t-lg rounded-br-lg font-medium text-[17px] text-white bg-[#3A563E] rounded-sm px-3 py-1 lg:px-5 lg:py-3">
+          {filter_options[selectedFilterOption]}
         </h1>
 
         <div className="flex items-center justify-center gap-x-1">
@@ -56,3 +56,5 @@ const BottomContents = ({
 };
 
 export default BottomContents;
+
+// ({numberOfDish})

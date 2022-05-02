@@ -79,11 +79,26 @@ const Menu = () => {
 
   useEffect(() => {
     if (menuModalState) {
-      document.body.style.overflow = "hidden";
+      const scrollY =
+        document.documentElement.style.getPropertyValue("--scroll-y");
+      const body = document.body;
+      body.style.position = "fixed";
+      body.style.top = `-${scrollY}`;
     } else {
-      document.body.style.overflow = "unset";
+      const body = document.body;
+      const scrollY = body.style.top;
+      body.style.position = "";
+      body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
   }, [menuModalState]);
+
+  window.addEventListener("scroll", () => {
+    document.documentElement.style.setProperty(
+      "--scroll-y",
+      `${window.scrollY}px`
+    );
+  });
 
   return (
     <div className="relative w-full">
@@ -112,7 +127,7 @@ const Menu = () => {
           pageWillBeExitingFrom === "menu" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className={`lg:bg-transparent ${menuModalState ? "fixed" : ""}`}
+        className="lg:bg-transparent"
       >
         {selectedFilterOption === 0 && (
           <DishesDivWrapper>

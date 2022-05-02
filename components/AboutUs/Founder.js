@@ -10,6 +10,7 @@ const Founder = ({ name }) => {
           layout="fill"
           objectFit="contain"
           className="rounded-full"
+          alt="founder-img"
         />
       </div>
       <p className="text-center text-xl mt-6 font-medium md:text-[22px]">

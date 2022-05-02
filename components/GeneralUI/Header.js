@@ -43,6 +43,7 @@ const Header = () => {
         {/* Logo and list items */}
         <img
           src="/logo.png"
+          alt="logo-img"
           onClick={() => {
             dispatch(uiActions.setOpenMenuFalse());
             dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));

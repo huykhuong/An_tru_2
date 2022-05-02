@@ -25,11 +25,14 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
           src={
             dishImg ? dishImg : "https://swiperjs.com/demos/images/nature-1.jpg"
           }
+          alt={dishName}
         />
-        <h1 className="px-3 mt-3 text-[18px] leading-6 font-bold">
+        <h1 className="px-3 mt-3 text-[18px] leading-6 font-bold text-[#3A563E]">
           {dishName}
         </h1>
-        <p className="ml-3 absolute bottom-3 md:bottom-5">{dishPrice}</p>
+        <p className="ml-3 absolute bottom-3 md:bottom-5 text-[#3A563E]">
+          {dishPrice}
+        </p>
       </div>
 
       <div className="hidden lg:flex items-center justify-around">
@@ -39,11 +42,11 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
             onClick={() => switchPage("/menu/1")}
           >
             <div>
-              <h1 className="w-[300px] text-[3rem] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+              <h1 className="w-[300px] text-[3rem] text-[#3A563E] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
                 {dishName}
               </h1>
             </div>
-            <div className="text-[200px] mb-[50px] text-black transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+            <div className="text-[200px] mb-[50px] text-[#3A563E] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
               {index + 1}
             </div>
           </div>
