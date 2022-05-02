@@ -112,7 +112,7 @@ const Menu = () => {
           pageWillBeExitingFrom === "menu" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className="lg:bg-transparent"
+        className={`lg:bg-transparent ${menuModalState ? "fixed" : ""}`}
       >
         {selectedFilterOption === 0 && (
           <DishesDivWrapper>

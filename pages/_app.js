@@ -37,12 +37,12 @@ function MyApp({ Component, pageProps }) {
           />
           <meta
             name="theme-color"
-            content="#242e52"
+            content="#3A563E"
             media="(prefers-color-scheme: dark)"
           />
           <meta
             name="theme-color"
-            content="#242e52"
+            content="#3A563E"
             media="(prefers-color-scheme: light)"
           />
           {/* <link
