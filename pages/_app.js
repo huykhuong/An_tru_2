@@ -29,16 +29,20 @@ function MyApp({ Component, pageProps }) {
           <meta charSet="UTF-8" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,target-densitydpi=device-dpi"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no"
           />
           <meta
             name="theme-color"
-            content="#3A563E"
+            content="#242e52"
             media="(prefers-color-scheme: dark)"
           />
           <meta
             name="theme-color"
-            content="#3A563E"
+            content="#242e52"
             media="(prefers-color-scheme: light)"
           />
           {/* <link

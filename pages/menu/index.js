@@ -39,6 +39,7 @@ const Menu = () => {
   const selectedFilterOption = useSelector(
     (state) => state.uiReducer.selectedFilterOption
   );
+  const menuModalState = useSelector((state) => state.uiReducer.openMenu);
 
   const dispatch = useDispatch();
   const router = useRouter();
@@ -75,6 +76,14 @@ const Menu = () => {
       }
     });
   }, []);
+
+  useEffect(() => {
+    if (menuModalState) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menuModalState]);
 
   return (
     <div className="relative w-full">
