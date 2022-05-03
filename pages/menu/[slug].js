@@ -33,17 +33,26 @@ const DishDetail = () => {
   };
 
   useEffect(() => {
-    dispatch(uiActions.setPageExitingFrom({ exitingPage: "dish_detail" }));
     router.beforePopState(({ url, as, options }) => {
       // I only want to allow these two routes!
-
-      if (url !== "/menu/[slug]" || url === "/menu/[slug]") {
+      if (url !== "/menu/[slug]") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        const scrollY =
+          document.documentElement.style.getPropertyValue("--scroll-y");
+        const body = document.getElementById("dish_detail_page");
+        body.style.position = "fixed";
+        body.style.top = `-${scrollY}`;
+
         setTimeout(() => {
           router.replace(as);
         }, 1100);
       }
     });
+  }, [router]);
+
+  useEffect(() => {
+    dispatch(uiActions.setPageExitingFrom({ exitingPage: "dish_detail" }));
+
     // const slider = document.getElementById("dish_detail_page");
     // let isDown = false;
     // let startX;
@@ -70,7 +79,7 @@ const DishDetail = () => {
     //   const walk = (x - startX) * 5; //scroll-fast
     //   slider.scrollLeft = scrollLeft - walk;
     // });
-  }, []);
+  }, [dispatch]);
 
   return (
     <Fragment>
@@ -86,7 +95,7 @@ const DishDetail = () => {
         }
         transition={{ duration: 0.6 }}
         // onWheel={onWheel}
-        className="mt-[100px] mb-20 pt-10 w-[100%] overflow-y-scroll lg:mb-0 lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:mt-0 lg:scrollbar-hide lg:h-screen lg:pt-0"
+        className="mt-[100px] mb-20 pt-10 w-[100%] lg:mb-0 lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:mt-0 lg:scrollbar-hide lg:h-screen lg:pt-0"
       >
         <TitleAndPrice />
 

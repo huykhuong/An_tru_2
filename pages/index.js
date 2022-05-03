@@ -16,18 +16,18 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
     router.beforePopState(({ url, as, options }) => {
-      // I only want to allow these two routes!
-
-      if (as !== "/" || as === "/") {
+      if (as !== "/") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
         setTimeout(() => {
-          dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
           router.replace(as);
         }, 1100);
       }
     });
+  }, [router]);
+
+  useEffect(() => {
+    dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
   }, [dispatch]);
 
   return (

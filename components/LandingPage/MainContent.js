@@ -31,7 +31,7 @@ const MainContent = () => {
             <h1 className=" py-10 text-2xl text-white tracking-widest font-medium md:text-4xl">
               Nhà hàng chay
             </h1>
-            <h1 className="w-fit text-9xl text-white font-bold md:w-[270px] md:text-[170px] font-akashi">
+            <h1 className="w-fit text-9xl text-white md:w-[270px] md:text-[170px] font-akashi">
               An Trú
             </h1>
           </div>

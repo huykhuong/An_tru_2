@@ -100,7 +100,7 @@ const Header = () => {
         initial={{ scaleY: 0 }}
         animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 0.65, ease: [0.85, 0.01, 0.4, 1] }}
-        className="h-screen w-full bg-[#3A563E] fixed top-0 right-0 bottom-0 z-40 flex flex-col lg:w-[300px]"
+        className="h-[calc(100vh-env(safe-area-inset-bottom))] w-full bg-[#3A563E] fixed top-0 right-0 bottom-0 z-40 flex flex-col lg:w-[300px]"
       >
         <div className="flex flex-col items-center flex-grow">
           <svg

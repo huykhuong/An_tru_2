@@ -19,19 +19,28 @@ const About = () => {
   );
 
   useEffect(() => {
-    dispatch(uiActions.setPageExitingFrom({ exitingPage: "about" }));
     router.beforePopState(({ url, as, options }) => {
       // I only want to allow these two routes!
-
-      if (as !== "/about" || as === "/about") {
+      if (as !== "/about") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        const scrollY =
+          document.documentElement.style.getPropertyValue("--scroll-y");
+        const body = document.getElementById("about_page");
+        body.style.position = "fixed";
+        body.style.top = `-${scrollY}`;
         setTimeout(() => {
-          dispatch(uiActions.setSelectedFilterOption({ value: 0 }));
           router.replace(as);
         }, 1100);
       }
     });
-  }, []);
+    return () => {
+      router.beforePopState(() => true);
+    };
+  }, [router]);
+
+  useEffect(() => {
+    dispatch(uiActions.setPageExitingFrom({ exitingPage: "about" }));
+  }, [dispatch]);
 
   return (
     <Fragment>

@@ -64,18 +64,27 @@ const Menu = () => {
   };
 
   useEffect(() => {
-    dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
     router.beforePopState(({ url, as, options }) => {
-      // I only want to allow these two routes!
-
-      if (as !== "/menu" || as === "/menu") {
+      if (as !== "/menu") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+        const scrollY =
+          document.documentElement.style.getPropertyValue("--scroll-y");
+        const body = document.getElementById("menu_page");
+        body.style.position = "fixed";
+        body.style.top = `-${scrollY}`;
         setTimeout(() => {
           router.replace(as);
         }, 1100);
       }
     });
-  }, []);
+    return () => {
+      router.beforePopState(() => true);
+    };
+  }, [router]);
+
+  useEffect(() => {
+    dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
+  }, [dispatch]);
 
   //Stop the screen from scrolling when the modal is opened
   useEffect(() => {
@@ -109,7 +118,6 @@ const Menu = () => {
           name="keywords"
           content="Menu, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay"
         />
-        <meta name="robots" content="noodp,index,follow" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Menu" />
         <meta property="og:description" content />
@@ -122,6 +130,7 @@ const Menu = () => {
       <Header />
 
       <motion.main
+        id="menu_page"
         key={"menu_page"}
         initial={{ opacity: 0 }}
         animate={
