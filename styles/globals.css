@@ -20,7 +20,6 @@ body {
   /* overflow: hidden; */
   font-family: Roboto, sans-serif;
   /* background-color: #3a563e; */
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 a {

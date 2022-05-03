@@ -67,11 +67,6 @@ const Menu = () => {
     router.beforePopState(({ url, as, options }) => {
       if (as !== "/menu") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
-        const scrollY =
-          document.documentElement.style.getPropertyValue("--scroll-y");
-        const body = document.getElementById("menu_page");
-        body.style.position = "fixed";
-        body.style.top = `-${scrollY}`;
         setTimeout(() => {
           router.replace(as);
         }, 1100);

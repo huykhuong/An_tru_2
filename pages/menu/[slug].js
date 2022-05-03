@@ -37,12 +37,6 @@ const DishDetail = () => {
       // I only want to allow these two routes!
       if (url !== "/menu/[slug]") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
-        const scrollY =
-          document.documentElement.style.getPropertyValue("--scroll-y");
-        const body = document.getElementById("dish_detail_page");
-        body.style.position = "fixed";
-        body.style.top = `-${scrollY}`;
-
         setTimeout(() => {
           router.replace(as);
         }, 1100);

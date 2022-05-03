@@ -23,11 +23,6 @@ const About = () => {
       // I only want to allow these two routes!
       if (as !== "/about") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
-        const scrollY =
-          document.documentElement.style.getPropertyValue("--scroll-y");
-        const body = document.getElementById("about_page");
-        body.style.position = "fixed";
-        body.style.top = `-${scrollY}`;
         setTimeout(() => {
           router.replace(as);
         }, 1100);
