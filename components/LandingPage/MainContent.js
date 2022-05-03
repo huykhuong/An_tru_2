@@ -2,12 +2,15 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../../store/ui-slice";
 
 {
   /* Middle content */
 }
 const MainContent = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const switchPage = (path) => {
     setTimeout(() => {
@@ -114,6 +117,7 @@ const MainContent = () => {
             <div className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] hover:-translate-y-[40px] transition-all duration-300 cursor-pointer">
               <Image
                 src="https://images.unsplash.com/photo-1616362258595-28a25ece05f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                alt="aboutus-image"
                 objectFit="cover"
                 layout="fill"
                 className="rounded-t-lg rounded-br-lg"
@@ -125,6 +129,7 @@ const MainContent = () => {
             <div className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[70px] xl:-mt-[120px] lg:-ml-[100px] hover:-translate-x-[40px] transition-all duration-300 cursor-pointer">
               <Image
                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+                alt="space-image"
                 objectFit="cover"
                 layout="fill"
                 className="rounded-t-lg rounded-br-lg"
@@ -133,9 +138,16 @@ const MainContent = () => {
                 <p className="text-3xl">Không gian</p>
               </div>
             </div>
-            <div className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[220px] lg:ml-[100px] xl:ml-[150px] hover:translate-x-[28px] transition-all duration-300 cursor-pointer">
+            <div
+              className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[220px] lg:ml-[100px] xl:ml-[150px] hover:translate-x-[28px] transition-all duration-300 cursor-pointer"
+              onClick={() => {
+                dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
+                switchPage("/menu");
+              }}
+            >
               <Image
                 src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                alt="menu-img"
                 objectFit="cover"
                 layout="fill"
                 className="rounded-t-lg rounded-br-lg"
