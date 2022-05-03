@@ -4,7 +4,6 @@ const BottomContents = ({
   setOpenFilterModal,
   filter_options,
   selectedFilterOption,
-  numberOfDish,
   selectFilterOption,
 }) => {
   return (
@@ -15,6 +14,7 @@ const BottomContents = ({
           <button
             onClick={() => {
               selectFilterOption(index);
+              window.scrollTo(0, 0); //new
             }}
             className={`min-w-[120px] py-[6px] px-[10px] border rounded-t-md rounded-br-md text-white text-sm font-bold outline-none ${
               selectedFilterOption === index
