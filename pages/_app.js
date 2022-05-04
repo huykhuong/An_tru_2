@@ -4,23 +4,30 @@ import { AnimatePresence } from "framer-motion";
 import { Provider } from "react-redux";
 import store from "../store";
 import { Router } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from "../components/GeneralUI/Loader";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
 
-  Router.events.on("routeChangeStart", () => {
-    setLoading(true);
-  });
+  useEffect(() => {
+    Router.events.on("routeChangeStart", () => {
+      setLoading(true);
+    });
 
-  Router.events.on("routeChangeComplete", () => {
-    setLoading(false);
-  });
+    Router.events.on("routeChangeComplete", () => {
+      setLoading(false);
+    });
 
-  Router.events.on("routeChangeError", () => {
-    setLoading(false);
-  });
+    Router.events.on("routeChangeError", () => {
+      setLoading(false);
+    });
+    return () => {
+      Router.events.off("routeChangeStart", () => {});
+      Router.events.off("routeChangeComplete", () => {});
+      Router.events.off("routeChangeError", () => {});
+    };
+  }, [Router.events]);
 
   return (
     <Provider store={store}>

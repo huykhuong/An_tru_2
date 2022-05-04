@@ -11,7 +11,6 @@ import { ImageGallery } from "../../components/DishDetailPage/ImageGallery";
 import NextDish from "../../components/DishDetailPage/NextDish";
 import { uiActions } from "../../store/ui-slice";
 import { useRouter } from "next/router";
-import restoreScrollPosition from "next-restore-scroll";
 
 const DishDetail = () => {
   const pageWillBeExitingFrom = useSelector(
@@ -38,7 +37,6 @@ const DishDetail = () => {
       // I only want to allow these two routes!
       if (url !== "/menu/[slug]") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
-
         setTimeout(() => {
           router.replace(as);
         }, 1100);
@@ -48,7 +46,6 @@ const DishDetail = () => {
 
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "dish_detail" }));
-
     // const slider = document.getElementById("dish_detail_page");
     // let isDown = false;
     // let startX;
