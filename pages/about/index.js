@@ -37,6 +37,13 @@ const About = () => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "about" }));
   }, [dispatch]);
 
+  window.addEventListener("scroll", () => {
+    document.documentElement.style.setProperty(
+      "--scroll-y",
+      `${window.scrollY}px`
+    );
+  });
+
   return (
     <Fragment>
       <Header />

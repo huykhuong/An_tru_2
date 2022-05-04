@@ -19,11 +19,6 @@ export default function Home() {
     router.beforePopState(({ url, as, options }) => {
       if (as !== "/") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
-        // const scrollY =
-        //   document.documentElement.style.getPropertyValue("--scroll-y");
-        // const body = document.getElementById("home_page");
-        // body.style.position = "fixed";
-        // body.style.top = `-${scrollY}`;
         setTimeout(() => {
           router.replace(as);
         }, 1100);
@@ -34,6 +29,13 @@ export default function Home() {
   useEffect(() => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "home" }));
   }, [dispatch]);
+
+  window.addEventListener("scroll", () => {
+    document.documentElement.style.setProperty(
+      "--scroll-y",
+      `${window.scrollY}px`
+    );
+  });
 
   return (
     <Fragment>

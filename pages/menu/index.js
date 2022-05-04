@@ -19,6 +19,7 @@ import {
 import BottomFilterModal from "../../components/MenuPage/BottomFilterModal";
 import DishesDivWrapper from "../../components/MenuPage/DishesDivWrapper";
 import { useRouter } from "next/router";
+import restoreScrollPosition from "next-restore-scroll";
 
 const filter_options = [
   "Món cơm",
@@ -67,6 +68,7 @@ const Menu = () => {
     router.beforePopState(({ url, as, options }) => {
       if (as !== "/menu") {
         dispatch(uiActions.setPageExitingFrom({ exitingPage: "" }));
+
         setTimeout(() => {
           router.replace(as);
         }, 1100);
