@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
           />
           <meta
             name="viewport"
-            content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no"
+            content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=no"
           />
           <meta name="theme-color" content="#3A563E"></meta>
 
