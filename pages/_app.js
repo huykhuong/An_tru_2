@@ -50,7 +50,12 @@ function MyApp({ Component, pageProps }) {
             sizes="256 x 256"
             href="favicon.ico"
           />
-          <link rel="apple-touch-icon" href="favicon.ico" />
+          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+          <link
+            rel="mask-icon"
+            href="apple-touch-icon.png"
+            color="#000000"
+          ></link>
         </Head>
 
         {loading ? (

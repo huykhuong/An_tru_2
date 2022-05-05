@@ -23,7 +23,7 @@ const BottomContents = ({
     <React.Fragment>
       {/* Mobile & Tablet */}
       <section
-        className="bg-[#3A563E] w-full pl-[21.25px] pr-[100.25px] py-[14px] fixed bottom-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden"
+        className="bg-[#3A563E] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 right-0 left-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden"
         id="mobile_bottom_contents"
       >
         {filter_options.map((name, index) => (
