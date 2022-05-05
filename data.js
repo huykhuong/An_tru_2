@@ -3,11 +3,13 @@ export const mon_com = [
     name: "Cơm chiên Omurice",
     price: 73000,
     type: "Cơm chảo",
+    img: "https://media.istockphoto.com/photos/omelet-picture-id1045956936?s=612x612",
   },
   {
     name: "Cơm chiên Kim Chi",
     price: 73000,
     type: "Cơm chảo",
+    img: "https://healthynibblesandbits.com/wp-content/uploads/2017/01/Kimchi-Fried-Rice-FF.jpg",
   },
   {
     name: "Cơm đậu hũ sốt Gochujang",

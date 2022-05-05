@@ -118,24 +118,6 @@ const Menu = () => {
           {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
           <meta property="og:site_name" content="Nhà hàng chay An Trú" />
           <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-          />
         </Head>
 
         <Header />
@@ -157,6 +139,7 @@ const Menu = () => {
                   key={item.name}
                   dishName={item.name}
                   dishPrice={item.price}
+                  dishImg={item.img}
                   index={index}
                 />
               ))}

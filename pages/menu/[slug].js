@@ -94,7 +94,7 @@ const DishDetail = () => {
 
         <section className="relative w-[100vw] h-[100vw] lg:w-[50vw] lg:h-[100vh] lg:flex-shrink-0">
           <Image
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
+            src="https://www.koreanbapsang.com/wp-content/uploads/2010/12/DSC_1106-e1454273856852.jpg"
             layout="fill"
             objectFit="cover"
           />

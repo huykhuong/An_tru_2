@@ -21,7 +21,7 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
         onClick={() => switchPage("/menu/1")}
       >
         <img
-          className="w-[98%] mx-auto rounded-t-xl rounded-r-xl"
+          className="w-[100%] mx-auto rounded-t-xl rounded-r-xl"
           src={
             dishImg ? dishImg : "https://swiperjs.com/demos/images/nature-1.jpg"
           }
