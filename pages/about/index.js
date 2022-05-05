@@ -13,7 +13,7 @@ import Space from "../../components/AboutUs/Space";
 const About = () => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { asPath } = useRouter();
+  const { href } = window.location;
 
   const pageWillBeExitingFrom = useSelector(
     (state) => state.uiReducer.pageExitingFrom
@@ -39,7 +39,8 @@ const About = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if ((asPath = "/about/#spaceSection")) {
+    console.log(href);
+    if (href === "http://localhost:3000/about#spaceSection") {
       document.getElementById(`spaceSection`).scrollIntoView({
         behavior: "smooth",
         block: "center",
