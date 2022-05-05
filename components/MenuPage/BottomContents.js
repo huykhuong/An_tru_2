@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const BottomContents = ({
   setOpenFilterModal,
@@ -6,12 +6,29 @@ const BottomContents = ({
   selectedFilterOption,
   selectFilterOption,
 }) => {
+  useEffect(() => {
+    // document
+    //   .getElementById("mobile_bottom_contents")
+    //   .scrollTo(
+    //     document.getElementById(`${selectedFilterOption}`).offset().left,
+    //     0
+    //   );
+    document.getElementById(`${selectedFilterOption}`).scrollIntoView({
+      behavior: "smooth",
+      inline: "end",
+    });
+  }, []);
+
   return (
     <React.Fragment>
       {/* Mobile & Tablet */}
-      <section className="bg-[#3A563E] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden">
+      <section
+        className="bg-[#3A563E] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden"
+        id="mobile_bottom_contents"
+      >
         {filter_options.map((name, index) => (
           <button
+            key={index}
             onClick={() => {
               selectFilterOption(index);
               window.scrollTo(0, 0); //new
@@ -21,6 +38,7 @@ const BottomContents = ({
                 ? "border-white border-1"
                 : "text-opacity-40 border-opacity-40 border-white"
             } lg:w-52 lg:mx-auto lg:text-4xl lg:px-0 lg:border-none lg:text-white`}
+            id={index}
           >
             {name}
           </button>
@@ -30,17 +48,17 @@ const BottomContents = ({
       {/* Pc & laptop */}
       <section className="hidden w-full bg-[#fbfbfb] px-[21.25px] pt-[10px] pb-5 fixed bottom-0 lg:inline-flex items-center justify-between lg:bg-transparent lg:px-32 2xl:px-[280px]">
         {/* selected filter option */}
-        <h1 className="rounded-t-lg rounded-br-lg font-medium text-[17px] text-white bg-[#3A563E] rounded-sm px-3 py-1 lg:px-5 lg:py-3">
+        <p className="rounded-t-lg rounded-br-lg font-medium text-[17px] text-white bg-[#3A563E] rounded-sm px-3 py-1 lg:px-5 lg:py-3">
           {filter_options[selectedFilterOption]}
-        </h1>
+        </p>
 
         <div className="flex items-center justify-center gap-x-1">
-          <h1
+          <p
             onClick={() => setOpenFilterModal(true)}
             className="font-bold text-[18px] lg:text-[20px]"
           >
             Phân Loại
-          </h1>
+          </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"

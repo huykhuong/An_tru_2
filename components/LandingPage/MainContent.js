@@ -109,7 +109,7 @@ const MainContent = () => {
       <section className="h-0 lg:relative lg:h-screen">
         <div className="hidden lg:flex mt-0 mx-auto lg:h-[calc(100vh-105.766px)] lg:max-w-[1650px] xl:max-w-[1400px]">
           <div className="flex flex-col justify-center w-1/2 px-10 mt-[10vh]">
-            <h2 className="text-lg">nhà hàng chay</h2>
+            <p className="text-lg">nhà hàng chay</p>
             <h1 className="text-9xl font-akashi">An Trú</h1>
           </div>
 
@@ -122,11 +122,27 @@ const MainContent = () => {
                 layout="fill"
                 className="rounded-t-lg rounded-br-lg"
               />
-              <div className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300">
+              <div
+                className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300"
+                onClick={() => {
+                  dispatch(
+                    uiActions.setPageExitingFrom({ exitingPage: "about" })
+                  );
+                  switchPage("/about");
+                }}
+              >
                 <p className="text-3xl">Về chúng tôi</p>
               </div>
             </div>
-            <div className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[70px] xl:-mt-[120px] lg:-ml-[100px] hover:-translate-x-[40px] transition-all duration-300 cursor-pointer">
+            <div
+              className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[70px] xl:-mt-[120px] lg:-ml-[100px] hover:-translate-x-[40px] transition-all duration-300 cursor-pointer"
+              onClick={() => {
+                dispatch(
+                  uiActions.setPageExitingFrom({ exitingPage: "about" })
+                );
+                switchPage("/about/#spaceSection");
+              }}
+            >
               <Image
                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
                 alt="space-image"

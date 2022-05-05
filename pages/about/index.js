@@ -13,6 +13,7 @@ import Space from "../../components/AboutUs/Space";
 const About = () => {
   const dispatch = useDispatch();
   const router = useRouter();
+  const { asPath } = useRouter();
 
   const pageWillBeExitingFrom = useSelector(
     (state) => state.uiReducer.pageExitingFrom
@@ -37,12 +38,14 @@ const About = () => {
     dispatch(uiActions.setPageExitingFrom({ exitingPage: "about" }));
   }, [dispatch]);
 
-  window.addEventListener("scroll", () => {
-    document.documentElement.style.setProperty(
-      "--scroll-y",
-      `${window.scrollY}px`
-    );
-  });
+  useEffect(() => {
+    if ((asPath = "/about/#spaceSection")) {
+      document.getElementById(`spaceSection`).scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }, []);
 
   return (
     <Fragment>
@@ -171,7 +174,7 @@ const About = () => {
 
         {/* RESTAURANT SPACE */}
         <section className="mt-[250px] lg:mt-[400px]">
-          <div className="lg:w-fit lg:mx-auto">
+          <div id="spaceSection" className="lg:w-fit lg:mx-auto">
             <Heading order="04" title="KHÔNG GIAN" />
           </div>
           <Space />

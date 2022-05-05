@@ -220,14 +220,14 @@ const Menu = () => {
             numberOfDish={numberOfDish}
           />
 
-          {/* Filter Modal */}
+          {/* Filter Modal
           <>
-            {/* Modal div */}
+            Modal div
             <ModalBackground
               openFilterModal={openFilterModal}
               setOpenFilterModal={setOpenFilterModal}
             />
-            {/* Bottom Content div */}
+            Bottom Content div
             <BottomFilterModal
               openFilterModal={openFilterModal}
               setOpenFilterModal={setOpenFilterModal}
@@ -243,7 +243,7 @@ const Menu = () => {
                 />
               ))}
             </BottomFilterModal>
-          </>
+          </> */}
         </motion.main>
       </div>
     </Fragment>
