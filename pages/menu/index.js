@@ -26,7 +26,7 @@ const filter_options = [
   "Món rau",
   "Món ăn kèm",
   "Tráng miệng",
-  "Đồ uống",
+  "Thức uống",
 ];
 
 const Menu = () => {
