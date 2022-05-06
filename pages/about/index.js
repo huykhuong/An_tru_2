@@ -39,7 +39,6 @@ const About = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    console.log(href);
     if (href === "http://localhost:3000/about#spaceSection") {
       document.getElementById(`spaceSection`).scrollIntoView({
         behavior: "smooth",

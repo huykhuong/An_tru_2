@@ -34,7 +34,6 @@ function MyApp({ Component, pageProps }) {
       <AnimatePresence>
         <Head>
           <meta charSet="UTF-8" />
-          <meta name="robots" content="noodp,index,follow" />
           <meta
             name="viewport"
             content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,target-densitydpi=device-dpi,viewport-fit=cover"

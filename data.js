@@ -3,7 +3,7 @@ export const mon_com = [
     name: "Cơm chiên Omurice",
     price: 73000,
     type: "Cơm chảo",
-    img: "https://media.istockphoto.com/photos/omelet-picture-id1045956936?s=612x612",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVoq5WZqxueQb6TSPA5yen5b3yl2orgXGGRw&usqp=CAU",
   },
   {
     name: "Cơm chiên Kim Chi",
@@ -15,16 +15,19 @@ export const mon_com = [
     name: "Cơm đậu hũ sốt Gochujang",
     price: 73000,
     type: "Cơm trắng",
+    img: "https://imstore.xyz/post/original/76/76829",
   },
   {
     name: "Cơm đậu hũ sốt Teriyaki",
     price: 73000,
     type: "Cơm trắng",
+    img: "https://dishingouthealth.com/wp-content/uploads/2021/03/TeriyakiTofu_Square.jpg",
   },
   {
     name: "Cơm nấm cây sốt Bulgogi",
     price: 73000,
     type: "Cơm trắng",
+    img: "https://mykoreankitchen.com/wp-content/uploads/2016/08/1.-Spicy-Pork-Bulgogi-Rice-Bowl-500x500.jpg",
   },
   {
     name: "Cơm Nấm kho sốt Tiêu",
@@ -201,7 +204,7 @@ export const do_uong = [
     name: "Dừa tắc Cocoxim",
     price: 47000,
     type: "Đồ Uống",
-    img: "https://www.minhcaumart.vn/media/com_eshop/products/8938507849018.jpg",
+    img: "https://scontent.fsgn2-3.fna.fbcdn.net/v/t1.15752-9/271583767_5047054631991604_1971323077208083679_n.jpg?_nc_cat=106&ccb=1-6&_nc_sid=ae9488&_nc_ohc=iQxlljXVZooAX_2ex0n&_nc_ht=scontent.fsgn2-3.fna&oh=03_AVLskJADndHFThE9iG82Y4Bu_N9X6n2ZwUOnJw9pu0E27Q&oe=6298A95E",
   },
   {
     name: "Coca-cola",
