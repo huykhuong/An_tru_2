@@ -122,7 +122,7 @@ const Header = () => {
             />
           </svg>
           <nav className="mt-20 text-4xl space-y-[10px] font-medium">
-            <h1
+            <p
               onClick={() => {
                 if (router.pathname === "/") return;
                 dispatch(uiActions.setOpenMenuFalse());
@@ -136,9 +136,9 @@ const Header = () => {
               } transition-all duration-200  lg:cursor-pointer`}
             >
               Trang chủ
-            </h1>
+            </p>
 
-            <h1
+            <p
               onClick={() => {
                 if (router.pathname === "/menu") return;
                 dispatch(uiActions.setOpenMenuFalse());
@@ -156,9 +156,9 @@ const Header = () => {
               } transition-all duration-200 lg:cursor-pointer`}
             >
               Menu
-            </h1>
+            </p>
 
-            <h1
+            <p
               onClick={() => {
                 if (router.pathname === "/about") return;
                 dispatch(uiActions.setOpenMenuFalse());
@@ -176,7 +176,7 @@ const Header = () => {
               } transition-all duration-200 lg:cursor-pointer`}
             >
               Về chúng tôi
-            </h1>
+            </p>
           </nav>
         </div>
         <p

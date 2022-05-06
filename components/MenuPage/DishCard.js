@@ -27,9 +27,9 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
           }
           alt={dishName}
         />
-        <h1 className="px-3 mt-3 text-[18px] leading-6 font-bold text-[#3A563E]">
+        <p className="px-3 mt-3 text-[18px] leading-6 font-bold text-[#3A563E]">
           {dishName}
-        </h1>
+        </p>
         <p className="ml-3 absolute bottom-3 md:bottom-5 text-[#3A563E]">
           {dishPrice}
         </p>

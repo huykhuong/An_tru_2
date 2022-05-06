@@ -38,11 +38,8 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,target-densitydpi=device-dpi,viewport-fit=cover"
           />
-          <meta
-            name="viewport"
-            content="width=device-width,maximum-scale=1,initial-scale=1,user-scalable=no"
-          />
           <meta name="theme-color" content="#3A563E"></meta>
+          <meta property="og:image" content="/logo.png"></meta>
 
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
