@@ -28,14 +28,14 @@ const BottomFilterModal = (props) => {
         />
       </svg>
       {props.children}
-      <h1
+      <p
         onClick={() => {
           props.setOpenFilterModal(false);
         }}
         className="cursor-pointer absolute bottom-5 right-7 font-medium mt-[55px] lg:hidden"
       >
         Đóng
-      </h1>
+      </p>
     </motion.section>
   );
 };

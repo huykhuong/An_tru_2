@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }) {
           <meta charSet="UTF-8" />
           <meta
             name="viewport"
-            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,target-densitydpi=device-dpi,viewport-fit=cover"
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,viewport-fit=cover"
           />
           <meta name="theme-color" content="#3A563E"></meta>
           <meta property="og:image" content="/logo.png"></meta>

@@ -42,9 +42,9 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
             onClick={() => switchPage("/menu/1")}
           >
             <div>
-              <h1 className="w-[300px] text-[3rem] text-[#3A563E] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+              <p className="w-[300px] text-[3rem] text-[#3A563E] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
                 {dishName}
-              </h1>
+              </p>
             </div>
             <div className="text-[200px] mb-[50px] text-[#3A563E] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
               {index + 1}
