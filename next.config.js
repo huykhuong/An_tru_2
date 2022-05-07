@@ -7,10 +7,6 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  i18n: {
-    locales: ["vi"],
-    defaultLocale: "vi",
-  },
 };
 
 module.exports = nextConfig;
