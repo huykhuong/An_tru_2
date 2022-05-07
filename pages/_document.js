@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="vi">
       <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
