@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="vi">
       <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -22,6 +21,8 @@ export default function Document() {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
       </Head>
       <body>
         <Main />
