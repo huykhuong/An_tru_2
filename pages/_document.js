@@ -11,7 +11,7 @@ export default function Document() {
           href="/apple-touch-icon.png"
         />
         <link
-          rel="short icon"
+          rel="icon"
           type="image/png"
           sizes="32x32"
           href="/favicon-32x32.png"
