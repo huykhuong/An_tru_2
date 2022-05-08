@@ -109,15 +109,16 @@ const Menu = () => {
           <title>Menu - Nhà hàng chay An Trú</title>
           <meta
             name="keywords"
-            content="Menu, An Trú, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay"
+            content="Menu, An Trú, An Tru, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, vegetarian restaurant, antruveggie"
           />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Menu" />
           <meta property="og:description" content />
-          {/* <meta property="og:url" content="https://iron-fever.vn/"/> */}
+          <meta name="robots" content="noodp,index,follow" />
+          <meta property="og:url" content="https://antruveggie.vn/menu" />
           {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
           <meta property="og:site_name" content="Nhà hàng chay An Trú" />
-          <link rel="canonical" href="https://nhahangchayantru.vn/menu" />
+          <link rel="canonical" href="https://antruveggie.vn/menu" />
         </Head>
 
         <Header />

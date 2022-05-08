@@ -32,9 +32,9 @@ const MainContent = () => {
             />
           </div>
           <div className="bg-black bg-opacity-40 absolute top-0 flex flex-col justify-start items-center w-full h-full rounded-t-lg rounded-br-lg">
-            <h1 className=" py-10 text-2xl text-white tracking-widest font-medium md:text-4xl">
+            <p className=" py-10 text-2xl text-white tracking-widest font-medium md:text-4xl">
               Nhà hàng chay
-            </h1>
+            </p>
             <h1 className="w-fit text-9xl text-white md:w-[270px] md:text-[140px] font-akashi">
               AN TRÚ
             </h1>
@@ -180,7 +180,7 @@ const MainContent = () => {
         </div>
 
         <div className="hidden lg:flex justify-between mt-10 mx-auto px-10 pb-[3vh] lg:max-w-[1650px] xl:max-w-[1400px]">
-          <h2 className="text-center my-auto text-xl">Hân hạnh phục vụ</h2>
+          <p className="text-center my-auto text-xl">Hân hạnh phục vụ</p>
           <div className="my-auto">
             <Link href={"https://www.facebook.com/nhahangchayantru"}>
               <svg
@@ -238,7 +238,7 @@ const MainContent = () => {
               </svg>
             </Link>
           </div>
-          <h2 className="text-center my-auto text-xl">Vegetarian house</h2>
+          <p className="text-center my-auto text-xl">Vegetarian house</p>
         </div>
       </section>
     </>

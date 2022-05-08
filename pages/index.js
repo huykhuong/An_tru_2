@@ -44,7 +44,7 @@ export default function Home() {
         <meta name="description" content="Trang chủ nhà hàng chay An Trú" />
         <meta
           name="keywords"
-          content="An Trú, An Tru, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, vegetarian restaurant"
+          content="An Trú, An Tru, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, vegetarian restaurant, antruveggie"
         />
         <meta name="robots" content="noodp,index,follow" />
         <meta property="og:type" content="website" />

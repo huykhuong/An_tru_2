@@ -49,6 +49,21 @@ const About = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Về chúng tôi - Nhà hàng chay An Trú</title>
+        <meta
+          name="keywords"
+          content="Về chúng tôi, An Trú, An Tru, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, vegetarian restaurant, antruveggie"
+        />
+        <meta name="robots" content="noodp,index,follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Về chúng tôi" />
+        <meta property="og:description" content />
+        <meta property="og:url" content="https://antruveggie.vn/about" />
+        {/* <meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/360/775/themes/729132/assets/logo.png?1622064036816"></meta> */}
+        <meta property="og:site_name" content="Nhà hàng chay An Trú" />
+        <link rel="canonical" href="https://antruveggie.vn/about" />
+      </Head>
       <Header />
 
       <motion.main
