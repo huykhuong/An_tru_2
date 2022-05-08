@@ -33,14 +33,14 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <AnimatePresence>
         <Head>
-          <meta charSet="UTF-8" />
+          <meta charset="UTF-8" />
           <meta
             name="viewport"
             content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,minimum-scale=1height=device-height,viewport-fit=cover"
           />
           <meta name="theme-color" content="#3A563E"></meta>
           <meta property="og:image" content="/logo.png"></meta>
-          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="icon" type="image/x-icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

@@ -147,7 +147,6 @@ const Menu = () => {
               ))}
             </DishesDivWrapper>
           )}
-
           {selectedFilterOption === 1 && (
             <DishesDivWrapper>
               {mon_soi.map((item, index) => (
@@ -160,7 +159,6 @@ const Menu = () => {
               ))}
             </DishesDivWrapper>
           )}
-
           {selectedFilterOption === 2 && (
             <DishesDivWrapper>
               {mon_rau.map((item, index) => (
@@ -173,7 +171,6 @@ const Menu = () => {
               ))}
             </DishesDivWrapper>
           )}
-
           {selectedFilterOption === 3 && (
             <DishesDivWrapper>
               {mon_an_kem.map((item, index) => (
@@ -186,7 +183,6 @@ const Menu = () => {
               ))}
             </DishesDivWrapper>
           )}
-
           {selectedFilterOption === 4 && (
             <DishesDivWrapper>
               {trang_mieng.map((item, index) => (
@@ -199,7 +195,6 @@ const Menu = () => {
               ))}
             </DishesDivWrapper>
           )}
-
           {selectedFilterOption === 5 && (
             <DishesDivWrapper>
               {do_uong.map((item, index) => (
@@ -213,7 +208,6 @@ const Menu = () => {
               ))}
             </DishesDivWrapper>
           )}
-
           {/* Bottom contents consitsting of filter button and dish category heading */}
           <BottomContents
             setOpenFilterModal={setOpenFilterModal}
@@ -223,14 +217,14 @@ const Menu = () => {
             numberOfDish={numberOfDish}
           />
 
-          {/* Filter Modal
+          {/* Filter Modal */}
           <>
-            Modal div
+            {/* Modal div */}
             <ModalBackground
               openFilterModal={openFilterModal}
               setOpenFilterModal={setOpenFilterModal}
             />
-            Bottom Content div
+            {/* Bottom Content div */}
             <BottomFilterModal
               openFilterModal={openFilterModal}
               setOpenFilterModal={setOpenFilterModal}
@@ -246,7 +240,7 @@ const Menu = () => {
                 />
               ))}
             </BottomFilterModal>
-          </> */}
+          </>
         </motion.main>
       </div>
     </Fragment>
