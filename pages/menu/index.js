@@ -107,6 +107,7 @@ const Menu = () => {
       <div className="relative w-full">
         <Head>
           <title>Menu - Nhà hàng chay An Trú</title>
+          <meta name="description" content="Trang chủ nhà hàng chay An Trú" />
           <meta
             name="keywords"
             content="Menu, An Trú, An Tru, nhà hàng chay An Trú, nhà hàng chay, đồ ăn chay, vegetarian restaurant, antruveggie"

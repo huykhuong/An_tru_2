@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Footer from "../../components/GeneralUI/Footer";
 import Space from "../../components/AboutUs/Space";
+import Head from "next/head";
 
 const About = () => {
   const dispatch = useDispatch();

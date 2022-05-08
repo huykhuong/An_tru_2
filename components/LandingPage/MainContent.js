@@ -113,7 +113,7 @@ const MainContent = () => {
         <div className="hidden lg:flex mt-0 mx-auto lg:h-[calc(100vh-105.766px)] lg:max-w-[1650px] xl:max-w-[1400px]">
           <div className="flex flex-col justify-center w-1/2 px-10 mt-[10vh]">
             <p className="text-lg">nhà hàng chay</p>
-            <h1 className="text-9xl font-akashi">AN TRÚ</h1>
+            <h1 className="text-9xl font-akashi w-fit">AN TRÚ</h1>
           </div>
 
           <div className="flex flex-col justify-center mx-auto mt-[8vh]">
