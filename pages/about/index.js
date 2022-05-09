@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import Footer from "../../components/GeneralUI/Footer";
 import Space from "../../components/AboutUs/Space";
 import Head from "next/head";
-import { style } from "@motionone/dom";
+import styles from "../../styles/about.module.css";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -48,13 +48,6 @@ const About = () => {
       });
     }
   }, []);
-
-  const styles = {
-    main: "px-10 mt-40 mx-auto lg:max-w-[1650px] lg:mb-[300px] lg:mt-[300px] xl:max-w-[1400px]",
-    blockquote:
-      "mb-10 max-w-xs mx-auto text-center text-xl italic lg:text-3xl lg:max-w-sm",
-    quote__author: "text-right mr-2 mt-5 text-sm lg:text-lg",
-  };
 
   return (
     <Fragment>
@@ -103,35 +96,31 @@ const About = () => {
         </section>
 
         {/* GENERAL INFO */}
-        <section className="mt-[300px] lg:flex lg:space-x-20 lg:justify-between">
+        <section className={styles.general__info__section}>
           <Heading order="01" title="TỔNG QUAN" />
           {/* <Heading order="01" title="TỔNG QUAN" /> */}
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 border-b md:max-w-2xl grid grid-cols-3 lg:max-w-sm lg:mx-0">
-            <p className="border-b font-bold text-lg py-5 col-span-1">
-              Sức chứa
+          <div className={styles.first__grid__section}>
+            <p className={`${styles.grid__cell__title} border-b`}>Sức chứa</p>
+            <p className={`${styles.grid__cell__description} border-b`}>
+              32 chỗ
             </p>
-            <p className="border-b text-lg py-5 col-span-2">32 chỗ</p>
-            <p className="border-b font-bold text-lg py-5 col-span-1">
-              Đóng cửa
-            </p>
-            <p className="border-b text-lg py-5 col-span-2">
+            <p className={`${styles.grid__cell__title} border-b`}>Đóng cửa</p>
+            <p className={`${styles.grid__cell__description} border-b`}>
               Thứ 2 hàng tuần (trừ các ngày Mùng 1 & 15 âm lịch)
             </p>
-            <p className="border-b font-bold text-lg py-5 pr-2 col-span-1">
-              Giờ mở cửa
-            </p>
-            <div className="border-b text-lg py-5 col-span-2">
+            <p className={`${styles.grid__cell__title} border-b`}>Giờ mở cửa</p>
+            <div className={`${styles.grid__cell__description} border-b`}>
               <p>- Bữa trưa: 10:00 - 14:00 (Đơn cuối 13:30)</p>
               <p>- Bữa tối: 17:00 - 21:00 (Đơn cuối 20:30)</p>
             </div>
-            <p className="font-bold text-lg py-5 col-span-1">Địa điểm</p>
-            <p className="text-lg py-5 col-span-2">
+            <p className={styles.grid__cell__title}>Địa điểm</p>
+            <p className={styles.grid__cell__description}>
               230 Nguyễn Sơn, Phú Thọ Hòa, Tân Phú, Tp.HCM
             </p>
           </div>
-          <div className="max-w-xs mx-auto leading-8 text-[17px] text-black text-opacity-70 md:max-w-2xl grid grid-cols-3 lg:max-w-sm lg:mx-0">
-            <p className="font-bold text-lg py-5 col-span-1">Đặt bàn</p>
-            <p className="text-lg py-5 col-span-2">
+          <div className={styles.second__grid__section}>
+            <p className={styles.grid__cell__title}>Đặt bàn</p>
+            <p className={styles.grid__cell__description}>
               Nếu quý khách đi theo nhóm từ 5 đến 12 người, hoan hỉ liên hệ đặt
               bàn (qua điện thoại, Facebook, Instagram, Zalo) để chúng tôi phục
               vụ quý khách tốt hơn. Trân trọng cảm ơn quý khách
@@ -140,20 +129,20 @@ const About = () => {
         </section>
 
         {/* STORY */}
-        <section className="mt-[250px] lg:flex lg:flex-row-reverse lg:mt-[400px]">
+        <section className={styles.story__section}>
           <Heading order="02" title="CÂU CHUYỆN" />
-          <div className="leading-8 lg:columns-2 lg:text-lg">
-            <p className="lg:pr-10">
+          <div className={styles.story__section__div__container}>
+            <p className={styles.story__paragraph}>
               Nhà hàng chay AN TRÚ phục vụ các món ăn chay lấy cảm hứng từ các
               nước châu Á điển hình như Hàn Quốc và Nhật Bản, hoà điệu với văn
               hoá ẩm thực chay Việt Nam để tạo nên màu sắc tươi mới, đương đại.
               Qua đó, việc ăn chay trở nên dễ dàng và gần gũi hơn với giới trẻ,
               nhằm giảm bớt yếu tố tín ngưỡng, tăng tính sở thích và lý tưởng cá
               nhân như “ăn chay vì yêu môi trường, yêu động vật”, “ăn chay vì
-              sức khoẻ”, “ăn chay vì… nó ngon”.{" "}
+              sức khoẻ”, “ăn chay vì… nó ngon”.
             </p>
             <br />
-            <p className="mb-auto align-top p content-start items-start lg:pr-10">
+            <p className={styles.story__paragraph}>
               Nhà hàng chay AN TRÚ tuy vận hành với quy mô nhỏ nhưng hứa hẹn sẽ
               mang lại chất lượng cao từ món ăn, đồ uống đến phong cách phục vụ.
               Chúng tôi luôn đề cao sự tận tâm, tận tình trong từng “điểm chạm”
@@ -162,7 +151,7 @@ const About = () => {
               “ăn chay là phải sang, xịn”.
             </p>
             <br />
-            <p className="lg:pr-10">
+            <p className={styles.story__paragraph}>
               Nhà hàng chay AN TRÚ mang âm hưởng Phật Giáo Ứng Dụng vào cuộc
               sống hiện đại, nên các chiến lược và đường lối kinh doanh đều dựa
               trên lời dạy của Đức Phật và những vị Thầy đáng kính của chúng
@@ -176,17 +165,17 @@ const About = () => {
         {/* <Divider /> */}
 
         {/* MESSAGE */}
-        <section className="md:text-center mt-[250px] lg:mt-[400px]">
+        <section className={styles.message__section}>
           <img
             src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80"
-            className="h-[550px] md:h-[700px] md:w-[450px] md:inline-block md:align-top"
+            className={styles.message__section__img}
             alt="message-img"
           />
-          <div className="md:bg-[#3A563E] md:bg-opacity-90 md:-ml-[370px] md:mt-[150px] md:inline-block lg:-ml-[150px] lg:mt-[100px]">
-            <h3 className="my-10 font-semibold text-3xl md:my-0 md:text-4xl md:p-36 md:text-white">
+          <div className={styles.message__section__div__container}>
+            <h3 className={styles.message__section__heading}>
               Chúng tôi tin rằng
             </h3>
-            <q className="max-w-xs mx-auto leading-8 lg;text-opacity-70 md:max-w-sm lg:text-2xl md:text-white md:flex md:items-center md:rounded-xl md:mb-40">
+            <q className={styles.message__section__paragraph}>
               Nếu mỗi ngày bạn ăn một bữa chay, thì trong một tháng, bạn “vô
               tình” ăn chay được 10 ngày và giảm được ⅓ lượng thịt tiêu thụ một
               cách dễ dàng. Ăn chay không khó, ăn chay là phải sang, xịn.
@@ -195,19 +184,19 @@ const About = () => {
         </section>
 
         {/* RESTAURANT SPACE */}
-        <section className="mt-[250px] lg:mt-[400px]">
-          <div id="spaceSection" className="lg:w-fit lg:mx-auto">
+        <section className={styles.space__founder__section}>
+          <div id="spaceSection" className="lg:w-fit lg:mx-auto lg:mb-40">
             <Heading order="04" title="KHÔNG GIAN" />
           </div>
           <Space />
         </section>
 
         {/* FOUNDERS */}
-        <section className="mt-[250px] lg:mt-[400px]">
+        <section className={styles.space__founder__section}>
           <div className="lg:w-fit lg:mx-auto">
             <Heading order="05" title="CÁC NHÀ SÁNG LẬP" />
           </div>
-          <div className="lg:flex lg:justify-evenly lg:mt-40">
+          <div className={styles.founder__div__container}>
             <Founder name="Nguyễn Minh Đạt" />
             <Founder name="Phan Duy Thịnh" />
             <Founder name="Khương Chấn Huy" />
