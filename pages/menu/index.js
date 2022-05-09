@@ -102,9 +102,14 @@ const Menu = () => {
   //   );
   // });
 
+  const styles = {
+    container: "relative w-full",
+    main: "bg-white lg:bg-transparent",
+  };
+
   return (
     <Fragment>
-      <div className="relative w-full">
+      <div className={styles.container}>
         <Head>
           <title>Menu - Nhà hàng chay An Trú</title>
           <meta name="description" content="Trang chủ nhà hàng chay An Trú" />
@@ -132,7 +137,7 @@ const Menu = () => {
             pageWillBeExitingFrom === "menu" ? { opacity: 1 } : { opacity: 0 }
           }
           transition={{ duration: 0.6 }}
-          className="bg-white lg:bg-transparent"
+          className={styles.main}
         >
           {selectedFilterOption === 0 && (
             <DishesDivWrapper>

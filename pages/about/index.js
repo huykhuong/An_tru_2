@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import Footer from "../../components/GeneralUI/Footer";
 import Space from "../../components/AboutUs/Space";
 import Head from "next/head";
+import { style } from "@motionone/dom";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -48,6 +49,13 @@ const About = () => {
     }
   }, []);
 
+  const styles = {
+    main: "px-10 mt-40 mx-auto lg:max-w-[1650px] lg:mb-[300px] lg:mt-[300px] xl:max-w-[1400px]",
+    blockquote:
+      "mb-10 max-w-xs mx-auto text-center text-xl italic lg:text-3xl lg:max-w-sm",
+    quote__author: "text-right mr-2 mt-5 text-sm lg:text-lg",
+  };
+
   return (
     <Fragment>
       <Head>
@@ -75,7 +83,7 @@ const About = () => {
           pageWillBeExitingFrom === "about" ? { opacity: 1 } : { opacity: 0 }
         }
         transition={{ duration: 0.6 }}
-        className="px-10 mt-40 mx-auto lg:max-w-[1650px] lg:mb-[300px] lg:mt-[300px] xl:max-w-[1400px]"
+        className={styles.main}
       >
         {/* TITLE */}
         {/* <section className="relative max-w-[256px] lg:max-w-[350px] h-20 lg:h-[100px] mx-auto mb-24 lg:mb-[200px]">
@@ -88,11 +96,9 @@ const About = () => {
         </section> */}
 
         <section>
-          <blockquote className="mb-10 max-w-xs mx-auto text-center text-xl italic lg:text-3xl lg:max-w-sm">
+          <blockquote className={styles.blockquote}>
             <q>Mỗi ngày một bữa ăn chay để yêu thương cơ thể và Trái Đất.</q>
-            <p className="text-right mr-2 mt-5 text-sm lg:text-lg">
-              Nhà hàng chay An Trú
-            </p>
+            <p className={styles.quote__author}>Nhà hàng chay An Trú</p>
           </blockquote>
         </section>
 
