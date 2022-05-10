@@ -185,7 +185,7 @@ const About = () => {
 
         {/* RESTAURANT SPACE */}
         <section className={styles.space__founder__section}>
-          <div id="spaceSection" className="lg:w-fit lg:mx-auto lg:mb-40">
+          <div id="spaceSection" className="lg:w-fit lg:mx-auto">
             <Heading order="04" title="KHÔNG GIAN" />
           </div>
           <Space />

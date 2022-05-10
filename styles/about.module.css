@@ -76,4 +76,43 @@
   .heading__component__title {
     @apply text-xl font-semibold italic lg:not-italic lg:text-3xl lg:mt-5 lg:text-[#3A563E];
   }
+  .space__overall__container {
+    @apply lg:pt-40;
+  }
+  .space__mobile__container {
+    @apply lg:hidden;
+  }
+  .space__mobile__space__element__container {
+    @apply md:max-w-[768px] mx-auto;
+  }
+  .space__mobile__space__image {
+    @apply md:w-[768px] md:mx-auto;
+  }
+  .space__mobile__space__description {
+    @apply mt-5 mb-12 text-[15px];
+  }
+  .space__laptop__container {
+    @apply hidden lg:inline-block lg:w-full lg:text-center;
+  }
+  .space__laptop__left__column__image {
+    @apply relative w-[600px] inline-block mt-[150px] mr-[60px];
+  }
+  .space__laptop__right__column__image {
+    @apply relative w-[600px] inline-block align-top;
+  }
+  .space__laptop__image__overlay {
+    @apply opacity-0 absolute bg-black bg-opacity-70 w-full top-0 bottom-0 right-0 transition-all duration-500 flex flex-col justify-center;
+  }
+  .space__laptop__image__card__horizontal_line {
+    @apply w-1/3 h-[1px] bg-white bg-opacity-30 mx-auto;
+  }
+  .space__laptop__detail__container {
+    @apply my-[200px];
+  }
+  .space__laptop__detail__upper__text {
+    @apply text-white text-[16px] opacity-60;
+  }
+  .space__laptop__detail__lower__text {
+    @apply text-white text-3xl font-semibold;
+  }
 }

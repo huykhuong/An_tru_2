@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
+import styles from "../../styles/menu.module.css";
 
 const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
   const router = useRouter();
@@ -17,36 +18,37 @@ const DishCard = ({ dishName, dishImg, dishPrice, index }) => {
   return (
     <>
       <div
-        className="relative max-w-[183px] h-[300px] shadow-lg rounded-t-xl rounded-br-xl md:max-w-[248px] md:h-[380px] lg:max-w-[300px] lg:h-[400px] 2xl:max-w-[350px] bg-white lg:hidden"
+        className={styles.menu__mobile__dish__card__div__container}
         onClick={() => switchPage("/menu/1")}
       >
         <img
-          className="w-[100%] mx-auto rounded-t-xl rounded-r-xl"
+          className={styles.menu__mobile__dish__card__image}
           src={
             dishImg ? dishImg : "https://swiperjs.com/demos/images/nature-1.jpg"
           }
           alt={dishName}
         />
-        <p className="px-3 mt-3 text-[18px] leading-6 font-bold text-[#3A563E]">
-          {dishName}
-        </p>
-        <p className="ml-3 absolute bottom-3 md:bottom-5 text-[#3A563E]">
-          {dishPrice}
-        </p>
+        <p className={styles.menu__mobile__dish__card__name}>{dishName}</p>
+        <p className={styles.menu__mobile__dish__card__price}>{dishPrice}</p>
       </div>
 
-      <div className="hidden lg:flex items-center justify-around">
-        <div className="group w-[550px] h-full flex flex-shrink-0 items-center hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className={styles.menu__laptop__dish__card__div__container}>
+        <div
+          className={`${styles.menu__laptop__dish__card__image} group hover:bg-[url('https://raw.githubusercontent.com/taimoorshahzada/Gallery-Landing-Page-Website-using-HTML-CSS-and-GSAP/main/3.jpg')]`}
+        >
           <div
-            className="w-[100%] h-[750px] pb-[100px] flex flex-col items-center justify-end space-y-10 border-l-[1px] border-[#272727] border-opacity-20 cursor-pointer"
+            className={styles.menu__laptop__dish__card__contents__container}
             onClick={() => switchPage("/menu/1")}
           >
-            <div>
-              <p className="w-[300px] text-[3rem] text-[#3A563E] text-center font-light uppercase transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
-                {dishName}
-              </p>
-            </div>
-            <div className="text-[200px] mb-[50px] text-[#3A563E] transition-colors group-hover:text-white duration-[600ms] ease-[cubic-bezier(0.19, 1, 0.22, 1)]">
+            <p
+              className={`${styles.menu__laptop__dish__card__name} group-hover:text-white ease-[cubic-bezier(0.19, 1, 0.22, 1)]`}
+            >
+              {dishName}
+            </p>
+
+            <div
+              className={`${styles.menu__laptop__dish__card__index} group-hover:text-white ease-[cubic-bezier(0.19, 1, 0.22, 1) ]`}
+            >
               {index + 1}
             </div>
           </div>

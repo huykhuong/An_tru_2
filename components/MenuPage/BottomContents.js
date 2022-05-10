@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import styles from "../../styles/menu.module.css";
 
 const BottomContents = ({
   setOpenFilterModal,
@@ -23,7 +24,7 @@ const BottomContents = ({
     <React.Fragment>
       {/* Mobile & Tablet */}
       <section
-        className="bg-[#3A563E] w-full pl-[21.25px] pr-[21.25px] py-[14px] fixed bottom-0 right-0 left-0 flex space-x-5 overflow-x-auto scrollbar-hide md:space-x-2 md:justify-center lg:hidden"
+        className={styles.menu__mobile__bottom__contents}
         id="mobile_bottom_contents"
       >
         {filter_options.map((name, index) => (
@@ -33,11 +34,11 @@ const BottomContents = ({
               selectFilterOption(index);
               window.scrollTo(0, 0); //new
             }}
-            className={`min-w-[120px] py-[6px] px-[10px] border rounded-t-md rounded-br-md text-white text-sm font-bold outline-none ${
+            className={` ${styles.menu__mobile__bottom__button} ${
               selectedFilterOption === index
-                ? "border-white border-1"
-                : "text-opacity-40 border-opacity-40 border-white"
-            } lg:w-52 lg:mx-auto lg:text-4xl lg:px-0 lg:border-none lg:text-white`}
+                ? "border-white border-1 text-white"
+                : "text-opacity-40 border-opacity-40 border-white text-white"
+            } `}
             id={index}
           >
             {name}
@@ -46,16 +47,16 @@ const BottomContents = ({
       </section>
 
       {/* Pc & laptop */}
-      <section className="hidden w-full bg-[#fbfbfb] px-[21.25px] pt-[10px] pb-5 fixed bottom-0 lg:inline-flex items-center justify-between lg:bg-transparent lg:px-32 2xl:px-[280px]">
+      <section className={styles.menu__laptop__bottom__contents}>
         {/* selected filter option */}
-        <p className="rounded-t-lg rounded-br-lg font-medium text-[17px] text-white bg-[#3A563E] rounded-sm px-3 py-1 lg:px-5 lg:py-3">
+        <p className={styles.menu__laptop__selected__filter__option}>
           {filter_options[selectedFilterOption]}
         </p>
 
-        <div className="flex items-center justify-center gap-x-1">
+        <div className={styles.menu__laptop__filter__button}>
           <p
             onClick={() => setOpenFilterModal(true)}
-            className="font-bold text-[18px] lg:text-[20px]"
+            className={styles.menu__laptop__filter__button__label}
           >
             Phân Loại
           </p>
@@ -74,5 +75,3 @@ const BottomContents = ({
 };
 
 export default BottomContents;
-
-// ({numberOfDish})

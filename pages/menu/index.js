@@ -19,6 +19,7 @@ import {
 import BottomFilterModal from "../../components/MenuPage/BottomFilterModal";
 import DishesDivWrapper from "../../components/MenuPage/DishesDivWrapper";
 import { useRouter } from "next/router";
+import styles from "../../styles/menu.module.css";
 
 const filter_options = [
   "Món cơm",
@@ -102,14 +103,9 @@ const Menu = () => {
   //   );
   // });
 
-  const styles = {
-    container: "relative w-full",
-    main: "bg-white lg:bg-transparent",
-  };
-
   return (
     <Fragment>
-      <div className={styles.container}>
+      <div className={styles.menu__overall__container}>
         <Head>
           <title>Menu - Nhà hàng chay An Trú</title>
           <meta name="description" content="Trang chủ nhà hàng chay An Trú" />
@@ -137,7 +133,7 @@ const Menu = () => {
             pageWillBeExitingFrom === "menu" ? { opacity: 1 } : { opacity: 0 }
           }
           transition={{ duration: 0.6 }}
-          className={styles.main}
+          className={styles.menu__main__section}
         >
           {selectedFilterOption === 0 && (
             <DishesDivWrapper>

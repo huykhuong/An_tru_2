@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
+import styles from "../../styles/landing.module.css";
 
 {
   /* Middle content */
@@ -19,37 +20,39 @@ const MainContent = () => {
   };
 
   return (
-    <>
-      <section className="relative max-w-[425px] md:max-w-[580px] h-full mx-auto mt-40 flex flex-col flex-shrink-0 justify-center items-center gap-y-6 text-center md:mt-[200px] lg:hidden">
-        <div className="relative z-30">
-          <div className="relative w-[310px] h-[450px] md:w-[450px] md:h-[530px] lg:w-[500px]">
+    <div>
+      <section className={styles.mobile__view__section}>
+        <div className={styles.mobile__main__content__tile__div__container}>
+          <div className={styles.mobile__main__content__tile__image__container}>
             <Image
               src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
               objectFit="cover"
               layout="fill"
               alt="mobile_home_page"
-              className="rounded-t-md rounded-br-md"
+              className={styles.mobile__main__content__tile__image}
             />
           </div>
-          <div className="bg-black bg-opacity-40 absolute top-0 flex flex-col justify-start items-center w-full h-full rounded-t-lg rounded-br-lg">
-            <p className=" py-10 text-2xl text-white tracking-widest font-medium md:text-4xl">
+          <div
+            className={styles.mobile__main__content__tile__text__div__container}
+          >
+            <p className={styles.mobile__main__content__tile__upper__text}>
               Nhà hàng chay
             </p>
-            <h1 className="w-fit text-9xl text-white md:w-[270px] md:text-[140px] font-akashi">
+            <h1 className={styles.mobile__main__content__tile__lower__text}>
               AN TRÚ
             </h1>
           </div>
         </div>
 
-        <div className="bg-[#3A563E] bg-opacity-80 w-52 h-40 absolute z-[0] top-14 -left-6 rounded-t-lg rounded-br-lg"></div>
+        <div className={styles.mobile__upper__green__tile}></div>
 
-        <div className="bg-[#3A563E] bg-opacity-80 w-40 h-40 absolute z-[0] top-[360px] right-0 rounded-t-lg rounded-br-lg md:top-[430px]">
-          <p className="text-white text-[15px] tracking-wider mt-28">
+        <div className={styles.mobile__lower__green__tile}>
+          <p className={styles.mobile__lower__green__tile__text}>
             Vegetarian House
           </p>
         </div>
 
-        <div className="mb-[50px] mt-[140px] md:mt-[100px]">
+        <div className={styles.mobile__social__links__container}>
           <Link href={"https://www.facebook.com/nhahangchayantru"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +61,7 @@ const MainContent = () => {
               width="30"
               height="30"
               viewBox="0 0 30 30"
-              className="inline-block mr-5 lg:cursor-pointer"
+              className={styles.mobile__social__link}
             >
               {" "}
               <path
@@ -77,7 +80,7 @@ const MainContent = () => {
               height="30"
               viewBox="0 0 24 24"
               style={{ fill: "#000000" }}
-              className="inline-block mr-5 lg:cursor-pointer"
+              className={styles.mobile__social__link}
             >
               {" "}
               <path
@@ -96,7 +99,7 @@ const MainContent = () => {
               height="30"
               viewBox="0 0 24 24"
               style={{ fill: "#000000" }}
-              className="inline-block mt-1 lg:cursor-pointer"
+              className={`${styles.mobile__social__link} mt-1`}
             >
               <path
                 id="phone-logo"
@@ -109,24 +112,30 @@ const MainContent = () => {
       </section>
 
       {/* Laptop view */}
-      <section className="h-0 lg:relative lg:h-screen">
-        <div className="hidden lg:flex mt-0 mx-auto lg:h-[calc(100vh-105.766px)] lg:max-w-[1650px] xl:max-w-[1400px]">
-          <div className="flex flex-col justify-center w-1/2 px-10 mt-[10vh]">
-            <p className="text-lg">nhà hàng chay</p>
-            <h1 className="text-9xl font-akashi w-fit">AN TRÚ</h1>
+      <section className={styles.laptop__section}>
+        <div className={styles.laptop__main__content__area__div__container}>
+          <div className={styles.laptop__restaurant__name__div__container}>
+            <p className={styles.laptop__restaurant__name__upper__text}>
+              nhà hàng chay
+            </p>
+            <h1 className={styles.laptop__restaurant__name__lower__text}>
+              AN TRÚ
+            </h1>
           </div>
 
-          <div className="flex flex-col justify-center mx-auto mt-[8vh]">
-            <div className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] hover:-translate-y-[40px] transition-all duration-300 cursor-pointer">
+          <div className={styles.laptop__image__area__div__container}>
+            <div
+              className={`${styles.laptop__img__div__container} hover:-translate-y-[40px] transition-all duration-300 cursor-pointer`}
+            >
               <Image
                 src="https://images.unsplash.com/photo-1616362258595-28a25ece05f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                 alt="aboutus-image"
                 objectFit="cover"
                 layout="fill"
-                className="rounded-t-lg rounded-br-lg"
+                className={styles.laptop__image}
               />
               <div
-                className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300"
+                className={styles.laptop__image__overlay__div__container}
                 onClick={() => {
                   dispatch(
                     uiActions.setPageExitingFrom({ exitingPage: "about" })
@@ -137,8 +146,9 @@ const MainContent = () => {
                 <p className="text-3xl">Về chúng tôi</p>
               </div>
             </div>
+
             <div
-              className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[70px] xl:-mt-[120px] lg:-ml-[100px] hover:-translate-x-[40px] transition-all duration-300 cursor-pointer"
+              className={`${styles.laptop__img__div__container} lg:-mt-[70px] xl:-mt-[120px] lg:-ml-[100px] hover:-translate-x-[40px] transition-all duration-300 cursor-pointer`}
               onClick={() => {
                 dispatch(
                   uiActions.setPageExitingFrom({ exitingPage: "about" })
@@ -151,14 +161,15 @@ const MainContent = () => {
                 alt="space-image"
                 objectFit="cover"
                 layout="fill"
-                className="rounded-t-lg rounded-br-lg"
+                className={styles.laptop__image}
               />
-              <div className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300">
+              <div className={styles.laptop__image__overlay__div__container}>
                 <p className="text-3xl">Không gian</p>
               </div>
             </div>
+
             <div
-              className="relative lg:h-[250px] lg:w-[250px] xl:h-[300px] xl:w-[300px] lg:-mt-[220px] lg:ml-[100px] xl:ml-[150px] hover:translate-x-[28px] transition-all duration-300 cursor-pointer"
+              className={`${styles.laptop__img__div__container} lg:-mt-[220px] lg:ml-[100px] xl:ml-[150px] hover:translate-x-[28px] transition-all duration-300 cursor-pointer`}
               onClick={() => {
                 dispatch(uiActions.setPageExitingFrom({ exitingPage: "menu" }));
                 switchPage("/menu");
@@ -170,17 +181,17 @@ const MainContent = () => {
                 objectFit="cover"
                 layout="fill"
                 priority={true}
-                className="rounded-t-lg rounded-br-lg"
+                className={styles.laptop__image}
               />
-              <div className="relative w-full h-full bg-black bg-opacity-0 hover:bg-opacity-50 flex justify-center items-center hover:text-white text-transparent transition-all duration-300">
+              <div className={styles.laptop__image__overlay__div__container}>
                 <p className="text-3xl">Menu</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="hidden lg:flex justify-between mt-10 mx-auto px-10 pb-[3vh] lg:max-w-[1650px] xl:max-w-[1400px]">
-          <p className="text-center my-auto text-xl">Hân hạnh phục vụ</p>
+        <div className={styles.laptop__bottom__contents__div__container}>
+          <p className={styles.laptop__bottom__left__text}>Hân hạnh phục vụ</p>
           <div className="my-auto">
             <Link href={"https://www.facebook.com/nhahangchayantru"}>
               <svg
@@ -238,10 +249,10 @@ const MainContent = () => {
               </svg>
             </Link>
           </div>
-          <p className="text-center my-auto text-xl">Vegetarian house</p>
+          <p className={styles.laptop__bottom__right__text}>Vegetarian house</p>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

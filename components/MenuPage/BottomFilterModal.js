@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import styles from "../../styles/menu.module.css";
 
 const BottomFilterModal = (props) => {
   return (
     <motion.section
-      className="w-full h-[200px] bg-white rounded-t-lg fixed z-[60] bottom-0 p-6 lg:w-[300px] lg:h-full lg:flex lg:flex-col lg:top-0 lg:right-0 lg:justify-start lg:bg-[#3A563E]"
+      className={styles.menu__laptop__filter__modal__section__div__container}
       key={"modal"}
       initial={{ y: "100%" }}
       animate={props.openFilterModal ? { y: 0 } : { y: "100%" }}
@@ -12,7 +13,7 @@ const BottomFilterModal = (props) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="hidden h-6 w-6 text-white ml-auto mr-10 mt-16 lg:cursor-pointer lg:inline lg:mb-20"
+        className={styles.menu__laptop__filter__modal__close__button}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -28,14 +29,14 @@ const BottomFilterModal = (props) => {
         />
       </svg>
       {props.children}
-      <p
+      {/* <p
         onClick={() => {
           props.setOpenFilterModal(false);
         }}
         className="cursor-pointer absolute bottom-5 right-7 font-medium mt-[55px] lg:hidden"
       >
         Đóng
-      </p>
+      </p> */}
     </motion.section>
   );
 };
