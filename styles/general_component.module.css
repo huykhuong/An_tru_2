@@ -10,4 +10,22 @@
   .footer__thank__you__message {
     @apply w-fit mt-4 text-white opacity-80 italic;
   }
+  .footer__opening__hours__text {
+    @apply mt-4 text-white opacity-80;
+  }
+  .footer__social__heading {
+    @apply text-xl mt-10;
+  }
+  .footer__social__icon__div__container {
+    @apply flex items-center justify-start gap-x-3 mt-5;
+  }
+  .footer__social__icon {
+    @apply w-6 h-6;
+  }
+  .footer__contact__info__div__container {
+    @apply space-y-5 pt-5;
+  }
+  .footer__contact__info__text {
+    @apply ml-2 text-white opacity-80;
+  }
 }

@@ -42,23 +42,26 @@ const Footer = () => {
         <div>
           <div>
             <h1 className="text-xl">Bữa trưa</h1>
-            <p className="paragraph mt-4 text-white opacity-80">
+            <p className={styles.footer__opening__hours__text}>
               Từ 10h sáng - 2h chiều
             </p>
           </div>
           <div>
             <h1 className="text-xl mt-10">Bữa tối</h1>
-            <p className="paragraph mt-4 text-white opacity-80">
+            <p className={styles.footer__opening__hours__text}>
               Từ 5h chiều - 9h tối
             </p>
           </div>
         </div>
+
         {/* Social Media Links */}
         <div>
-          <h1 className="text-xl mt-10">Kết nối với chúng tôi</h1>
-          <div className="flex items-center justify-start gap-x-3 mt-5">
-            <FaFacebookF className="w-6 h-6 " />
-            <BsInstagram className="w-6 h-6 " />
+          <h1 className={styles.footer__social__heading}>
+            Kết nối với chúng tôi
+          </h1>
+          <div className={styles.footer__social__icon__div__container}>
+            <FaFacebookF className={styles.footer__social__icon} />
+            <BsInstagram className={styles.footer__social__icon} />
           </div>
         </div>
       </div>
@@ -66,7 +69,7 @@ const Footer = () => {
       {/* Brief contact info */}
       <div className="md:flex-1/3">
         <h1 className="text-xl">Quý khách có câu hỏi cho chúng tôi?</h1>
-        <div className="space-y-5 pt-5">
+        <div className={styles.footer__contact__info__div__container}>
           <div className="flex">
             <PhoneIcon className="h-6 w-6" />
             <div>
