@@ -58,4 +58,16 @@
   .menu__laptop__dish__card__index {
     @apply text-[200px] mb-[50px] text-[#3A563E] transition-colors duration-[600ms];
   }
+  .menu__mobile__laptop__dish__card__wrapper {
+    @apply bg-[#c2f4ab] bg-opacity-30 min-h-[calc(100vh-150.797px)] w-[100%] mx-auto mt-[86.797px] mb-[63.5px] flex flex-wrap gap-y-4 gap-x-2 content-start justify-center md:px-3 md:gap-x-5 lg:scrollbar-hide lg:overflow-x-auto lg:justify-start lg:gap-x-0 lg:px-0 lg:my-0 lg:flex-nowrap lg:h-[100vh] lg:mx-0 lg:bg-transparent;
+  }
+  .menu__mobile__psudo__dish__card {
+    @apply w-[183px] md:w-[248px] lg:hidden;
+  }
+  .menu__laptop__filter__option__button {
+    @apply min-w-[120px] py-[6px] px-[10px] mr-3 mb-3 border rounded-md text-sm font-medium outline-none lg:w-52 lg:mx-auto lg:text-4xl lg:px-0 lg:border-none;
+  }
+  .menu__laptop__modal__background {
+    @apply absolute z-[60] w-full top-0 bottom-0 transition-all duration-[0.65s];
+  }
 }

@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import styles from "../../styles/menu.module.css";
 
 const DishesDivWrapper = (props) => {
   const onWheel = (e) => {
@@ -20,7 +21,7 @@ const DishesDivWrapper = (props) => {
     <motion.div
       ref={scrollRef}
       id="dishes_wrapper"
-      className="bg-[#c2f4ab] bg-opacity-30 min-h-[calc(100vh-150.797px)] w-[100%] mx-auto mt-[86.797px] mb-[63.5px] flex flex-wrap gap-y-4 gap-x-2 content-start justify-center md:px-3 md:gap-x-5 lg:scrollbar-hide lg:overflow-x-auto lg:justify-start lg:gap-x-0 lg:px-0 lg:my-0 lg:flex-nowrap lg:h-[100vh] lg:mx-0 lg:bg-transparent"
+      className={styles.menu__mobile__laptop__dish__card__wrapper}
       key={"dishes_wrapper"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -29,9 +30,9 @@ const DishesDivWrapper = (props) => {
     >
       {props.children}
       {/* Psudo elements to fill in the blanks of flex wrap */}
-      <div className="w-[183px] md:w-[248px] lg:hidden"></div>
-      <div className="w-[183px] md:w-[248px] lg:hidden"></div>
-      <div className="w-[183px] md:w-[248px] lg:hidden"></div>
+      <div className={styles.menu__mobile__psudo__dish__card}></div>
+      <div className={styles.menu__mobile__psudo__dish__card}></div>
+      <div className={styles.menu__mobile__psudo__dish__card}></div>
     </motion.div>
   );
 };
