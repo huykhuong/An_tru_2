@@ -73,14 +73,16 @@ const Footer = () => {
           <div className="flex">
             <PhoneIcon className="h-6 w-6" />
             <div>
-              <p className="ml-2 text-white opacity-80">000 (123) 456 7890</p>
+              <p className={styles.footer__contact__info__text}>
+                000 (123) 456 7890
+              </p>
             </div>
           </div>
 
           <div className="flex">
             <LocationMarkerIcon className="h-8 w-8 lg:h-7 lg:w-7" />
             <div>
-              <p className="ml-2 text-white opacity-80">
+              <p className={styles.footer__contact__info__text}>
                 230 Nguyễn Sơn, Phú Thọ Hòa, Tân Phú, Tp.HCM
               </p>
             </div>
@@ -89,7 +91,7 @@ const Footer = () => {
           <div className="flex">
             <MailIcon className="h-6 w-6" />
             <div>
-              <p className="ml-2 text-white opacity-80">
+              <p className={styles.footer__contact__info__text}>
                 nhahangchayantru@gmail.com
               </p>
             </div>

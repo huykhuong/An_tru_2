@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { uiActions } from "../../store/ui-slice";
+import styles from "../../styles/general_component.module.css";
 
 const Header = () => {
   const [disableBtn, setDisableBtn] = useState(false);
@@ -29,10 +30,12 @@ const Header = () => {
   const selectedOptionStyle = "italic text-[#999999]";
 
   return (
-    <header className="relative">
+    <header className={styles.header}>
       {/* Contents */}
       <div
-        className={`fixed flex justify-between items-center top-0 bg-[#fbfbfb] bottom-0 left-0 right-0 z-40 w-full px-5 py-4 h-fit mx-auto md:px-10 lg:py-5 lg:max-w-[1650px] xl:max-w-[1400px] ${
+        className={`${
+          styles.header__main__contents__area__div__container
+        } bg-[#fbfbfb] ${
           router.pathname === "/menu" ||
           router.pathname === "/menu/[slug]" ||
           router.pathname === "/"
@@ -53,7 +56,7 @@ const Header = () => {
             router.pathname === "/menu/[slug]" && !openMenuState
               ? "lg:invisible"
               : "lg:visible"
-          } w-[50px] lg:w-[60px] lg:cursor-pointer relative z-30`}
+          } ${styles.header__logo__image}`}
         />
 
         {/* Menu button */}
@@ -69,7 +72,7 @@ const Header = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 lg:h-7 lg:w-7"
+            className={styles.header__burger__menu__icon}
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -84,9 +87,11 @@ const Header = () => {
 
       {/* Blur black background */}
       <div
-        className={`fixed bg-black top-0 left-0 w-full h-screen z-40 ${
-          openMenuState ? "visible bg-opacity-70" : "invisible bg-opacity-0"
-        } transition-all duration-[0.65s] ease-[0.85, 0.01, 0.4, 1]`}
+        className={`${styles.header__blur__black__background} ${
+          openMenuState
+            ? "visible bg-opacity-70 bg-black"
+            : "invisible bg-opacity-0 bg-black"
+        } ease-[0.85, 0.01, 0.4, 1]`}
         onClick={() => {
           dispatch(uiActions.toggleOpenMenu(false));
           setDisableBtn(true);
@@ -100,12 +105,12 @@ const Header = () => {
         initial={{ scaleY: 0 }}
         animate={openMenuState ? { scaleY: 1 } : { scaleY: 0 }}
         transition={{ duration: 0.65, ease: [0.85, 0.01, 0.4, 1] }}
-        className="h-[calc(100vh-env(safe-area-inset-bottom))] w-full bg-[#3A563E] fixed top-0 right-0 bottom-0 z-40 flex flex-col lg:w-[300px]"
+        className={styles.header__menu__green__column__container}
       >
-        <div className="flex flex-col items-center flex-grow">
+        <div className={styles.header__menu__green__column__inner__container}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white ml-auto mr-10 mt-16 lg:cursor-pointer"
+            className={styles.header__menu__green__column__close__button}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -121,7 +126,8 @@ const Header = () => {
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
-          <nav className="mt-20 text-4xl space-y-[10px] font-medium">
+
+          <nav className={styles.header__menu__green__column__nav__section}>
             <p
               onClick={() => {
                 if (router.pathname === "/") return;
@@ -133,7 +139,7 @@ const Header = () => {
                 router.pathname === "/" ? selectedOptionStyle : "text-white"
               } ${
                 openMenuState ? "visible opacity-100" : "invisible opacity-0"
-              } transition-all duration-200  lg:cursor-pointer`}
+              } ${styles.header__menu__green__column__nav__button}`}
             >
               Trang chủ
             </p>
@@ -153,7 +159,7 @@ const Header = () => {
                   : "text-white"
               } ${
                 openMenuState ? "visible opacity-100" : "invisible opacity-0"
-              } transition-all duration-200 lg:cursor-pointer`}
+              } ${styles.header__menu__green__column__nav__button}`}
             >
               Menu
             </p>
@@ -173,14 +179,15 @@ const Header = () => {
                   : "text-white"
               } ${
                 openMenuState ? "visible opacity-100" : "invisible opacity-0"
-              } transition-all duration-200 lg:cursor-pointer`}
+              } ${styles.header__menu__green__column__nav__button}`}
             >
               Về chúng tôi
             </p>
           </nav>
         </div>
+
         <p
-          className={`text-white text-center pb-10 ${
+          className={`${styles.header__menu__green__column__copyright__text} ${
             openMenuState ? "visible opacity-100" : "invisible opacity-0"
           }`}
         >

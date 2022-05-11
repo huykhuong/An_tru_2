@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import styles from "../../styles/general_component.module.css";
 
 const Loader = () => {
   return (
-    <motion.div className="bg-[#3A563E] w-full h-screen flex justify-center items-center font-medium text-xl">
+    <motion.div className={styles.loader__div__container}>
       <motion.img
         key={"loader"}
         id={"loader"}
