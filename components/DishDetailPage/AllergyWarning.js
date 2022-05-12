@@ -1,9 +1,12 @@
 import React from "react";
+import styles from "../../styles/dish__detail.module.css";
 
 const AllergicWarning = ({ warning }) => {
   return (
-    <section className="mt-10 px-5 md:px-10 lg:w-[25vw] lg:flex-shrink-0 lg:mt-auto lg:mb-[35vh] lg:mr-[100px]">
-      <p className="italic text-lg lg:text-lg">
+    <section
+      className={styles.dish__detail__mobile__allergy__warning__container}
+    >
+      <p className={styles.dish__detail__mobile__allergy__warning__text}>
         Lưu ý: sản phẩm có chứa nhiều sữa
       </p>
     </section>

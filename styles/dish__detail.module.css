@@ -1,0 +1,37 @@
+@tailwind components;
+
+@layer components {
+  .dish__detail__main__section {
+    @apply mt-[100px] mb-20 pt-10 w-[100%] lg:mb-0 lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:mt-0 lg:scrollbar-hide lg:h-screen lg:pt-0;
+  }
+  .dish__detail__image {
+    @apply relative w-[100vw] h-[100vw] lg:w-[50vw] lg:h-[100vh] lg:flex-shrink-0;
+  }
+  .dish__detail__title__and__price__container {
+    @apply px-5 md:pl-10 lg:flex-shrink-0 lg:w-[50vw] lg:mt-auto lg:mb-[100px];
+  }
+  .dish__detail__title__and__price__vietnamese__name {
+    @apply text-7xl lg:text-[8vw];
+  }
+  .dish__detail__title__and__price__extra__details__container {
+    @apply flex justify-between items-center mt-10 lg:mt-16 mb-5;
+  }
+  .dish__detail__title__and__price__eng__name__and__price {
+    @apply lg:flex-col space-y-5;
+  }
+  .dish__detail__title__and__price__eng__name {
+    @apply italic text-xl lg:text-[20px];
+  }
+  .dish__detail__title__and__price__price {
+    @apply text-lg lg:text-[20px];
+  }
+  .dish__detail__title__and__price__laptop__allery__text {
+    @apply hidden lg:inline-flex italic text-lg lg:text-lg lg:max-w-[200px];
+  }
+  .dish__detail__mobile__allergy__warning__container {
+    @apply mt-10 px-5 md:px-10 lg:hidden;
+  }
+  .dish__detail__mobile__allergy__warning__text {
+    @apply italic text-lg lg:text-lg;
+  }
+}

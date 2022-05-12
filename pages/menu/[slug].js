@@ -5,13 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/GeneralUI/Header";
 import { motion } from "framer-motion";
 import TitleAndPrice from "../../components/DishDetailPage/TitleAndPrice";
-import Ingredients from "../../components/DishDetailPage/Ingredients";
 import AllergyWarning from "../../components/DishDetailPage/AllergyWarning";
-import { ImageGallery } from "../../components/DishDetailPage/ImageGallery";
-import NextDish from "../../components/DishDetailPage/NextDish";
 import { uiActions } from "../../store/ui-slice";
 import { useRouter } from "next/router";
-import { style } from "@motionone/dom";
+import styles from "../../styles/dish__detail.module.css";
 
 const DishDetail = () => {
   const pageWillBeExitingFrom = useSelector(
@@ -75,13 +72,6 @@ const DishDetail = () => {
     // });
   }, [dispatch]);
 
-  const styles = {
-    main: "mt-[100px] mb-20 pt-10 w-[100%] lg:mb-0 lg:flex lg:overflow-y-hidden lg:overflow-x-auto lg:mt-0 lg:scrollbar-hide lg:h-screen lg:pt-0",
-    imgSection:
-      "relative w-[100vw] h-[100vw] lg:w-[50vw] lg:h-[100vh] lg:flex-shrink-0",
-    allergyWarning: "lg:hidden",
-  };
-
   return (
     <Fragment>
       <Header />
@@ -96,11 +86,11 @@ const DishDetail = () => {
         }
         transition={{ duration: 0.6 }}
         // onWheel={onWheel}
-        className={styles.main}
+        className={styles.dish__detail__main__section}
       >
         <TitleAndPrice />
 
-        <section className={styles.imgSection}>
+        <section className={styles.dish__detail__image}>
           <Image
             src="https://www.koreanbapsang.com/wp-content/uploads/2010/12/DSC_1106-e1454273856852.jpg"
             layout="fill"
@@ -109,10 +99,7 @@ const DishDetail = () => {
         </section>
 
         {/* <Ingredients /> */}
-
-        <div className={styles.allergyWarning}>
-          <AllergyWarning />
-        </div>
+        <AllergyWarning />
 
         {/* Gallery */}
         {/* <ImageGallery /> */}
